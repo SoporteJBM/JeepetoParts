@@ -64,6 +64,23 @@ const CATALOGO = [
       },
       {
         "cat": "Luces de freno y direccionales",
+        "nombre": "Luz de freno de techo LED (spoiler), par",
+        "compatible": "Wrangler JKU 2007-2018 (solo 4 puertas, con techo duro)",
+        "descripcion": "Dos luces LED que van en las esquinas traseras del techo duro y funcionan como spoiler. Hacen de luz de posición, de freno y de direccional.",
+        "ventajas": [
+          "Freno, posición y direccional en uno",
+          "Look tipo spoiler"
+        ],
+        "codigo": "TL-JK-G10",
+        "precio": 1049,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/g10.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Luces de freno y direccionales",
         "nombre": "Direccionales con aro de luz, ahumadas",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Luces redondas de los guardafangos delanteros. Parpadean en ámbar y tienen un aro blanco que queda prendido como luz de día.",
