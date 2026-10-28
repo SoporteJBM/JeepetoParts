@@ -28,9 +28,9 @@ function render(){
 function card(p){
   const i=ALL.indexOf(p), img=p.foto;
   return `<button class="card" data-i="${i}" aria-label="${esc(p.nombre)}, ${soles(p.precio)}">
-    <div class="ph">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${p.agotado?`<span class="badge">Agotado</span>`:""}</div>
+    <div class="ph">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${p.agotado?`<span class="badge">Agotado</span>`:""}${p.antes?`<span class="badge promo">Promo</span>`:""}</div>
     <div class="cb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3>
-    <div class="price ${p.agotado?"sold":""}">${soles(p.precio)}</div></div></button>`;
+    <div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?` <s>${soles(p.antes)}</s>`:""}</div></div></button>`;
 }
 const dlg=document.getElementById("dlg");
 function open(i){
@@ -44,7 +44,7 @@ function open(i){
       <p>${esc(p.descripcion)}</p>
       <ul>${p.ventajas.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
       <div class="code">Código: ${esc(p.codigo)}</div>
-      <div class="dfoot"><div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.agotado?"<small>Agotado temporalmente · consulta disponibilidad</small>":""}</div>
+      <div class="dfoot"><div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?` <s>${soles(p.antes)}</s><small>Promo válida hasta el 31/12/2026</small>`:""}${p.agotado?"<small>Agotado temporalmente · consulta disponibilidad</small>":""}</div>
       <button class="btn" id="ask">${p.agotado?"Consultar":"Lo quiero"}</button></div>
     </div>`;
   document.getElementById("ask").onclick=()=>ask(p);

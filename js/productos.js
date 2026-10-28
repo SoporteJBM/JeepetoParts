@@ -1,6 +1,30 @@
 // Catálogo de productos de Jeepeto Parts.
 // Para cambiar un precio, edita "precio". Para marcar agotado, pon "agotado": true.
+// Para una promoción, agrega "antes" con el precio normal (debe ser real).
 const CATALOGO = [
+  {
+    "categoria": "Promociones (válidas hasta el 31/12/2026)",
+    "productos": [
+      {
+        "cat": "Promociones (válidas hasta el 31/12/2026)",
+        "nombre": "Kit JK básico: tercera luz + direccionales con aro + marcadores",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Incluye la tercera luz de freno LED ahumada y el combo de direccionales LED con aro de luz de día más los marcadores de guardafango (mica transparente). Por separado cuestan S/ 444.",
+        "ventajas": [
+          "Ahorras S/ 45",
+          "Todo plug and play"
+        ],
+        "codigo": "KIT-JK-1",
+        "precio": 399,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/kit_basico.jpg",
+        "agotado": false,
+        "antes": 444
+      }
+    ]
+  },
   {
     "categoria": "Luces de freno y direccionales",
     "productos": [
@@ -385,6 +409,40 @@ const CATALOGO = [
   {
     "categoria": "Stops traseros LED",
     "productos": [
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Combo stops LED Bold + tercera luz de freno, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Las dos luces traseras LED Bold Series (mica transparente) más la tercera luz de freno LED ahumada. Las 3 luces de atrás en un solo pedido. Foto referencial.",
+        "ventajas": [
+          "Las 3 luces traseras en un combo",
+          "Plug and play"
+        ],
+        "codigo": "TL-JK-G1-CLR + BL-JK-G1-SMK",
+        "precio": 899,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/combo3_clr.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Combo stops LED Bold + tercera luz de freno, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Las dos luces traseras LED Bold Series y la tercera luz de freno, todo en mica ahumada.",
+        "ventajas": [
+          "Las 3 luces traseras en un combo",
+          "Look oscuro"
+        ],
+        "codigo": "TL-JK-G1-SMK + BL-JK-G1-SMK",
+        "precio": 899,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/combo3_smk.jpg",
+        "agotado": true
+      },
       {
         "cat": "Stops traseros LED",
         "nombre": "Stops LED Destroyer, transparentes",
@@ -919,6 +977,164 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/siren.jpg",
+        "agotado": false
+      }
+    ]
+  },
+  {
+    "categoria": "Otros autos",
+    "productos": [
+      {
+        "cat": "Otros autos",
+        "nombre": "Focos LED 4S H7 (par)",
+        "compatible": "Universal: autos con focos H7. Hyundai Tiburon 2000-2001 (baja), 2003-2006 (baja y alta) y 2007-2008 (alta)",
+        "descripcion": "Par de focos LED para reemplazar los halógenos H7 de faros o neblineros.",
+        "ventajas": [
+          "Luz blanca, mucho más clara",
+          "Reemplazo directo"
+        ],
+        "codigo": "HB-4S-H7",
+        "precio": 329,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_4s.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Focos LED 4S H11 (par)",
+        "compatible": "Universal: autos con focos H11. Hyundai Tiburon 2007-2008 (baja)",
+        "descripcion": "Par de focos LED para reemplazar los halógenos H11, muy usados en neblineros y luces bajas.",
+        "ventajas": [
+          "Luz blanca, mucho más clara",
+          "Reemplazo directo"
+        ],
+        "codigo": "HB-4S-H11",
+        "precio": 329,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_4s.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Focos LED R3 9005 (par)",
+        "compatible": "Universal: autos con focos 9005 / HB3. Hyundai Tiburon 1997-1999 (alta)",
+        "descripcion": "Par de focos LED de alta potencia para luces altas tipo 9005.",
+        "ventajas": [
+          "Alta potencia",
+          "Reemplazo directo"
+        ],
+        "codigo": "HB-R3-9005",
+        "precio": 489,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_r3.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Decodificador anti-parpadeo H7 (par)",
+        "compatible": "Universal: autos con focos LED H7",
+        "descripcion": "Evita que los focos LED H7 parpadeen o que salga error de foco quemado en el tablero.",
+        "ventajas": [
+          "Elimina parpadeos",
+          "Complemento para focos LED"
+        ],
+        "codigo": "HL-CANBUS-H7-G1",
+        "precio": 145,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_cb_h7.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Decodificador anti-parpadeo H11 (par)",
+        "compatible": "Universal: autos con focos LED H11",
+        "descripcion": "Evita que los focos LED H11 parpadeen o que salga error de foco quemado en el tablero.",
+        "ventajas": [
+          "Elimina parpadeos",
+          "Complemento para focos LED"
+        ],
+        "codigo": "HL-CANBUS-H11-G1",
+        "precio": 145,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_cb_h11.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Underglow D1 con efecto de persecución",
+        "compatible": "Universal: autos y camionetas 12V",
+        "descripcion": "Kit de luces LED de colores para debajo del carro, con efectos y control por app. Para exhibición o eventos: en vía pública no está permitido.",
+        "ventajas": [
+          "Efectos de movimiento",
+          "Control desde el celular"
+        ],
+        "codigo": "UGL-62710-G1",
+        "precio": 319,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_d1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Underglow + luces de interior Fusion",
+        "compatible": "Universal: autos y camionetas 12V",
+        "descripcion": "Kit de luces LED de colores para debajo del carro más tiras para el interior. Para exhibición o eventos: el underglow en vía pública no está permitido.",
+        "ventajas": [
+          "Exterior e interior en un kit",
+          "Control desde el celular"
+        ],
+        "codigo": "UGL-62713-G1",
+        "precio": 369,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_fusion.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Tiras LED RGB de interior (encendedor)",
+        "compatible": "Universal: cualquier auto con toma de encendedor",
+        "descripcion": "Tiras de luz de colores para el piso del auto, se conectan al encendedor.",
+        "ventajas": [
+          "Instalación sin cables",
+          "Muchos colores"
+        ],
+        "codigo": "DL-IL-G8",
+        "precio": 199,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_g8.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Tiras LED RGB de interior (USB)",
+        "compatible": "Universal: cualquier auto con puerto USB",
+        "descripcion": "Tiras de luz de colores para el interior, se conectan por USB.",
+        "ventajas": [
+          "Instalación sin cables",
+          "Muchos colores"
+        ],
+        "codigo": "DL-IL-G7",
+        "precio": 199,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_g7.jpg",
         "agotado": false
       }
     ]

@@ -5,13 +5,14 @@ Catálogo web de accesorios Xprite y repuestos Mopar para Jeep.
 ## Estructura
 
 - `index.html`: estructura de la página
-- `css/styles.css`: estilos (colores, tamaños, modo oscuro)
-- `js/productos.js`: lista de productos (nombre, precio, foto, compatibilidad, agotado)
-- `js/app.js`: filtros, detalle del producto y botón de WhatsApp
-- `img/`: fotos de los productos
+- `css/styles.css`: estilos
+- `js/productos.js`: lista de productos (precio, foto, compatibilidad, agotado, promo)
+- `js/app.js`: filtros, detalle y WhatsApp
+- `img/`: fotos
 
 ## Cambios rápidos
 
 - **Precio:** edita `precio` en `js/productos.js`.
 - **Agotado:** cambia `agotado` a `true` o `false`.
+- **Promo:** agrega `"antes": 444` (precio normal real).
 - **WhatsApp:** cambia `WHATSAPP` al inicio de `js/app.js`.
