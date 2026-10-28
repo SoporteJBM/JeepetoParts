@@ -22,9 +22,20 @@
 </head>
 <body>
 <header class="top">
-  <div class="brand"><span class="mark"></span><b>Jeepeto Parts</b><small class="sub">Accesorios Xprite para Jeep</small></div>
+  <div class="brand"><button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><span class="bars"><span></span><span></span><span></span></span>Menú</button><span class="mark"></span><b>Jeepeto Parts</b><small class="sub">Accesorios Xprite para Jeep</small></div>
   <nav class="filters" id="filters" aria-label="Filtrar por modelo"></nav>
 </header>
+<div class="overlay" id="overlay" hidden></div>
+<nav class="drawer" id="drawer" aria-label="Menú de categorías" aria-hidden="true">
+  <div class="drawer-head"><b>Jeepeto Parts</b><button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button></div>
+  <div id="drawerList"></div>
+  <div class="drawer-group">Información</div>
+  <a class="drawer-link" href="#mopar" data-go="mopar">Repuestos Mopar a pedido</a>
+  <a class="drawer-link" href="#xprite" data-go="xprite">¿Por qué Xprite?</a>
+  <a class="drawer-link" href="#comprar" data-go="comprar">Cómo comprar</a>
+  <a class="drawer-link wa-link" href="https://wa.me/51946564236" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+</nav>
+
 
 <main class="wrap">
   <section class="hero">
@@ -45,7 +56,7 @@
 
   <div id="list"></div>
 
-  <section class="why">
+  <section class="why" id="xprite">
     <h2>¿Por qué Xprite?</h2>
     <div class="wg">
       <div><b>Marca de California</b><span>Con base en Chino, California, desde 2014. Especialistas en luces LED y accesorios off-road.</span></div>

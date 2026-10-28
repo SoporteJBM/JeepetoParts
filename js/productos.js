@@ -26,6 +26,607 @@ const CATALOGO = [
     ]
   },
   {
+    "categoria": "Faros delanteros",
+    "productos": [
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros LED 7\"",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas). TJ 1997-2006: consultar",
+        "descripcion": "Los dos faros principales redondos, completos, en LED.",
+        "ventajas": [
+          "Mucha más luz de noche",
+          "Larga duración"
+        ],
+        "codigo": "HL-R7IN-105W-G2",
+        "precio": 699,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/105w.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de luz azul",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED con un aro azul alrededor.",
+        "ventajas": [
+          "Look llamativo"
+        ],
+        "codigo": "HL-90W-G2 Azul",
+        "precio": 699,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/halo.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de colores (RGB)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED con un aro que cambia de color desde el celular.",
+        "ventajas": [
+          "Control por app",
+          "Ideal para eventos"
+        ],
+        "codigo": "HL-90W-G2 RGB",
+        "precio": 799,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/halo.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" Envision",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de diseño más elaborado, en negro o cromado.",
+        "ventajas": [
+          "El diseño más elegante",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-R7IN-G13",
+        "precio": 879,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/envision.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros LED 7\" G14",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas). TJ 1997-2006: consultar",
+        "descripcion": "Faros principales redondos LED de 7\", completos.",
+        "ventajas": [
+          "Mucha más luz de noche",
+          "Larga duración"
+        ],
+        "codigo": "HL-R7IN-G14",
+        "precio": 949,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_g14.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con halo, luz de día y direccional",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro de luz de día que también hace de direccional.",
+        "ventajas": [
+          "Halo con direccional",
+          "Look moderno"
+        ],
+        "codigo": "JL-HL-R7IN-G15",
+        "precio": 899,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_g15.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de luz blanco",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro blanco alrededor.",
+        "ventajas": [
+          "Look moderno",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-90W-G2 Blanco",
+        "precio": 799,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_90w.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de luz rojo",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro rojo alrededor. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Look llamativo",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-90W-G2 Rojo",
+        "precio": 749,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_90w.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de luz verde",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro verde alrededor. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Look llamativo",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-90W-G2 Verde",
+        "precio": 829,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_90w.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" RGB con aro de persecución",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro de colores con efecto de movimiento, control por app. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Efecto de persecución",
+          "Control por app"
+        ],
+        "codigo": "XP-JL-HL-JK-90W-G3-CHASE",
+        "precio": 1099,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_chase.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro azul",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro azul. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Ahorras vs. por separado"
+        ],
+        "codigo": "HL-90W-G2-B + FL-DRL-G2",
+        "precio": 1149,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_br.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro rojo",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro rojo. Uso fuera de carretera o en eventos. Foto referencial.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Ahorras vs. por separado"
+        ],
+        "codigo": "HL-90W-G2-R + FL-DRL-G2",
+        "precio": 1099,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_br.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro blanco",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro blanco.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Look moderno"
+        ],
+        "codigo": "HL-90W-G2-W + FL-DRL-G2-W",
+        "precio": 1099,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_w.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro verde",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro verde. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Look llamativo"
+        ],
+        "codigo": "HL-90W-G2-G + FL-DRL-G2-G",
+        "precio": 1149,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_g.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\" RGB",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro de colores, control por app. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Control por app"
+        ],
+        "codigo": "HL-90W-G2-RGB-KIT",
+        "precio": 1299,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_rgbkit.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros + neblineros RGB de persecución",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros de 7\" y neblineros de 4\" con aro de colores con efecto de movimiento. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Efecto de persecución",
+          "Control por app"
+        ],
+        "codigo": "XP-JL-HL-JK-90W-G3-CHASE-KIT",
+        "precio": 1299,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_chasekit.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Kit faros 9\" RGB + neblineros",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" con aro de colores más neblineros, control por app. Producto grande: incluye impuestos de importación.",
+        "ventajas": [
+          "Frente completo para JL",
+          "Control por app"
+        ],
+        "codigo": "HL-JL-R9IN-G6-KIT",
+        "precio": 2799,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g6kit.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 9\" con aro de luz G5",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" con aro de luz de día.",
+        "ventajas": [
+          "Hechos para JL y Gladiator",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-JL-R9IN-G5",
+        "precio": 1899,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g5.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 9\" con luz de día G1",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" premium con luz de día.",
+        "ventajas": [
+          "Gama alta",
+          "Hechos para JL y Gladiator"
+        ],
+        "codigo": "HL-JL-R9IN-G1",
+        "precio": 3299,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g1.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 9\" con aro de luz G3",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" premium con aro de luz.",
+        "ventajas": [
+          "Gama alta",
+          "Hechos para JL y Gladiator"
+        ],
+        "codigo": "HL-JL-R9IN-G3",
+        "precio": 3599,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g3.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros LED rectangulares 5x7 Insight (par)",
+        "compatible": "Cherokee XJ 1984-2001, Wrangler YJ 1987-1995 y Comanche MJ 1986-1992",
+        "descripcion": "Faros principales rectangulares en LED, reemplazo directo del faro de fábrica (H6054). También por unidad: S/ 345.",
+        "ventajas": [
+          "Mucha más luz que los halógenos",
+          "Plug and play con el conector original"
+        ],
+        "codigo": "HL-5X7-G3-K",
+        "precio": 689,
+        "modelos": [
+          "xj"
+        ],
+        "foto": "img/x57g3.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros LED rectangulares 5x7 con alta y baja (par)",
+        "compatible": "Cherokee XJ 1984-2001, Wrangler YJ 1987-1995 y Comanche MJ 1986-1992",
+        "descripcion": "Faros LED tipo proyector con luz alta y baja, reemplazo directo del faro de fábrica (H6054).",
+        "ventajas": [
+          "Diseño tipo proyector",
+          "Certificación DOT/SAE"
+        ],
+        "codigo": "HL-5X7-G4",
+        "precio": 889,
+        "modelos": [
+          "xj"
+        ],
+        "foto": "img/x57g4.jpg",
+        "agotado": true
+      }
+    ]
+  },
+  {
+    "categoria": "Neblineros LED 4\"",
+    "productos": [
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" blanco/ámbar",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Luces redondas del parachoques delantero. Luz blanca o ámbar.",
+        "ventajas": [
+          "Mucho más luz que los de fábrica",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JL-G1",
+        "precio": 409,
+        "modelos": [
+          "jk",
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fogg1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" amarillos",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Luz amarilla, que alumbra mejor con neblina, polvo y lluvia.",
+        "ventajas": [
+          "Ideal para carretera y campo",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JL-G1 Amarillo",
+        "precio": 345,
+        "modelos": [
+          "jk",
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fogg1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros 4\" con aro de luz ámbar",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Neblineros con un aro que queda prendido como luz de día.",
+        "ventajas": [
+          "Look moderno",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JL-G2 Ámbar",
+        "precio": 355,
+        "modelos": [
+          "jk",
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fogg2.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros 4\" con aro de luz blanco",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Igual al anterior, con el aro en blanco.",
+        "ventajas": [
+          "Combina con faros LED",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JL-G2 Blanco",
+        "precio": 389,
+        "modelos": [
+          "jk",
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fogg2.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" 60W, blancos",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" y 60W, luz blanca.",
+        "ventajas": [
+          "Mucha más luz",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JK-G1 Blanco",
+        "precio": 359,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fljkg1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" 60W, ámbar",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" y 60W, luz ámbar para neblina y polvo.",
+        "ventajas": [
+          "Ideal para campo",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JK-G1 Ámbar",
+        "precio": 379,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fljkg1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" con aro blanco (AL036)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" con aro blanco de luz de día.",
+        "ventajas": [
+          "Look moderno",
+          "Plug and play"
+        ],
+        "codigo": "AL036K1002",
+        "precio": 349,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_al1002.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" básicos (AL036)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" sencillos.",
+        "ventajas": [
+          "Precio de entrada",
+          "Plug and play"
+        ],
+        "codigo": "AL036K1001",
+        "precio": 299,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_al1001.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros 4\" con aro de color",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" con aro de color: elige blanco, amarillo, rojo o azul (verde agotado). Los aros de color son para uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Varios colores",
+          "Plug and play"
+        ],
+        "codigo": "FL-DRL-G2",
+        "precio": 389,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fldrl.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros 4\" con aro RGB",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" con aro de colores, control por app. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Control por app",
+          "Muchos colores"
+        ],
+        "codigo": "FL-DRL-G2-RGB",
+        "precio": 519,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fldrlrgb.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" con aro, amarillos",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Neblineros LED de 4\" con aro de luz, luz amarilla para neblina y polvo.",
+        "ventajas": [
+          "Ideal para campo",
+          "Tres modelos de Jeep"
+        ],
+        "codigo": "JL-FL-JL-G2 Amarillo",
+        "precio": 389,
+        "modelos": [
+          "jk",
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fogg2.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" blanco o ámbar (AL-FL)",
+        "compatible": "Universal: consultar compatibilidad (Honda 2016-2025 y algunos Jeep)",
+        "descripcion": "Neblineros LED de 4\" en luz blanca o ámbar. Consulta si le quedan a tu vehículo antes de pedir.",
+        "ventajas": [
+          "Blanco o ámbar",
+          "Alta potencia"
+        ],
+        "codigo": "AL-FL-R4IN-G1",
+        "precio": 629,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/fd_alfl.jpg",
+        "agotado": false
+      }
+    ]
+  },
+  {
     "categoria": "Luces de freno y direccionales",
     "productos": [
       {
@@ -336,282 +937,6 @@ const CATALOGO = [
         ],
         "foto": "img/fd_stjl.jpg",
         "agotado": true
-      }
-    ]
-  },
-  {
-    "categoria": "Luz para la llanta de repuesto",
-    "productos": [
-      {
-        "cat": "Luz para la llanta de repuesto",
-        "nombre": "Luz de freno para llanta de repuesto 14\"",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas) y Wrangler JL 2018 en adelante",
-        "descripcion": "Aro de luces LED en el centro de la llanta de repuesto. Prende al frenar y reemplaza la tercera luz de fábrica.",
-        "ventajas": [
-          "Muy visible para el carro de atrás",
-          "Le da un look único"
-        ],
-        "codigo": "TL-JK-WHEEL-G5",
-        "precio": 299,
-        "modelos": [
-          "jk",
-          "jl"
-        ],
-        "foto": "img/g5.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luz para la llanta de repuesto",
-        "nombre": "Luz de freno para llanta de repuesto Typhoon",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Doble aro rojo LED en el centro de la llanta de repuesto.",
-        "ventajas": [
-          "Diseño de doble aro",
-          "Muy llamativa"
-        ],
-        "codigo": "TL-JK-WHEEL-G6",
-        "precio": 349,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/typhoon.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luz para la llanta de repuesto",
-        "nombre": "Luz de freno para llanta de repuesto Typhoon, JL",
-        "compatible": "Wrangler JL 2018 en adelante",
-        "descripcion": "La versión del doble aro para el Wrangler JL.",
-        "ventajas": [
-          "Hecha a medida para JL",
-          "Muy llamativa"
-        ],
-        "codigo": "TL-JL-WHEEL-G6",
-        "precio": 319,
-        "modelos": [
-          "jl"
-        ],
-        "foto": "img/typhoon.jpg",
-        "agotado": false
-      }
-    ]
-  },
-  {
-    "categoria": "Neblineros LED 4\"",
-    "productos": [
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" blanco/ámbar",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Luces redondas del parachoques delantero. Luz blanca o ámbar.",
-        "ventajas": [
-          "Mucho más luz que los de fábrica",
-          "Plug and play"
-        ],
-        "codigo": "JL-FL-JL-G1",
-        "precio": 409,
-        "modelos": [
-          "jk",
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fogg1.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" amarillos",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Luz amarilla, que alumbra mejor con neblina, polvo y lluvia.",
-        "ventajas": [
-          "Ideal para carretera y campo",
-          "Plug and play"
-        ],
-        "codigo": "JL-FL-JL-G1 Amarillo",
-        "precio": 345,
-        "modelos": [
-          "jk",
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fogg1.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros 4\" con aro de luz ámbar",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Neblineros con un aro que queda prendido como luz de día.",
-        "ventajas": [
-          "Look moderno",
-          "Plug and play"
-        ],
-        "codigo": "JL-FL-JL-G2 Ámbar",
-        "precio": 355,
-        "modelos": [
-          "jk",
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fogg2.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros 4\" con aro de luz blanco",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Igual al anterior, con el aro en blanco.",
-        "ventajas": [
-          "Combina con faros LED",
-          "Plug and play"
-        ],
-        "codigo": "JL-FL-JL-G2 Blanco",
-        "precio": 389,
-        "modelos": [
-          "jk",
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fogg2.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" 60W, blancos",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Neblineros LED de 4\" y 60W, luz blanca.",
-        "ventajas": [
-          "Mucha más luz",
-          "Plug and play"
-        ],
-        "codigo": "JL-FL-JK-G1 Blanco",
-        "precio": 359,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_fljkg1.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" 60W, ámbar",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Neblineros LED de 4\" y 60W, luz ámbar para neblina y polvo.",
-        "ventajas": [
-          "Ideal para campo",
-          "Plug and play"
-        ],
-        "codigo": "JL-FL-JK-G1 Ámbar",
-        "precio": 379,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_fljkg1.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" con aro blanco (AL036)",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Neblineros LED de 4\" con aro blanco de luz de día.",
-        "ventajas": [
-          "Look moderno",
-          "Plug and play"
-        ],
-        "codigo": "AL036K1002",
-        "precio": 349,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_al1002.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" básicos (AL036)",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Neblineros LED de 4\" sencillos.",
-        "ventajas": [
-          "Precio de entrada",
-          "Plug and play"
-        ],
-        "codigo": "AL036K1001",
-        "precio": 299,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_al1001.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros 4\" con aro de color",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Neblineros LED de 4\" con aro de color: elige blanco, amarillo, rojo o azul (verde agotado). Los aros de color son para uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Varios colores",
-          "Plug and play"
-        ],
-        "codigo": "FL-DRL-G2",
-        "precio": 389,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_fldrl.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros 4\" con aro RGB",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Neblineros LED de 4\" con aro de colores, control por app. Uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Control por app",
-          "Muchos colores"
-        ],
-        "codigo": "FL-DRL-G2-RGB",
-        "precio": 519,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_fldrlrgb.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" con aro, amarillos",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Neblineros LED de 4\" con aro de luz, luz amarilla para neblina y polvo.",
-        "ventajas": [
-          "Ideal para campo",
-          "Tres modelos de Jeep"
-        ],
-        "codigo": "JL-FL-JL-G2 Amarillo",
-        "precio": 389,
-        "modelos": [
-          "jk",
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fogg2.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Neblineros LED 4\"",
-        "nombre": "Neblineros LED 4\" blanco o ámbar (AL-FL)",
-        "compatible": "Universal: consultar compatibilidad (Honda 2016-2025 y algunos Jeep)",
-        "descripcion": "Neblineros LED de 4\" en luz blanca o ámbar. Consulta si le quedan a tu vehículo antes de pedir.",
-        "ventajas": [
-          "Blanco o ámbar",
-          "Alta potencia"
-        ],
-        "codigo": "AL-FL-R4IN-G1",
-        "precio": 629,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/fd_alfl.jpg",
-        "agotado": false
       }
     ]
   },
@@ -997,384 +1322,184 @@ const CATALOGO = [
     ]
   },
   {
-    "categoria": "Faros delanteros",
+    "categoria": "Luz para la llanta de repuesto",
     "productos": [
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros LED 7\"",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas). TJ 1997-2006: consultar",
-        "descripcion": "Los dos faros principales redondos, completos, en LED.",
+        "cat": "Luz para la llanta de repuesto",
+        "nombre": "Luz de freno para llanta de repuesto 14\"",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas) y Wrangler JL 2018 en adelante",
+        "descripcion": "Aro de luces LED en el centro de la llanta de repuesto. Prende al frenar y reemplaza la tercera luz de fábrica.",
         "ventajas": [
-          "Mucha más luz de noche",
-          "Larga duración"
+          "Muy visible para el carro de atrás",
+          "Le da un look único"
         ],
-        "codigo": "HL-R7IN-105W-G2",
-        "precio": 699,
+        "codigo": "TL-JK-WHEEL-G5",
+        "precio": 299,
         "modelos": [
-          "jk"
+          "jk",
+          "jl"
         ],
-        "foto": "img/105w.jpg",
+        "foto": "img/g5.jpg",
         "agotado": false
       },
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" con aro de luz azul",
+        "cat": "Luz para la llanta de repuesto",
+        "nombre": "Luz de freno para llanta de repuesto Typhoon",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED con un aro azul alrededor.",
+        "descripcion": "Doble aro rojo LED en el centro de la llanta de repuesto.",
         "ventajas": [
-          "Look llamativo"
+          "Diseño de doble aro",
+          "Muy llamativa"
         ],
-        "codigo": "HL-90W-G2 Azul",
-        "precio": 699,
+        "codigo": "TL-JK-WHEEL-G6",
+        "precio": 349,
         "modelos": [
           "jk"
         ],
-        "foto": "img/halo.jpg",
+        "foto": "img/typhoon.jpg",
         "agotado": false
       },
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" con aro de colores (RGB)",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED con un aro que cambia de color desde el celular.",
+        "cat": "Luz para la llanta de repuesto",
+        "nombre": "Luz de freno para llanta de repuesto Typhoon, JL",
+        "compatible": "Wrangler JL 2018 en adelante",
+        "descripcion": "La versión del doble aro para el Wrangler JL.",
         "ventajas": [
-          "Control por app",
-          "Ideal para eventos"
+          "Hecha a medida para JL",
+          "Muy llamativa"
         ],
-        "codigo": "HL-90W-G2 RGB",
+        "codigo": "TL-JL-WHEEL-G6",
+        "precio": 319,
+        "modelos": [
+          "jl"
+        ],
+        "foto": "img/typhoon.jpg",
+        "agotado": false
+      }
+    ]
+  },
+  {
+    "categoria": "Luces auxiliares (uso fuera de carretera)",
+    "productos": [
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Kit soporte Mamba + pods LED 2\"",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Soporte completo para el marco del parabrisas con bases para pods, más un par de pods LED de 2\". Se atornilla en los puntos originales, sin perforar. Uso fuera de carretera.",
+        "ventajas": [
+          "Todo listo para instalar",
+          "Sin perforar, con espuma que protege la pintura"
+        ],
+        "codigo": "WLB-0008-G1 + WL-10RS-2PC",
+        "precio": 1049,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/mamba.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Soporte Mamba para barra LED 50\" y pods",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Soporte que va a lo largo del marco del parabrisas, para una barra de 50\" arriba y pods de 2\" a 6\" en las esquinas. Se atornilla sin perforar. Uso fuera de carretera.",
+        "ventajas": [
+          "Barra arriba, pods abajo o ambos",
+          "Sin perforar, con espuma que protege la pintura"
+        ],
+        "codigo": "WLB-0008-G1",
         "precio": 799,
         "modelos": [
           "jk"
         ],
-        "foto": "img/halo.jpg",
+        "foto": "img/mamba.jpg",
         "agotado": false
       },
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" Envision",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de diseño más elaborado, en negro o cromado.",
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Pods LED 2\" spot (par)",
+        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
+        "descripcion": "Par de luces auxiliares LED de 2\" y 10W, haz concentrado (spot). Uso fuera de carretera.",
         "ventajas": [
-          "El diseño más elegante",
-          "LED de alta potencia"
+          "Chicos y potentes",
+          "Ideales para las esquinas del parabrisas"
         ],
-        "codigo": "HL-R7IN-G13",
-        "precio": 879,
+        "codigo": "WL-10RS-2PC",
+        "precio": 239,
         "modelos": [
-          "jk"
+          "uni"
         ],
-        "foto": "img/envision.jpg",
+        "foto": "img/pod2.jpg",
         "agotado": false
       },
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros LED 7\" G14",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas). TJ 1997-2006: consultar",
-        "descripcion": "Faros principales redondos LED de 7\", completos.",
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Pods LED 2\" spot + kit de montaje",
+        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
+        "descripcion": "Par de pods LED de 2\" con kit de pernos de montaje. Uso fuera de carretera.",
         "ventajas": [
-          "Mucha más luz de noche",
-          "Larga duración"
+          "Todo para instalar",
+          "Precio de entrada"
         ],
-        "codigo": "HL-R7IN-G14",
-        "precio": 949,
+        "codigo": "WL-10RS-2PC + WLB-0013-#5",
+        "precio": 349,
         "modelos": [
-          "jk"
+          "uni"
         ],
-        "foto": "img/fd_g14.jpg",
+        "foto": "img/pod2.jpg",
         "agotado": false
       },
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" con halo, luz de día y direccional",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" con aro de luz de día que también hace de direccional.",
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Pods LED 3\" 25W CREE (par)",
+        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
+        "descripcion": "Par de luces auxiliares LED CREE de 3\", haz concentrado, luz blanca. Uso fuera de carretera.",
         "ventajas": [
-          "Halo con direccional",
-          "Look moderno"
+          "Más alcance que los de 2\"",
+          "LED CREE"
         ],
-        "codigo": "JL-HL-R7IN-G15",
-        "precio": 899,
+        "codigo": "WL-25CS-2PC",
+        "precio": 449,
         "modelos": [
-          "jk"
+          "uni"
         ],
-        "foto": "img/fd_g15.jpg",
+        "foto": "img/pod3.jpg",
         "agotado": false
       },
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" con aro de luz blanco",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" con aro blanco alrededor.",
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Pods LED 4\" 50W (par)",
+        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
+        "descripcion": "Par de luces auxiliares LED de 4\" y 50W, haz concentrado, en blanco o amarillo. Uso fuera de carretera.",
         "ventajas": [
-          "Look moderno",
-          "LED de alta potencia"
+          "Máxima potencia en pods",
+          "Blanco o amarillo"
         ],
-        "codigo": "HL-90W-G2 Blanco",
-        "precio": 799,
+        "codigo": "WL-50CS-2PC",
+        "precio": 649,
         "modelos": [
-          "jk"
+          "uni"
         ],
-        "foto": "img/fd_90w.jpg",
+        "foto": "img/pod4.jpg",
         "agotado": false
       },
       {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" con aro de luz rojo",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" con aro rojo alrededor. Uso fuera de carretera o en eventos.",
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Barra LED 50\" ámbar Astro",
+        "compatible": "Wrangler JK con soporte Mamba. Universal con el soporte adecuado",
+        "descripcion": "Barra LED ultra delgada de 50\", luz ámbar de haz abierto (flood), ideal para polvo y neblina. Uso fuera de carretera.",
         "ventajas": [
-          "Look llamativo",
-          "LED de alta potencia"
+          "Luz ámbar, mejor con polvo y neblina",
+          "Diseño ultra delgado"
         ],
-        "codigo": "HL-90W-G2 Rojo",
-        "precio": 749,
+        "codigo": "WL-C6-240SS-CR-AMBER",
+        "precio": 1199,
         "modelos": [
-          "jk"
+          "jk",
+          "uni"
         ],
-        "foto": "img/fd_90w.jpg",
+        "foto": "img/bar50.jpg",
         "agotado": false
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" con aro de luz verde",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" con aro verde alrededor. Uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Look llamativo",
-          "LED de alta potencia"
-        ],
-        "codigo": "HL-90W-G2 Verde",
-        "precio": 829,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_90w.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 7\" RGB con aro de persecución",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" con aro de colores con efecto de movimiento, control por app. Uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Efecto de persecución",
-          "Control por app"
-        ],
-        "codigo": "XP-JL-HL-JK-90W-G3-CHASE",
-        "precio": 1099,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_chase.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Combo faros 7\" + neblineros 4\", aro azul",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro azul. Uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Frente completo en un combo",
-          "Ahorras vs. por separado"
-        ],
-        "codigo": "HL-90W-G2-B + FL-DRL-G2",
-        "precio": 1149,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_combo_br.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Combo faros 7\" + neblineros 4\", aro rojo",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro rojo. Uso fuera de carretera o en eventos. Foto referencial.",
-        "ventajas": [
-          "Frente completo en un combo",
-          "Ahorras vs. por separado"
-        ],
-        "codigo": "HL-90W-G2-R + FL-DRL-G2",
-        "precio": 1099,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_combo_br.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Combo faros 7\" + neblineros 4\", aro blanco",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro blanco.",
-        "ventajas": [
-          "Frente completo en un combo",
-          "Look moderno"
-        ],
-        "codigo": "HL-90W-G2-W + FL-DRL-G2-W",
-        "precio": 1099,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_combo_w.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Combo faros 7\" + neblineros 4\", aro verde",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro verde. Uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Frente completo en un combo",
-          "Look llamativo"
-        ],
-        "codigo": "HL-90W-G2-G + FL-DRL-G2-G",
-        "precio": 1149,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_combo_g.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Combo faros 7\" + neblineros 4\" RGB",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro de colores, control por app. Uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Frente completo en un combo",
-          "Control por app"
-        ],
-        "codigo": "HL-90W-G2-RGB-KIT",
-        "precio": 1299,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_rgbkit.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Combo faros + neblineros RGB de persecución",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Faros de 7\" y neblineros de 4\" con aro de colores con efecto de movimiento. Uso fuera de carretera o en eventos.",
-        "ventajas": [
-          "Efecto de persecución",
-          "Control por app"
-        ],
-        "codigo": "XP-JL-HL-JK-90W-G3-CHASE-KIT",
-        "precio": 1299,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/fd_chasekit.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Kit faros 9\" RGB + neblineros",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Faros LED de 9\" con aro de colores más neblineros, control por app. Producto grande: incluye impuestos de importación.",
-        "ventajas": [
-          "Frente completo para JL",
-          "Control por app"
-        ],
-        "codigo": "HL-JL-R9IN-G6-KIT",
-        "precio": 2799,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fd_9g6kit.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 9\" con aro de luz G5",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Faros LED de 9\" con aro de luz de día.",
-        "ventajas": [
-          "Hechos para JL y Gladiator",
-          "LED de alta potencia"
-        ],
-        "codigo": "HL-JL-R9IN-G5",
-        "precio": 1899,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fd_9g5.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 9\" con luz de día G1",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Faros LED de 9\" premium con luz de día.",
-        "ventajas": [
-          "Gama alta",
-          "Hechos para JL y Gladiator"
-        ],
-        "codigo": "HL-JL-R9IN-G1",
-        "precio": 3299,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fd_9g1.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros 9\" con aro de luz G3",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Faros LED de 9\" premium con aro de luz.",
-        "ventajas": [
-          "Gama alta",
-          "Hechos para JL y Gladiator"
-        ],
-        "codigo": "HL-JL-R9IN-G3",
-        "precio": 3599,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/fd_9g3.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros LED rectangulares 5x7 Insight (par)",
-        "compatible": "Cherokee XJ 1984-2001, Wrangler YJ 1987-1995 y Comanche MJ 1986-1992",
-        "descripcion": "Faros principales rectangulares en LED, reemplazo directo del faro de fábrica (H6054). También por unidad: S/ 345.",
-        "ventajas": [
-          "Mucha más luz que los halógenos",
-          "Plug and play con el conector original"
-        ],
-        "codigo": "HL-5X7-G3-K",
-        "precio": 689,
-        "modelos": [
-          "xj"
-        ],
-        "foto": "img/x57g3.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros LED rectangulares 5x7 con alta y baja (par)",
-        "compatible": "Cherokee XJ 1984-2001, Wrangler YJ 1987-1995 y Comanche MJ 1986-1992",
-        "descripcion": "Faros LED tipo proyector con luz alta y baja, reemplazo directo del faro de fábrica (H6054).",
-        "ventajas": [
-          "Diseño tipo proyector",
-          "Certificación DOT/SAE"
-        ],
-        "codigo": "HL-5X7-G4",
-        "precio": 889,
-        "modelos": [
-          "xj"
-        ],
-        "foto": "img/x57g4.jpg",
-        "agotado": true
       }
     ]
   },
@@ -1611,126 +1736,92 @@ const CATALOGO = [
     ]
   },
   {
-    "categoria": "Luces auxiliares (uso fuera de carretera)",
+    "categoria": "Accesorios",
     "productos": [
       {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Kit soporte Mamba + pods LED 2\"",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Soporte completo para el marco del parabrisas con bases para pods, más un par de pods LED de 2\". Se atornilla en los puntos originales, sin perforar. Uso fuera de carretera.",
+        "cat": "Accesorios",
+        "nombre": "Seguros de capó de aluminio",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas) y Wrangler JL 2018 en adelante",
+        "descripcion": "Los dos ganchos que cierran el capó. Reemplazan los de goma de fábrica, que se rajan con el tiempo.",
         "ventajas": [
-          "Todo listo para instalar",
-          "Sin perforar, con espuma que protege la pintura"
+          "Más resistentes",
+          "Se atornillan fácil"
         ],
-        "codigo": "WLB-0008-G1 + WL-10RS-2PC",
-        "precio": 1049,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/mamba.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Soporte Mamba para barra LED 50\" y pods",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Soporte que va a lo largo del marco del parabrisas, para una barra de 50\" arriba y pods de 2\" a 6\" en las esquinas. Se atornilla sin perforar. Uso fuera de carretera.",
-        "ventajas": [
-          "Barra arriba, pods abajo o ambos",
-          "Sin perforar, con espuma que protege la pintura"
-        ],
-        "codigo": "WLB-0008-G1",
-        "precio": 799,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/mamba.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Pods LED 2\" spot (par)",
-        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
-        "descripcion": "Par de luces auxiliares LED de 2\" y 10W, haz concentrado (spot). Uso fuera de carretera.",
-        "ventajas": [
-          "Chicos y potentes",
-          "Ideales para las esquinas del parabrisas"
-        ],
-        "codigo": "WL-10RS-2PC",
-        "precio": 239,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/pod2.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Pods LED 2\" spot + kit de montaje",
-        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
-        "descripcion": "Par de pods LED de 2\" con kit de pernos de montaje. Uso fuera de carretera.",
-        "ventajas": [
-          "Todo para instalar",
-          "Precio de entrada"
-        ],
-        "codigo": "WL-10RS-2PC + WLB-0013-#5",
-        "precio": 349,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/pod2.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Pods LED 3\" 25W CREE (par)",
-        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
-        "descripcion": "Par de luces auxiliares LED CREE de 3\", haz concentrado, luz blanca. Uso fuera de carretera.",
-        "ventajas": [
-          "Más alcance que los de 2\"",
-          "LED CREE"
-        ],
-        "codigo": "WL-25CS-2PC",
-        "precio": 449,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/pod3.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Pods LED 4\" 50W (par)",
-        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
-        "descripcion": "Par de luces auxiliares LED de 4\" y 50W, haz concentrado, en blanco o amarillo. Uso fuera de carretera.",
-        "ventajas": [
-          "Máxima potencia en pods",
-          "Blanco o amarillo"
-        ],
-        "codigo": "WL-50CS-2PC",
-        "precio": 649,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/pod4.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Barra LED 50\" ámbar Astro",
-        "compatible": "Wrangler JK con soporte Mamba. Universal con el soporte adecuado",
-        "descripcion": "Barra LED ultra delgada de 50\", luz ámbar de haz abierto (flood), ideal para polvo y neblina. Uso fuera de carretera.",
-        "ventajas": [
-          "Luz ámbar, mejor con polvo y neblina",
-          "Diseño ultra delgado"
-        ],
-        "codigo": "WL-C6-240SS-CR-AMBER",
-        "precio": 1199,
+        "codigo": "ZS-0104",
+        "precio": 269,
         "modelos": [
           "jk",
+          "jl"
+        ],
+        "foto": "img/latch.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Accesorios",
+        "nombre": "Tapa de gasolina Bedrock",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Tapa exterior del tanque de gasolina, robusta y con mejor diseño.",
+        "ventajas": [
+          "Detalle que destaca",
+          "Fácil de instalar"
+        ],
+        "codigo": "ZS-0133",
+        "precio": 349,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/bedrock.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Accesorios",
+        "nombre": "Apoyapiés delanteros",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Soportes para apoyar el pie al manejar sin puertas.",
+        "ventajas": [
+          "Más comodidad sin puertas",
+          "Acero resistente"
+        ],
+        "codigo": "ZS-0029-G2",
+        "precio": 165,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/peg.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Accesorios",
+        "nombre": "Protectores para stops",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), con stops de fábrica",
+        "descripcion": "Rejillas que protegen los stops traseros de golpes en el campo.",
+        "ventajas": [
+          "Protegen en trochas",
+          "Look más rudo"
+        ],
+        "codigo": "WLB-0015-R-MATTE",
+        "precio": 205,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/cover.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Accesorios",
+        "nombre": "Decodificador para focos LED (CANBUS)",
+        "compatible": "Universal: cualquier Jeep o carro con focos LED tipo 9005 (consultar)",
+        "descripcion": "Evita que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
+        "ventajas": [
+          "Elimina parpadeos",
+          "Complemento ideal para focos LED"
+        ],
+        "codigo": "HL-CANBUS",
+        "precio": 145,
+        "modelos": [
           "uni"
         ],
-        "foto": "img/bar50.jpg",
+        "foto": "img/canbus.jpg",
         "agotado": false
       }
     ]
@@ -1911,97 +2002,6 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/tb_g7.jpg",
-        "agotado": false
-      }
-    ]
-  },
-  {
-    "categoria": "Accesorios",
-    "productos": [
-      {
-        "cat": "Accesorios",
-        "nombre": "Seguros de capó de aluminio",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas) y Wrangler JL 2018 en adelante",
-        "descripcion": "Los dos ganchos que cierran el capó. Reemplazan los de goma de fábrica, que se rajan con el tiempo.",
-        "ventajas": [
-          "Más resistentes",
-          "Se atornillan fácil"
-        ],
-        "codigo": "ZS-0104",
-        "precio": 269,
-        "modelos": [
-          "jk",
-          "jl"
-        ],
-        "foto": "img/latch.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Accesorios",
-        "nombre": "Tapa de gasolina Bedrock",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Tapa exterior del tanque de gasolina, robusta y con mejor diseño.",
-        "ventajas": [
-          "Detalle que destaca",
-          "Fácil de instalar"
-        ],
-        "codigo": "ZS-0133",
-        "precio": 349,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/bedrock.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Accesorios",
-        "nombre": "Apoyapiés delanteros",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Soportes para apoyar el pie al manejar sin puertas.",
-        "ventajas": [
-          "Más comodidad sin puertas",
-          "Acero resistente"
-        ],
-        "codigo": "ZS-0029-G2",
-        "precio": 165,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/peg.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Accesorios",
-        "nombre": "Protectores para stops",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), con stops de fábrica",
-        "descripcion": "Rejillas que protegen los stops traseros de golpes en el campo.",
-        "ventajas": [
-          "Protegen en trochas",
-          "Look más rudo"
-        ],
-        "codigo": "WLB-0015-R-MATTE",
-        "precio": 205,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/cover.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Accesorios",
-        "nombre": "Decodificador para focos LED (CANBUS)",
-        "compatible": "Universal: cualquier Jeep o carro con focos LED tipo 9005 (consultar)",
-        "descripcion": "Evita que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
-        "ventajas": [
-          "Elimina parpadeos",
-          "Complemento ideal para focos LED"
-        ],
-        "codigo": "HL-CANBUS",
-        "precio": 145,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/canbus.jpg",
         "agotado": false
       }
     ]

@@ -14,17 +14,44 @@ function renderFilters(){
   nav.innerHTML=FILTERS.map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${k===current}">${l}</button>`).join("");
   nav.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{current=b.dataset.k;renderFilters();render();window.scrollTo({top:document.getElementById("list").offsetTop-120,behavior:"smooth"});});
 }
+const GROUPS=[["Luces",["Faros delanteros","Neblineros","Luces de freno","Stops traseros","Luz para la llanta","Luces auxiliares"]],["Exterior",["Máscaras","Accesorios"]],["Otros",["Audio y otros","Otros autos"]]];
+function groupOf(name){for(const [g,cs] of GROUPS){if(cs.some(c=>name.startsWith(c))) return g;}return "";}
+function shortName(name){return name.replace(/ \(.*\)$/,"");}
 function render(){
-  let html="",count=0;
-  CATALOGO.forEach(sec=>{
+  let html="",count=0,last=null;
+  CATALOGO.forEach((sec,si)=>{
     const items=sec.productos.filter(p=>current==="all"||p.modelos.includes(current));
     if(!items.length) return;
     count+=items.length;
-    html+=`<h2 class="cat">${esc(sec.categoria)}<small>${items.length} ${items.length===1?"producto":"productos"}</small></h2><div class="grid">`+items.map(card).join("")+`</div>`;
+    const g=groupOf(sec.categoria);
+    if(g&&g!==last){html+=`<h2 class="group">${g}</h2>`;last=g;}
+    html+=`<h3 class="cat" id="cat-${si}">${esc(sec.categoria)}<small>${items.length} ${items.length===1?"producto":"productos"}</small></h3><div class="grid">`+items.map(card).join("")+`</div>`;
   });
   document.getElementById("list").innerHTML=count?html:`<p class="empty">No hay productos para este modelo todavía.</p>`;
   document.querySelectorAll(".card").forEach(c=>c.onclick=()=>open(+c.dataset.i));
+  renderDrawer();
 }
+function renderDrawer(){
+  let html="",last=null;
+  CATALOGO.forEach((sec,si)=>{
+    const g=groupOf(sec.categoria)||"Destacado";
+    if(g!==last){html+=`<div class="drawer-group">${g}</div>`;last=g;}
+    const n=sec.productos.filter(p=>current==="all"||p.modelos.includes(current)).length;
+    html+=`<button class="drawer-link" data-cat="${si}"><span>${esc(shortName(sec.categoria))}</span><small>${n}</small></button>`;
+  });
+  const box=document.getElementById("drawerList"); box.innerHTML=html;
+  box.querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{
+    let el=document.getElementById("cat-"+b.dataset.cat);
+    if(!el){current="all";renderFilters();render();el=document.getElementById("cat-"+b.dataset.cat);}
+    closeDrawer(); if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);
+  });
+}
+const drawerEl=document.getElementById("drawer"),overlayEl=document.getElementById("overlay"),menuBtn=document.getElementById("menuBtn");
+function openDrawer(){drawerEl.classList.add("open");drawerEl.setAttribute("aria-hidden","false");overlayEl.hidden=false;menuBtn.setAttribute("aria-expanded","true");document.getElementById("drawerClose").focus();}
+function closeDrawer(){drawerEl.classList.remove("open");drawerEl.setAttribute("aria-hidden","true");overlayEl.hidden=true;menuBtn.setAttribute("aria-expanded","false");}
+menuBtn.onclick=openDrawer; overlayEl.onclick=closeDrawer; document.getElementById("drawerClose").onclick=closeDrawer;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&drawerEl.classList.contains("open")) closeDrawer();});
+document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault();closeDrawer();const el=document.getElementById(a.dataset.go);if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);});
 function card(p){
   const i=ALL.indexOf(p), img=p.foto;
   return `<button class="card" data-i="${i}" aria-label="${esc(p.nombre)}, ${soles(p.precio)}">
