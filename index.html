@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jeepeto Parts · Accesorios Xprite para Jeep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark"></span><b>Jeepeto Parts</b><small class="sub">Accesorios Xprite para Jeep</small></div>
+  <nav class="filters" id="filters" aria-label="Filtrar por modelo"></nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Luces y accesorios <span>originales</span> para tu Jeep</h1>
+    <p>Importados de la tienda oficial de Xprite en EE.UU. Elige tu modelo arriba y toca un producto para ver los detalles.</p>
+    <ul class="facts"><li>Originales Xprite</li><li>A pedido · 2 a 3 semanas</li><li>Precios en soles</li><li>Instalación desde S/ 80</li><li>Miraflores y alrededores</li><li>Repuestos Mopar a pedido</li></ul>
+  </section>
+
+  <section class="mopar" id="mopar">
+    <div>
+      <span class="ml">También a pedido</span>
+      <h2>Repuestos 100% originales Mopar</h2>
+      <p>Traemos cualquier pieza original Mopar para tu Jeep. Solo envíanos el <b>código de la pieza</b> (número de parte Mopar) y te pasamos la cotización.</p>
+      <p class="tip">¿No tienes el código? Suele venir grabado o en una etiqueta en la pieza original. También puedes mandarnos el VIN de tu Jeep y una foto de la pieza.</p>
+    </div>
+    <a class="wa" id="moparbtn" href="https://wa.me/51946564236" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+  </section>
+
+  <div id="list"></div>
+
+  <section class="why">
+    <h2>¿Por qué Xprite?</h2>
+    <div class="wg">
+      <div><b>Marca de California</b><span>Con base en Chino, California, desde 2014. Especialistas en luces LED y accesorios off-road.</span></div>
+      <div><b>Hecho a medida</b><span>Diseñado para cada modelo: calza sin modificar y la mayoría se conecta directo.</span></div>
+      <div><b>Garantía de 1 año</b><span>Cubre defectos de fabricación en luces LED y accesorios.</span></div>
+      <div><b>Calidad a buen precio</b><span>Mejor que los genéricos, a una fracción de las marcas premium.</span></div>
+    </div>
+  </section>
+
+  <section class="buy" id="comprar">
+    <h2>Cómo comprar</h2>
+    <ol class="steps">
+      <li><b>Escríbenos por WhatsApp</b><span>Toca “Lo quiero” en el producto y te llega el mensaje listo.</span></li>
+      <li><b>Confirmamos tu Jeep</b><span>Revisamos que el producto le quede a tu modelo y año.</span></li>
+      <li><b>Separas con el 50%</b><span>El resto lo pagas cuando el producto llega.</span></li>
+      <li><b>Entrega o instalación</b><span>Te lo entregamos o lo instalamos en Miraflores y alrededores.</span></li>
+    </ol>
+    <div class="info">
+      <div><b>Pagos</b><span>Yape, Plin y transferencia</span></div>
+      <div><b>Adelanto</b><span>50% para hacer el pedido</span></div>
+      <div><b>Entrega</b><span>Miraflores y zonas aledañas</span></div>
+      <div><b>Instalación</b><span>Desde S/ 80, según el producto (consultar)</span></div>
+      <div><b>Tiempo</b><span>2 a 3 semanas aprox.</span></div>
+    </div>
+    <a class="wa" href="https://wa.me/51946564236" target="_blank" rel="noopener">Escríbenos al WhatsApp +51 946 564 236</a>
+  </section>
+</main>
+
+<footer class="wrap"><b>Jeepeto Parts</b> · WhatsApp: +51 946 564 236 · Miraflores, Lima.<br>Precios en soles, referenciales y sujetos a cambio. Verifica el modelo y año de tu Jeep antes de pedir. Las luces de colores (RGB) son para uso fuera de carretera o en eventos.</footer>
+
+<dialog id="dlg" aria-labelledby="dtitle">
+  <button class="close" id="dclose" aria-label="Cerrar">✕</button>
+  <div id="dbody"></div>
+</dialog>
+<a class="fab" href="https://wa.me/51946564236" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/productos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
