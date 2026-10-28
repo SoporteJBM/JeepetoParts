@@ -282,6 +282,60 @@ const CATALOGO = [
         ],
         "foto": "img/ag_g3_smk.jpg",
         "agotado": true
+      },
+      {
+        "cat": "Luces de freno y direccionales",
+        "nombre": "Direccionales LED JL, 6 pines",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Direccionales y luces de posición LED para los guardafangos del JL, conector de 6 pines (halógeno). No sirve para Sport, Willys ni guardafangos de una pieza.",
+        "ventajas": [
+          "Reemplazo directo",
+          "Look moderno"
+        ],
+        "codigo": "TS-JL-SMK-G1",
+        "precio": 799,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_tsjl.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Luces de freno y direccionales",
+        "nombre": "Direccionales LED JL, 5 pines",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Direccionales y luces de posición LED para los guardafangos del JL, conector de 5 pines (LED de fábrica). No sirve para Sport, Willys ni guardafangos de una pieza.",
+        "ventajas": [
+          "Reemplazo directo",
+          "Look moderno"
+        ],
+        "codigo": "TS-JL-SMK-G2",
+        "precio": 699,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_tsjl.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Luces de freno y direccionales",
+        "nombre": "Luces LED de guardafango JL",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Luces LED laterales para los guardafangos del Wrangler JL y Gladiator.",
+        "ventajas": [
+          "Más visibles de lado",
+          "Look moderno"
+        ],
+        "codigo": "ST-JL-G1",
+        "precio": 649,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_stjl.jpg",
+        "agotado": true
       }
     ]
   },
@@ -420,6 +474,144 @@ const CATALOGO = [
         ],
         "foto": "img/fogg2.jpg",
         "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" 60W, blancos",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" y 60W, luz blanca.",
+        "ventajas": [
+          "Mucha más luz",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JK-G1 Blanco",
+        "precio": 359,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fljkg1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" 60W, ámbar",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" y 60W, luz ámbar para neblina y polvo.",
+        "ventajas": [
+          "Ideal para campo",
+          "Plug and play"
+        ],
+        "codigo": "JL-FL-JK-G1 Ámbar",
+        "precio": 379,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fljkg1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" con aro blanco (AL036)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" con aro blanco de luz de día.",
+        "ventajas": [
+          "Look moderno",
+          "Plug and play"
+        ],
+        "codigo": "AL036K1002",
+        "precio": 349,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_al1002.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" básicos (AL036)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" sencillos.",
+        "ventajas": [
+          "Precio de entrada",
+          "Plug and play"
+        ],
+        "codigo": "AL036K1001",
+        "precio": 299,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_al1001.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros 4\" con aro de color",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" con aro de color: elige blanco, amarillo, rojo o azul (verde agotado). Los aros de color son para uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Varios colores",
+          "Plug and play"
+        ],
+        "codigo": "FL-DRL-G2",
+        "precio": 389,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fldrl.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros 4\" con aro RGB",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Neblineros LED de 4\" con aro de colores, control por app. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Control por app",
+          "Muchos colores"
+        ],
+        "codigo": "FL-DRL-G2-RGB",
+        "precio": 519,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_fldrlrgb.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" con aro, amarillos",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Neblineros LED de 4\" con aro de luz, luz amarilla para neblina y polvo.",
+        "ventajas": [
+          "Ideal para campo",
+          "Tres modelos de Jeep"
+        ],
+        "codigo": "JL-FL-JL-G2 Amarillo",
+        "precio": 389,
+        "modelos": [
+          "jk",
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fogg2.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Neblineros LED 4\"",
+        "nombre": "Neblineros LED 4\" blanco o ámbar (AL-FL)",
+        "compatible": "Universal: consultar compatibilidad (Honda 2016-2025 y algunos Jeep)",
+        "descripcion": "Neblineros LED de 4\" en luz blanca o ámbar. Consulta si le quedan a tu vehículo antes de pedir.",
+        "ventajas": [
+          "Blanco o ámbar",
+          "Alta potencia"
+        ],
+        "codigo": "AL-FL-R4IN-G1",
+        "precio": 629,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/fd_alfl.jpg",
+        "agotado": false
       }
     ]
   },
@@ -496,20 +688,311 @@ const CATALOGO = [
       },
       {
         "cat": "Stops traseros LED",
-        "nombre": "Stops LED Savage",
+        "nombre": "Stops LED Bold, transparentes",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Stops de diseño moderno con luz en forma de S.",
+        "descripcion": "Las dos luces traseras LED Bold Series, con mica transparente. Freno, direccional y retroceso.",
+        "ventajas": [
+          "Cambia el look de atrás",
+          "Plug and play"
+        ],
+        "codigo": "TL-JK-G1-CLR",
+        "precio": 499,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_bold_clr.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Bold, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Las dos luces traseras LED Bold Series, con mica ahumada.",
+        "ventajas": [
+          "Look oscuro",
+          "Plug and play"
+        ],
+        "codigo": "TL-JK-G1-SMK",
+        "precio": 549,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_bold_smk.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Defender, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Las dos luces traseras LED Defender, con mica transparente.",
+        "ventajas": [
+          "LED completo",
+          "Plug and play"
+        ],
+        "codigo": "TL-JK-G2-CLR",
+        "precio": 579,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_def_clr.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Defender, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Las dos luces traseras LED Defender, con mica ahumada.",
+        "ventajas": [
+          "Look oscuro",
+          "Plug and play"
+        ],
+        "codigo": "TL-JK-G2-SMK",
+        "precio": 579,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_def_smk.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Rival, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops LED de diseño premium Rival Series, mica transparente.",
+        "ventajas": [
+          "Diseño premium",
+          "LED completo"
+        ],
+        "codigo": "TL-JK-G4-CLR",
+        "precio": 1749,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_rival_clr.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Rival, rojos",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops LED de diseño premium Rival Series, mica roja.",
+        "ventajas": [
+          "Diseño premium",
+          "Look original rojo"
+        ],
+        "codigo": "TL-JK-G4-RED",
+        "precio": 1749,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_rival_red.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Rival, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops LED de diseño premium Rival Series, mica ahumada.",
+        "ventajas": [
+          "Diseño premium",
+          "Look oscuro"
+        ],
+        "codigo": "TL-JK-G4-SMK",
+        "precio": 1749,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_rival_smk.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Linear, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops LED Linear Series con líneas de luz, mica transparente.",
+        "ventajas": [
+          "Diseño de líneas",
+          "LED completo"
+        ],
+        "codigo": "TL-JK-G6-CLR",
+        "precio": 749,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_linear.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Linear, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops LED Linear Series con líneas de luz, mica ahumada. Foto referencial.",
+        "ventajas": [
+          "Diseño de líneas",
+          "Look oscuro"
+        ],
+        "codigo": "TL-JK-G6-SMK",
+        "precio": 749,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_linear.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Inspire, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops LED Inspire Series, mica transparente.",
+        "ventajas": [
+          "Diseño moderno",
+          "LED completo"
+        ],
+        "codigo": "TL-JK-G9-CLR",
+        "precio": 699,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_inspire_clr.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Inspire, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops LED Inspire Series, mica ahumada.",
+        "ventajas": [
+          "Diseño moderno",
+          "Look oscuro"
+        ],
+        "codigo": "TL-JK-G9-SMK",
+        "precio": 759,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_inspire_smk.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Savage, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops de diseño moderno con luz en forma de S, mica transparente. Foto referencial (la tienda muestra un JL).",
         "ventajas": [
           "El diseño más vistoso",
           "LED completo"
         ],
-        "codigo": "XP-JL-TL-JK-G12",
+        "codigo": "XP-JL-TL-JK-G12-CLR",
         "precio": 1249,
         "modelos": [
           "jk"
         ],
-        "foto": "img/savage.jpg",
+        "foto": "img/tl_savjk_clr.jpg",
         "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Savage, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Stops de diseño moderno con luz en forma de S, mica ahumada.",
+        "ventajas": [
+          "El diseño más vistoso",
+          "Look oscuro"
+        ],
+        "codigo": "XP-JL-TL-JK-G12-SMK",
+        "precio": 1249,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_savjk_smk.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Infinity, transparentes",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Stops LED Infinity para Wrangler JL y Gladiator, mica transparente.",
+        "ventajas": [
+          "Hecho para JL y Gladiator",
+          "LED completo"
+        ],
+        "codigo": "TL-JL-CLR-G1",
+        "precio": 1099,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/tl_infinity.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Infinity, ahumados",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Stops LED Infinity para Wrangler JL y Gladiator, mica ahumada. Foto referencial.",
+        "ventajas": [
+          "Hecho para JL y Gladiator",
+          "Look oscuro"
+        ],
+        "codigo": "TL-JL-SMK-G2",
+        "precio": 1099,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/tl_infinity.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Savage JL, transparentes",
+        "compatible": "Wrangler JL 2018 en adelante",
+        "descripcion": "Stops con luz en forma de S para Wrangler JL, mica transparente.",
+        "ventajas": [
+          "El diseño más vistoso",
+          "LED completo"
+        ],
+        "codigo": "JL-TL-JL-G12-CLR",
+        "precio": 1249,
+        "modelos": [
+          "jl"
+        ],
+        "foto": "img/tl_savjl_clr.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Savage JL, ahumados",
+        "compatible": "Wrangler JL 2018 en adelante",
+        "descripcion": "Stops con luz en forma de S para Wrangler JL, mica ahumada.",
+        "ventajas": [
+          "El diseño más vistoso",
+          "Look oscuro"
+        ],
+        "codigo": "JL-TL-JL-G12-SMK",
+        "precio": 1049,
+        "modelos": [
+          "jl"
+        ],
+        "foto": "img/tl_savjl_smk.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED ahumados Gladiator",
+        "compatible": "Gladiator JT 2020 en adelante",
+        "descripcion": "Stops LED con luz en forma de S para Gladiator JT, mica ahumada.",
+        "ventajas": [
+          "Hecho para Gladiator",
+          "Look oscuro"
+        ],
+        "codigo": "TL-JT-G1-SMK",
+        "precio": 1249,
+        "modelos": [
+          "jt"
+        ],
+        "foto": "img/tl_jt_smk.jpg",
+        "agotado": true
       }
     ]
   },
@@ -582,6 +1065,282 @@ const CATALOGO = [
         ],
         "foto": "img/envision.jpg",
         "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros LED 7\" G14",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas). TJ 1997-2006: consultar",
+        "descripcion": "Faros principales redondos LED de 7\", completos.",
+        "ventajas": [
+          "Mucha más luz de noche",
+          "Larga duración"
+        ],
+        "codigo": "HL-R7IN-G14",
+        "precio": 949,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_g14.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con halo, luz de día y direccional",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro de luz de día que también hace de direccional.",
+        "ventajas": [
+          "Halo con direccional",
+          "Look moderno"
+        ],
+        "codigo": "JL-HL-R7IN-G15",
+        "precio": 899,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_g15.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de luz blanco",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro blanco alrededor.",
+        "ventajas": [
+          "Look moderno",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-90W-G2 Blanco",
+        "precio": 799,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_90w.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de luz rojo",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro rojo alrededor. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Look llamativo",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-90W-G2 Rojo",
+        "precio": 749,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_90w.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" con aro de luz verde",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro verde alrededor. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Look llamativo",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-90W-G2 Verde",
+        "precio": 829,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_90w.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 7\" RGB con aro de persecución",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" con aro de colores con efecto de movimiento, control por app. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Efecto de persecución",
+          "Control por app"
+        ],
+        "codigo": "XP-JL-HL-JK-90W-G3-CHASE",
+        "precio": 1099,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_chase.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro azul",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro azul. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Ahorras vs. por separado"
+        ],
+        "codigo": "HL-90W-G2-B + FL-DRL-G2",
+        "precio": 1149,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_br.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro rojo",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro rojo. Uso fuera de carretera o en eventos. Foto referencial.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Ahorras vs. por separado"
+        ],
+        "codigo": "HL-90W-G2-R + FL-DRL-G2",
+        "precio": 1099,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_br.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro blanco",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro blanco.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Look moderno"
+        ],
+        "codigo": "HL-90W-G2-W + FL-DRL-G2-W",
+        "precio": 1099,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_w.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\", aro verde",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro verde. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Look llamativo"
+        ],
+        "codigo": "HL-90W-G2-G + FL-DRL-G2-G",
+        "precio": 1149,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_combo_g.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros 7\" + neblineros 4\" RGB",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros LED de 7\" y neblineros de 4\" con aro de colores, control por app. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Frente completo en un combo",
+          "Control por app"
+        ],
+        "codigo": "HL-90W-G2-RGB-KIT",
+        "precio": 1299,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_rgbkit.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Combo faros + neblineros RGB de persecución",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Faros de 7\" y neblineros de 4\" con aro de colores con efecto de movimiento. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Efecto de persecución",
+          "Control por app"
+        ],
+        "codigo": "XP-JL-HL-JK-90W-G3-CHASE-KIT",
+        "precio": 1299,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_chasekit.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Kit faros 9\" RGB + neblineros",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" con aro de colores más neblineros, control por app. Producto grande: incluye impuestos de importación.",
+        "ventajas": [
+          "Frente completo para JL",
+          "Control por app"
+        ],
+        "codigo": "HL-JL-R9IN-G6-KIT",
+        "precio": 2799,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g6kit.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 9\" con aro de luz G5",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" con aro de luz de día.",
+        "ventajas": [
+          "Hechos para JL y Gladiator",
+          "LED de alta potencia"
+        ],
+        "codigo": "HL-JL-R9IN-G5",
+        "precio": 1899,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g5.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 9\" con luz de día G1",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" premium con luz de día.",
+        "ventajas": [
+          "Gama alta",
+          "Hechos para JL y Gladiator"
+        ],
+        "codigo": "HL-JL-R9IN-G1",
+        "precio": 3299,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g1.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 9\" con aro de luz G3",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" premium con aro de luz.",
+        "ventajas": [
+          "Gama alta",
+          "Hechos para JL y Gladiator"
+        ],
+        "codigo": "HL-JL-R9IN-G3",
+        "precio": 3599,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_9g3.jpg",
+        "agotado": true
       },
       {
         "cat": "Faros delanteros",
