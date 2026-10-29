@@ -178,6 +178,13 @@ h2.big{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:800;font-stretch:72%;line-
 @media (max-width:640px){.feat-row{grid-auto-columns:78%}}
 .subnav a:first-child{margin-left:auto}
 .subnav a:last-child{margin-right:auto}
+.brand .logo{height:34px;width:auto;display:block}
+.drawer-head .logo{height:30px;width:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero-logo{display:block;height:clamp(110px,16vw,180px);width:auto;margin:0 0 10px;filter:drop-shadow(0 4px 18px rgba(0,0,0,.6))}
+.foot-logo{height:120px;width:auto;margin-bottom:10px}
+.drawer-head{background:var(--head);margin-top:calc(-1 * (env(safe-area-inset-top,0px) + 6px));padding-top:calc(env(safe-area-inset-top,0px) + 16px)}
+.drawer-head .drawer-close{color:#fff}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.9rem;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;text-align:center;z-index:20}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 @media (prefers-reduced-motion:reduce){.toast,.card{transition:none}}
