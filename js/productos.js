@@ -3,25 +3,102 @@
 // Para una promoción, agrega "antes" con el precio normal (debe ser real).
 const CATALOGO = [
   {
-    "categoria": "Promociones (válidas hasta el 31/12/2026)",
+    "categoria": "Promociones",
     "productos": [
       {
-        "cat": "Promociones (válidas hasta el 31/12/2026)",
-        "nombre": "Kit JK básico: tercera luz + direccionales con aro + marcadores",
+        "cat": "Promociones",
+        "nombre": "Combo stops LED Bold + tercera luz de freno, transparentes",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Incluye la tercera luz de freno LED ahumada y el combo de direccionales LED con aro de luz de día más los marcadores de guardafango (mica transparente). Por separado cuestan S/ 444.",
+        "descripcion": "Las dos luces traseras LED Bold Series (mica transparente) más la tercera luz de freno LED ahumada. Las 3 luces de atrás en un solo pedido. Foto referencial.",
         "ventajas": [
-          "Ahorras S/ 45",
-          "Todo plug and play"
+          "Las 3 luces traseras en un combo",
+          "Plug and play"
         ],
-        "codigo": "KIT-JK-1",
-        "precio": 399,
+        "codigo": "TL-JK-G1-CLR + BL-JK-G1-SMK",
+        "precio": 629,
         "modelos": [
           "jk"
         ],
-        "foto": "img/kit_basico.jpg",
+        "foto": "img/combo3_clr.jpg",
         "agotado": false,
-        "antes": 444
+        "antes": 664,
+        "oferta": true
+      },
+      {
+        "cat": "Promociones",
+        "nombre": "Combo direccionales con aro de luz + marcadores, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Direccionales LED con aro blanco de luz de día más los marcadores LED del guardafango. Todo en mica transparente.",
+        "ventajas": [
+          "Incluye marcadores de guardafango",
+          "Plug and play"
+        ],
+        "codigo": "TS-JK-DRL-G2-CLR + SL-JK-G1-CLR",
+        "precio": 329,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/ts_combo_halo.jpg",
+        "agotado": false,
+        "antes": 384,
+        "oferta": true
+      },
+      {
+        "cat": "Promociones",
+        "nombre": "Combo direccionales con aro de luz + marcadores, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Direccionales LED con aro de luz de día más los marcadores LED del guardafango, en mica ahumada.",
+        "ventajas": [
+          "Incluye marcadores de guardafango",
+          "Look oscuro"
+        ],
+        "codigo": "TS-JK-DRL-G2-SMK + SL-JK-G1-SMK",
+        "precio": 329,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/ag_combo_halo_smk.jpg",
+        "agotado": true,
+        "antes": 384,
+        "oferta": true
+      },
+      {
+        "cat": "Promociones",
+        "nombre": "Combo direccionales sin aro + marcadores, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Direccionales LED ámbar sin aro de luz más los marcadores LED del guardafango, en mica transparente.",
+        "ventajas": [
+          "Incluye marcadores de guardafango",
+          "Look limpio, sin aro"
+        ],
+        "codigo": "TS-JK-G2-CLR + SL-JK-G1-CLR",
+        "precio": 339,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/ts_combo_sinhalo.jpg",
+        "agotado": false,
+        "antes": 354,
+        "oferta": true
+      },
+      {
+        "cat": "Promociones",
+        "nombre": "Combo direccionales sin aro + marcadores, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Direccionales LED sin aro de luz más los marcadores LED del guardafango, en mica ahumada.",
+        "ventajas": [
+          "Incluye marcadores de guardafango",
+          "Look oscuro"
+        ],
+        "codigo": "TS-JK-G2-SMK + SL-JK-G1-SMK",
+        "precio": 339,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/ag_combo_sin_smk.jpg",
+        "agotado": true,
+        "antes": 358,
+        "oferta": true
       }
     ]
   },
@@ -207,7 +284,7 @@ const CATALOGO = [
           "Ahorras vs. por separado"
         ],
         "codigo": "HL-90W-G2-B + FL-DRL-G2",
-        "precio": 1149,
+        "precio": 1079,
         "modelos": [
           "jk"
         ],
@@ -716,74 +793,6 @@ const CATALOGO = [
       },
       {
         "cat": "Luces de freno y direccionales",
-        "nombre": "Combo direccionales con aro de luz + marcadores, transparentes",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Direccionales LED con aro blanco de luz de día más los marcadores LED del guardafango. Todo en mica transparente.",
-        "ventajas": [
-          "Incluye marcadores de guardafango",
-          "Plug and play"
-        ],
-        "codigo": "TS-JK-DRL-G2-CLR + SL-JK-G1-CLR",
-        "precio": 279,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/ts_combo_halo.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces de freno y direccionales",
-        "nombre": "Combo direccionales con aro de luz + marcadores, ahumados",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Direccionales LED con aro de luz de día más los marcadores LED del guardafango, en mica ahumada.",
-        "ventajas": [
-          "Incluye marcadores de guardafango",
-          "Look oscuro"
-        ],
-        "codigo": "TS-JK-DRL-G2-SMK + SL-JK-G1-SMK",
-        "precio": 279,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/ag_combo_halo_smk.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Luces de freno y direccionales",
-        "nombre": "Combo direccionales sin aro + marcadores, transparentes",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Direccionales LED ámbar sin aro de luz más los marcadores LED del guardafango, en mica transparente.",
-        "ventajas": [
-          "Incluye marcadores de guardafango",
-          "Look limpio, sin aro"
-        ],
-        "codigo": "TS-JK-G2-CLR + SL-JK-G1-CLR",
-        "precio": 369,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/ts_combo_sinhalo.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces de freno y direccionales",
-        "nombre": "Combo direccionales sin aro + marcadores, ahumados",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Direccionales LED sin aro de luz más los marcadores LED del guardafango, en mica ahumada.",
-        "ventajas": [
-          "Incluye marcadores de guardafango",
-          "Look oscuro"
-        ],
-        "codigo": "TS-JK-G2-SMK + SL-JK-G1-SMK",
-        "precio": 359,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/ag_combo_sin_smk.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Luces de freno y direccionales",
         "nombre": "Direccionales LED sin aro, transparentes",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Direccionales LED ámbar del guardafango delantero, sin aro de luz de día.",
@@ -945,23 +954,6 @@ const CATALOGO = [
     "productos": [
       {
         "cat": "Stops traseros LED",
-        "nombre": "Combo stops LED Bold + tercera luz de freno, transparentes",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Las dos luces traseras LED Bold Series (mica transparente) más la tercera luz de freno LED ahumada. Las 3 luces de atrás en un solo pedido. Foto referencial.",
-        "ventajas": [
-          "Las 3 luces traseras en un combo",
-          "Plug and play"
-        ],
-        "codigo": "TL-JK-G1-CLR + BL-JK-G1-SMK",
-        "precio": 899,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/combo3_clr.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Stops traseros LED",
         "nombre": "Combo stops LED Bold + tercera luz de freno, ahumados",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Las dos luces traseras LED Bold Series y la tercera luz de freno, todo en mica ahumada.",
@@ -970,7 +962,7 @@ const CATALOGO = [
           "Look oscuro"
         ],
         "codigo": "TL-JK-G1-SMK + BL-JK-G1-SMK",
-        "precio": 899,
+        "precio": 679,
         "modelos": [
           "jk"
         ],
@@ -1383,23 +1375,6 @@ const CATALOGO = [
     "productos": [
       {
         "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Kit soporte Mamba + pods LED 2\"",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Soporte completo para el marco del parabrisas con bases para pods, más un par de pods LED de 2\". Se atornilla en los puntos originales, sin perforar. Uso fuera de carretera.",
-        "ventajas": [
-          "Todo listo para instalar",
-          "Sin perforar, con espuma que protege la pintura"
-        ],
-        "codigo": "WLB-0008-G1 + WL-10RS-2PC",
-        "precio": 1049,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/mamba.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces auxiliares (uso fuera de carretera)",
         "nombre": "Soporte Mamba para barra LED 50\" y pods",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Soporte que va a lo largo del marco del parabrisas, para una barra de 50\" arriba y pods de 2\" a 6\" en las esquinas. Se atornilla sin perforar. Uso fuera de carretera.",
@@ -1434,19 +1409,19 @@ const CATALOGO = [
       },
       {
         "cat": "Luces auxiliares (uso fuera de carretera)",
-        "nombre": "Pods LED 2\" spot + kit de montaje",
-        "compatible": "Universal: se monta en soportes de parabrisas, parachoques o techo",
-        "descripcion": "Par de pods LED de 2\" con kit de pernos de montaje. Uso fuera de carretera.",
+        "nombre": "Tornillos Torx M8 extra largos (4)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Juego de 4 tornillos Torx M8 extra largos, para montar soportes de pods o luces en el JK.",
         "ventajas": [
-          "Todo para instalar",
-          "Precio de entrada"
+          "Acabado negro",
+          "Para montar soportes de luces"
         ],
-        "codigo": "WL-10RS-2PC + WLB-0013-#5",
-        "precio": 349,
+        "codigo": "WLB-0013-#5",
+        "precio": 109,
         "modelos": [
-          "uni"
+          "jk"
         ],
-        "foto": "img/pod2.jpg",
+        "foto": "img/torx.jpg",
         "agotado": false
       },
       {
@@ -1559,7 +1534,7 @@ const CATALOGO = [
       },
       {
         "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G1",
+        "nombre": "Parrilla con direccionales G1 (JK)",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Parrilla de dientes agresivos con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
         "ventajas": [
@@ -1576,7 +1551,7 @@ const CATALOGO = [
       },
       {
         "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G2",
+        "nombre": "Parrilla con direccionales G2 (JK)",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Parrilla con malla tipo panal y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
         "ventajas": [
@@ -1681,7 +1656,7 @@ const CATALOGO = [
       },
       {
         "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G1",
+        "nombre": "Parrilla con direccionales G1 (JL / Gladiator)",
         "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
         "descripcion": "Parrilla de dientes agresivos con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
         "ventajas": [
@@ -1699,7 +1674,7 @@ const CATALOGO = [
       },
       {
         "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G2",
+        "nombre": "Parrilla con direccionales G2 (JL / Gladiator)",
         "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
         "descripcion": "Parrilla con malla tipo panal y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
         "ventajas": [
@@ -1809,15 +1784,15 @@ const CATALOGO = [
       },
       {
         "cat": "Accesorios",
-        "nombre": "Decodificador para focos LED (CANBUS)",
+        "nombre": "Decodificador anti-parpadeo 9005 (pack x2)",
         "compatible": "Universal: cualquier Jeep o carro con focos LED tipo 9005 (consultar)",
-        "descripcion": "Evita que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
+        "descripcion": "Dos decodificadores para focos LED 9005. Evitan que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
         "ventajas": [
           "Elimina parpadeos",
-          "Complemento ideal para focos LED"
+          "Pack de 2"
         ],
-        "codigo": "HL-CANBUS",
-        "precio": 145,
+        "codigo": "HL-CANBUS-9005 x2",
+        "precio": 279,
         "modelos": [
           "uni"
         ],
@@ -1904,15 +1879,15 @@ const CATALOGO = [
       },
       {
         "cat": "Otros autos",
-        "nombre": "Decodificador anti-parpadeo H7 (par)",
+        "nombre": "Decodificador anti-parpadeo H7 (pack x2)",
         "compatible": "Universal: autos con focos LED H7",
-        "descripcion": "Evita que los focos LED H7 parpadeen o que salga error de foco quemado en el tablero.",
+        "descripcion": "Dos decodificadores para focos LED H7. Evitan que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
         "ventajas": [
           "Elimina parpadeos",
-          "Complemento para focos LED"
+          "Pack de 2"
         ],
-        "codigo": "HL-CANBUS-H7-G1",
-        "precio": 145,
+        "codigo": "HL-CANBUS-H7-G1 x2",
+        "precio": 279,
         "modelos": [
           "uni"
         ],
@@ -1921,19 +1896,70 @@ const CATALOGO = [
       },
       {
         "cat": "Otros autos",
-        "nombre": "Decodificador anti-parpadeo H11 (par)",
+        "nombre": "Decodificador anti-parpadeo H11 (pack x2)",
         "compatible": "Universal: autos con focos LED H11",
-        "descripcion": "Evita que los focos LED H11 parpadeen o que salga error de foco quemado en el tablero.",
+        "descripcion": "Dos decodificadores para focos LED H11. Evitan que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
         "ventajas": [
           "Elimina parpadeos",
-          "Complemento para focos LED"
+          "Pack de 2"
         ],
-        "codigo": "HL-CANBUS-H11-G1",
-        "precio": 145,
+        "codigo": "HL-CANBUS-H11-G1 x2",
+        "precio": 279,
         "modelos": [
           "uni"
         ],
         "foto": "img/tb_cb_h11.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Pack focos LED H7 + decodificador H7",
+        "compatible": "Universal: autos con focos H7. Hyundai Tiburon 2000-2001 (baja), 2003-2006 (baja y alta) y 2007-2008 (alta)",
+        "descripcion": "Par de focos LED 4S H7 más su decodificador anti-parpadeo, listos para instalar sin errores en el tablero.",
+        "ventajas": [
+          "Focos + decodificador en uno",
+          "Sin parpadeos"
+        ],
+        "codigo": "HB-4S-H7 + HL-CANBUS-H7-G1",
+        "precio": 449,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_4s.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Pack focos LED H11 + decodificador H11",
+        "compatible": "Universal: autos con focos H11. Hyundai Tiburon 2007-2008 (baja)",
+        "descripcion": "Par de focos LED 4S H11 más su decodificador anti-parpadeo, listos para instalar sin errores en el tablero.",
+        "ventajas": [
+          "Focos + decodificador en uno",
+          "Sin parpadeos"
+        ],
+        "codigo": "HB-4S-H11 + HL-CANBUS-H11-G1",
+        "precio": 449,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_4s.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Pack focos LED 9005 + decodificador 9005",
+        "compatible": "Universal: autos con focos 9005 / HB3. Hyundai Tiburon 1997-1999 (alta)",
+        "descripcion": "Par de focos LED R3 9005 de alta potencia más su decodificador anti-parpadeo.",
+        "ventajas": [
+          "Focos + decodificador en uno",
+          "Alta potencia"
+        ],
+        "codigo": "HB-R3-9005 + HL-CANBUS-9005",
+        "precio": 599,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/tb_r3.jpg",
         "agotado": false
       },
       {

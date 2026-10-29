@@ -15,7 +15,7 @@ function renderFilters(){
   nav.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{current=b.dataset.k;renderFilters();render();document.getElementById("catalogo").scrollIntoView({behavior:"smooth",block:"start"});});
 }
 function pic(p){return p.foto;}
-const FEATURED=["KIT-JK-1","TL-JK-G1-CLR + BL-JK-G1-SMK","ZS-0128K-JK","TS-JK-DRL-G2-CLR + SL-JK-G1-CLR","WLB-0008-G1 + WL-10RS-2PC","TL-JK-WHEEL-G5"];
+const FEATURED=["BL-JK-G1-SMK","TL-JK-G1-CLR + BL-JK-G1-SMK","ZS-0128K-JK","TS-JK-DRL-G2-CLR + SL-JK-G1-CLR","WLB-0008-G1","TL-JK-WHEEL-G5"];
 function renderFeatured(){
   const row=document.getElementById("featRow");
   row.innerHTML=FEATURED.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean).map(p=>`<button class="fcard" data-i="${ALL.indexOf(p)}"><div class="fimg"><img src="${pic(p)}" alt="" loading="lazy"></div><div class="fb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3><div class="fp"><b>${soles(p.precio)}</b><span>Ver ›</span></div></div></button>`).join("");
@@ -76,9 +76,9 @@ document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault
 function card(p){
   const i=ALL.indexOf(p), img=p.foto;
   return `<button class="card" data-i="${i}" aria-label="${esc(p.nombre)}, ${soles(p.precio)}">
-    <div class="ph">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${p.agotado?`<span class="badge">Agotado</span>`:""}${p.antes?`<span class="badge promo">Promo</span>`:""}</div>
+    <div class="ph">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${p.agotado?`<span class="badge">Agotado</span>`:""}${p.oferta&&!p.agotado?`<span class="badge promo">${p.antes?"–"+Math.round((p.antes-p.precio)*100/p.antes)+"%":"Oferta"}</span>`:""}</div>
     <div class="cb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3>
-    <div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?` <s>${soles(p.antes)}</s>`:""}</div></div></button>`;
+    <div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small class="save">Por separado ${soles(p.antes)}</small>`:""}</div></div></button>`;
 }
 const dlg=document.getElementById("dlg");
 function open(i){
@@ -92,7 +92,7 @@ function open(i){
       <p>${esc(p.descripcion)}</p>
       <ul>${p.ventajas.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
       <div class="code">Código: ${esc(p.codigo)}</div>
-      <div class="dfoot"><div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?` <s>${soles(p.antes)}</s><small>Promo válida hasta el 31/12/2026</small>`:""}${p.agotado?"<small>Agotado temporalmente · consulta disponibilidad</small>":""}</div>
+      <div class="dfoot"><div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small>Por separado ${soles(p.antes)} · Ahorras ${soles(p.antes-p.precio)} (–${Math.round((p.antes-p.precio)*100/p.antes)}%)</small>`:""}${p.agotado?"<small>Agotado temporalmente · consulta disponibilidad</small>":""}</div>
       <button class="btn" id="ask">${p.agotado?"Consultar":"Lo quiero"}</button></div>
     </div>`;
   document.getElementById("ask").onclick=()=>ask(p);
