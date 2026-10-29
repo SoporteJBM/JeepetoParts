@@ -698,63 +698,10 @@ const CATALOGO = [
     ]
   },
   {
-    "categoria": "Luces de freno y direccionales",
+    "categoria": "Direccionales y marcadores",
     "productos": [
       {
-        "cat": "Luces de freno y direccionales",
-        "nombre": "Tercera luz de freno LED",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Luz roja de freno del centro, sobre la llanta de repuesto. LED, mica ahumada.",
-        "ventajas": [
-          "Más visible al frenar",
-          "Instalación con conector, sin cortar cables"
-        ],
-        "codigo": "BL-JK-G1-SMK",
-        "precio": 165,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/bl1.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Luces de freno y direccionales",
-        "nombre": "Tercera luz de freno LED, modelo 2",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "La misma función con otro diseño, más llamativo.",
-        "ventajas": [
-          "Diseño moderno",
-          "LED de larga duración"
-        ],
-        "codigo": "BL-JK-G2",
-        "precio": 205,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/bl2.jpg",
-        "agotado": false,
-        "foto2": "img/s2_p01-001.jpg"
-      },
-      {
-        "cat": "Luces de freno y direccionales",
-        "nombre": "Luz de freno de techo LED (spoiler), par",
-        "compatible": "Wrangler JKU 2007-2018 (solo 4 puertas, con techo duro)",
-        "descripcion": "Dos luces LED que van en las esquinas traseras del techo duro y funcionan como spoiler. Hacen de luz de posición, de freno y de direccional.",
-        "ventajas": [
-          "Freno, posición y direccional en uno",
-          "Look tipo spoiler"
-        ],
-        "codigo": "TL-JK-G10",
-        "precio": 1049,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/g10.jpg",
-        "agotado": true,
-        "foto2": "img/fx_5.jpg"
-      },
-      {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales con aro de luz, ahumadas",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Luces redondas de los guardafangos delanteros. Parpadean en ámbar y tienen un aro blanco que queda prendido como luz de día.",
@@ -772,7 +719,7 @@ const CATALOGO = [
         "foto2": "img/h2_turn__ts_halo_smk.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales con aro de luz, transparentes",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Mismas direccionales con mica transparente.",
@@ -790,7 +737,7 @@ const CATALOGO = [
         "foto2": "img/h2_turn__ts_halo_clr.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales LED sin aro, transparentes",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Direccionales LED ámbar del guardafango delantero, sin aro de luz de día.",
@@ -807,7 +754,7 @@ const CATALOGO = [
         "agotado": false
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales LED sin aro, ahumadas",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Direccionales LED del guardafango delantero, sin aro de luz de día, en mica ahumada. Foto referencial: esta versión no tiene el aro de luz.",
@@ -824,7 +771,7 @@ const CATALOGO = [
         "agotado": false
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Marcadores LED de guardafango, transparentes",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Luces LED laterales que van en los guardafangos delanteros.",
@@ -842,7 +789,7 @@ const CATALOGO = [
         "foto2": "img/fx_4.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Marcadores LED de guardafango, ahumados",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Luces LED laterales para los guardafangos delanteros, en mica ahumada.",
@@ -860,7 +807,7 @@ const CATALOGO = [
         "foto2": "img/fx_4.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales LED ámbar, lente ámbar",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Direccionales LED de luz ámbar con lente ámbar para el guardafango delantero.",
@@ -878,7 +825,7 @@ const CATALOGO = [
         "foto2": "img/h2_ag_g3_amb__s2_p14-000.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales LED ámbar, ahumadas",
         "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
         "descripcion": "Direccionales LED de luz ámbar para el guardafango delantero, en mica ahumada.",
@@ -896,7 +843,7 @@ const CATALOGO = [
         "foto2": "img/h2_ag_g3_smk__s2_p14-000.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales LED JL, 6 pines",
         "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
         "descripcion": "Direccionales y luces de posición LED para los guardafangos del JL, conector de 6 pines (halógeno). No sirve para Sport, Willys ni guardafangos de una pieza.",
@@ -915,7 +862,7 @@ const CATALOGO = [
         "foto2": "img/s2_p17-001.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Direccionales LED JL, 5 pines",
         "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
         "descripcion": "Direccionales y luces de posición LED para los guardafangos del JL, conector de 5 pines (LED de fábrica). No sirve para Sport, Willys ni guardafangos de una pieza.",
@@ -934,7 +881,7 @@ const CATALOGO = [
         "foto2": "img/s2_p17-001.jpg"
       },
       {
-        "cat": "Luces de freno y direccionales",
+        "cat": "Direccionales y marcadores",
         "nombre": "Luces LED de guardafango JL",
         "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
         "descripcion": "Luces LED laterales para los guardafangos del Wrangler JL y Gladiator.",
@@ -950,6 +897,242 @@ const CATALOGO = [
         ],
         "foto": "img/fd_stjl.jpg",
         "agotado": true
+      }
+    ]
+  },
+  {
+    "categoria": "Máscaras / parrillas (a pedido)",
+    "productos": [
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla Venom",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Parrilla frontal de reemplazo con diseño de dientes agresivos. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Cambia todo el frente del Jeep",
+          "Se instala en lugar de la de fábrica"
+        ],
+        "codigo": "ZS-0128K-JK",
+        "precio": 1269,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/p_venom.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla Black Widow",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Parrilla frontal con malla y barras verticales. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Look agresivo con malla",
+          "Se instala en lugar de la de fábrica"
+        ],
+        "codigo": "ZS-0117K",
+        "precio": 1319,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/p_widow.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla Transformer",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Parrilla frontal con malla y barras redondeadas. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Diseño robusto",
+          "Se instala en lugar de la de fábrica"
+        ],
+        "codigo": "ZS-0033K-G2",
+        "precio": 1449,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/p_trans.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla con direccionales G1 (JK)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Parrilla de dientes agresivos con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Direccionales y luz de día incorporadas",
+          "Diseño muy llamativo"
+        ],
+        "codigo": "ZS-0127-JK-G1-SMK",
+        "precio": 1649,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/p_jkg1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla con direccionales G2 (JK)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Parrilla con malla tipo panal y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Direccionales incorporadas",
+          "Malla tipo panal"
+        ],
+        "codigo": "ZS-0127-JK-G2-SMK",
+        "precio": 1699,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/p_jkg2.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla con direccionales G4",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Parrilla con malla fina y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Direccionales incorporadas",
+          "Look limpio con malla fina"
+        ],
+        "codigo": "ZS-0127-JK-G4-SMK",
+        "precio": 1699,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/p_jkg4.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla Vader con direccionales y luz de día",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Parrilla tipo angry con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Direccionales y luz de día incorporadas",
+          "Diseño muy llamativo"
+        ],
+        "codigo": "ZS-0127-JK-SMK",
+        "precio": 1649,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/p_jksmk.jpg",
+        "agotado": false,
+        "foto2": "img/h2_p_jksmk__s2_p04-002.jpg"
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla Classic con luces ámbar",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Parrilla frontal con barras verticales y luces LED ámbar arriba. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Luces LED integradas",
+          "Look clásico renovado"
+        ],
+        "codigo": "ZS-0106K-JL",
+        "precio": 1499,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/p_jl106.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla Angry con luces ámbar",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Parrilla frontal de dientes agresivos con luces LED ámbar arriba. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Luces LED integradas",
+          "Diseño agresivo"
+        ],
+        "codigo": "ZS-0108K-JL",
+        "precio": 1549,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/p_jl108.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla negra de reemplazo",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Parrilla frontal con malla y barras verticales, estilo agresivo. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Look agresivo con malla",
+          "Se instala en lugar de la de fábrica"
+        ],
+        "codigo": "ZS-0123K-JL",
+        "precio": 1449,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/p_jl123.jpg",
+        "agotado": false,
+        "foto2": "img/h2_p_jl123__s2_p04-003.jpg"
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla con direccionales G1 (JL / Gladiator)",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Parrilla de dientes agresivos con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Direccionales y luz de día incorporadas",
+          "Diseño muy llamativo"
+        ],
+        "codigo": "ZS-0127-JL-G1-SMK",
+        "precio": 1499,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/p_jlg1.jpg",
+        "agotado": false,
+        "foto2": "img/h2_p_jlg1__s2_p03-003.jpg"
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla con direccionales G2 (JL / Gladiator)",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Parrilla con malla tipo panal y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Direccionales incorporadas",
+          "Malla tipo panal"
+        ],
+        "codigo": "ZS-0127-JL-G2-SMK",
+        "precio": 1699,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/p_jlg2.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Máscaras / parrillas (a pedido)",
+        "nombre": "Parrilla Vader con luz de día",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Parrilla tipo angry con direccionales y luz de día integradas. Producto grande: solo a pedido. Instalación a consultar.",
+        "ventajas": [
+          "Direccionales y luz de día incorporadas",
+          "Diseño muy llamativo"
+        ],
+        "codigo": "ZS-0127-JL-SMK",
+        "precio": 1699,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/p_jlsmk.jpg",
+        "agotado": false,
+        "foto2": "img/h2_p_jlsmk__s2_p05-000.jpg"
       }
     ]
   },
@@ -1331,6 +1514,64 @@ const CATALOGO = [
     ]
   },
   {
+    "categoria": "Luces de freno (tercera luz y techo)",
+    "productos": [
+      {
+        "cat": "Luces de freno (tercera luz y techo)",
+        "nombre": "Tercera luz de freno LED",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Luz roja de freno del centro, sobre la llanta de repuesto. LED, mica ahumada.",
+        "ventajas": [
+          "Más visible al frenar",
+          "Instalación con conector, sin cortar cables"
+        ],
+        "codigo": "BL-JK-G1-SMK",
+        "precio": 165,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/bl1.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Luces de freno (tercera luz y techo)",
+        "nombre": "Tercera luz de freno LED, modelo 2",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "La misma función con otro diseño, más llamativo.",
+        "ventajas": [
+          "Diseño moderno",
+          "LED de larga duración"
+        ],
+        "codigo": "BL-JK-G2",
+        "precio": 205,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/bl2.jpg",
+        "agotado": false,
+        "foto2": "img/s2_p01-001.jpg"
+      },
+      {
+        "cat": "Luces de freno (tercera luz y techo)",
+        "nombre": "Luz de freno de techo LED (spoiler), par",
+        "compatible": "Wrangler JKU 2007-2018 (solo 4 puertas, con techo duro)",
+        "descripcion": "Dos luces LED que van en las esquinas traseras del techo duro y funcionan como spoiler. Hacen de luz de posición, de freno y de direccional.",
+        "ventajas": [
+          "Freno, posición y direccional en uno",
+          "Look tipo spoiler"
+        ],
+        "codigo": "TL-JK-G10",
+        "precio": 1049,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/g10.jpg",
+        "agotado": true,
+        "foto2": "img/fx_5.jpg"
+      }
+    ]
+  },
+  {
     "categoria": "Luz para la llanta de repuesto",
     "productos": [
       {
@@ -1383,6 +1624,28 @@ const CATALOGO = [
           "jl"
         ],
         "foto": "img/typhoon.jpg",
+        "agotado": false
+      }
+    ]
+  },
+  {
+    "categoria": "Protectores de stops",
+    "productos": [
+      {
+        "cat": "Protectores de stops",
+        "nombre": "Protectores para stops",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), con stops de fábrica",
+        "descripcion": "Rejillas que protegen los stops traseros de golpes en el campo.",
+        "ventajas": [
+          "Protegen en trochas",
+          "Look más rudo"
+        ],
+        "codigo": "WLB-0015-R-MATTE",
+        "precio": 205,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/cover.jpg",
         "agotado": false
       }
     ]
@@ -1552,242 +1815,6 @@ const CATALOGO = [
     ]
   },
   {
-    "categoria": "Máscaras / parrillas (a pedido)",
-    "productos": [
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla Venom",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Parrilla frontal de reemplazo con diseño de dientes agresivos. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Cambia todo el frente del Jeep",
-          "Se instala en lugar de la de fábrica"
-        ],
-        "codigo": "ZS-0128K-JK",
-        "precio": 1269,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/p_venom.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla Black Widow",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Parrilla frontal con malla y barras verticales. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Look agresivo con malla",
-          "Se instala en lugar de la de fábrica"
-        ],
-        "codigo": "ZS-0117K",
-        "precio": 1319,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/p_widow.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla Transformer",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Parrilla frontal con malla y barras redondeadas. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Diseño robusto",
-          "Se instala en lugar de la de fábrica"
-        ],
-        "codigo": "ZS-0033K-G2",
-        "precio": 1449,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/p_trans.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G1 (JK)",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Parrilla de dientes agresivos con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Direccionales y luz de día incorporadas",
-          "Diseño muy llamativo"
-        ],
-        "codigo": "ZS-0127-JK-G1-SMK",
-        "precio": 1649,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/p_jkg1.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G2 (JK)",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Parrilla con malla tipo panal y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Direccionales incorporadas",
-          "Malla tipo panal"
-        ],
-        "codigo": "ZS-0127-JK-G2-SMK",
-        "precio": 1699,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/p_jkg2.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G4",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Parrilla con malla fina y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Direccionales incorporadas",
-          "Look limpio con malla fina"
-        ],
-        "codigo": "ZS-0127-JK-G4-SMK",
-        "precio": 1699,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/p_jkg4.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla Vader con direccionales y luz de día",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Parrilla tipo angry con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Direccionales y luz de día incorporadas",
-          "Diseño muy llamativo"
-        ],
-        "codigo": "ZS-0127-JK-SMK",
-        "precio": 1649,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/p_jksmk.jpg",
-        "agotado": false,
-        "foto2": "img/h2_p_jksmk__s2_p04-002.jpg"
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla Classic con luces ámbar",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Parrilla frontal con barras verticales y luces LED ámbar arriba. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Luces LED integradas",
-          "Look clásico renovado"
-        ],
-        "codigo": "ZS-0106K-JL",
-        "precio": 1499,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/p_jl106.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla Angry con luces ámbar",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Parrilla frontal de dientes agresivos con luces LED ámbar arriba. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Luces LED integradas",
-          "Diseño agresivo"
-        ],
-        "codigo": "ZS-0108K-JL",
-        "precio": 1549,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/p_jl108.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla negra de reemplazo",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Parrilla frontal con malla y barras verticales, estilo agresivo. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Look agresivo con malla",
-          "Se instala en lugar de la de fábrica"
-        ],
-        "codigo": "ZS-0123K-JL",
-        "precio": 1449,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/p_jl123.jpg",
-        "agotado": false,
-        "foto2": "img/h2_p_jl123__s2_p04-003.jpg"
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G1 (JL / Gladiator)",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Parrilla de dientes agresivos con direccionales ámbar y luz de día blanca integradas. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Direccionales y luz de día incorporadas",
-          "Diseño muy llamativo"
-        ],
-        "codigo": "ZS-0127-JL-G1-SMK",
-        "precio": 1499,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/p_jlg1.jpg",
-        "agotado": false,
-        "foto2": "img/h2_p_jlg1__s2_p03-003.jpg"
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla con direccionales G2 (JL / Gladiator)",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Parrilla con malla tipo panal y direccionales ámbar en forma de flecha. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Direccionales incorporadas",
-          "Malla tipo panal"
-        ],
-        "codigo": "ZS-0127-JL-G2-SMK",
-        "precio": 1699,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/p_jlg2.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Máscaras / parrillas (a pedido)",
-        "nombre": "Parrilla Vader con luz de día",
-        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
-        "descripcion": "Parrilla tipo angry con direccionales y luz de día integradas. Producto grande: solo a pedido. Instalación a consultar.",
-        "ventajas": [
-          "Direccionales y luz de día incorporadas",
-          "Diseño muy llamativo"
-        ],
-        "codigo": "ZS-0127-JL-SMK",
-        "precio": 1699,
-        "modelos": [
-          "jl",
-          "jt"
-        ],
-        "foto": "img/p_jlsmk.jpg",
-        "agotado": false,
-        "foto2": "img/h2_p_jlsmk__s2_p05-000.jpg"
-      }
-    ]
-  },
-  {
     "categoria": "Espejos",
     "productos": [
       {
@@ -1915,23 +1942,6 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/peg.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Accesorios",
-        "nombre": "Protectores para stops",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas), con stops de fábrica",
-        "descripcion": "Rejillas que protegen los stops traseros de golpes en el campo.",
-        "ventajas": [
-          "Protegen en trochas",
-          "Look más rudo"
-        ],
-        "codigo": "WLB-0015-R-MATTE",
-        "precio": 205,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/cover.jpg",
         "agotado": false
       },
       {

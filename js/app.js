@@ -4,7 +4,7 @@ const WHATSAPP = "51946564236"; // número con código de país, sin +
 const FILTERS=[["all","Todos"],["jk","Wrangler JK"],["jl","Wrangler JL"],["jt","Gladiator"],["uni","Universal"]];
 const SHORT={jk:"JK",jl:"JL",jt:"Gladiator",uni:"Universal"};
 let current="all";
-try{const h=location.hash.slice(1); if(FILTERS.some(f=>f[0]===h)) current=h;}catch(e){}
+
 const soles=n=>"S/ "+n.toLocaleString("es-PE");
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ALL=[]; CATALOGO.forEach(s=>s.productos.forEach(p=>ALL.push(p)));
@@ -47,34 +47,67 @@ function renderGallery(){
 const GROUPS=[["Luces",["Faros delanteros","Neblineros","Luces de freno","Stops traseros","Luz para la llanta","Luces auxiliares"]],["Exterior",["Máscaras","Espejos","Accesorios"]],["Otros",["Audio y otros","Otros autos"]]];
 function groupOf(name){for(const [g,cs] of GROUPS){if(cs.some(c=>name.startsWith(c))) return g;}return "";}
 function shortName(name){return name.replace(/ \(.*\)$/,"");}
+const EXP=new Set(); const PER=999;
+const PAGES=[
+ {k:"promociones",t:"Promociones",s:"Combos en oferta de Xprite, más baratos que comprar las piezas por separado.",cats:["Promociones"]},
+ {k:"delantera",t:"Parte delantera",s:"Faros, neblineros, direccionales y máscaras para el frente de tu Jeep.",cats:["Faros delanteros","Neblineros","Direccionales y marcadores","Máscaras"]},
+ {k:"trasera",t:"Parte trasera",s:"Stops, tercera luz, luz de llanta de repuesto y protectores.",cats:["Stops traseros","Luces de freno","Luz para la llanta","Protectores de stops"]},
+ {k:"auxiliares",t:"Luces auxiliares",s:"Pods, barra LED, soportes y rock lights. Uso fuera de carretera.",cats:["Luces auxiliares"]},
+ {k:"accesorios",t:"Accesorios",s:"Espejos, seguros de capó, tapa de gasolina, apoyapiés y más.",cats:["Espejos","Accesorios","Audio y otros"]},
+ {k:"otros",t:"Otros autos",s:"Focos LED, decodificadores y luces para otros vehículos.",cats:["Otros autos"]}];
+const MODE=document.body.dataset.mode;
+function pageOf(cat){const p=PAGES.find(p=>p.cats.some(c=>cat.startsWith(c)));return p?p.k:"";}
+function fileOf(k){return k==="inicio"?"index.html":k+".html";}
+function linkOf(k,anchor){return MODE==="files"?fileOf(k)+(anchor?"#"+anchor:""):"#"+(anchor&&k==="inicio"?anchor:k);}
+let PAGE=MODE==="files"?document.body.dataset.page:(PAGES.some(p=>p.k===location.hash.slice(1))?location.hash.slice(1):"inicio");
+function goTo(k,anchor){
+  closeDrawer();
+  if(MODE==="files"&&k!==PAGE){location.href=linkOf(k,anchor);return;}
+  if(k!==PAGE){setPage(k,true);}
+  if(anchor){setTimeout(()=>{const el=document.getElementById(anchor);if(el)el.scrollIntoView({behavior:"smooth",block:"start"});},80);}else window.scrollTo({top:0});
+}
+function setPage(k,push){
+  PAGE=k; document.body.dataset.page=k;
+  if(MODE==="hash"&&push){history.replaceState(null,"",k==="inicio"?location.pathname:"#"+k);}
+  const pg=PAGES.find(p=>p.k===k);
+  if(pg){document.getElementById("pageTitle").textContent=pg.t;document.getElementById("pageSub").textContent=pg.s;document.title=pg.t+" · Jeepeto Parts";}
+  else document.title="Jeepeto Parts · Accesorios Xprite para Jeep";
+  document.querySelectorAll("[data-page-link]").forEach(a=>{a.href=linkOf(a.dataset.pageLink,a.dataset.anchor);a.classList.toggle("on",!a.dataset.anchor&&a.dataset.pageLink===k);});
+  render();
+}
+function renderZones(){
+  document.getElementById("zoneGrid").innerHTML=PAGES.map(pg=>{
+    const items=CATALOGO.filter(s=>pg.cats.some(c=>s.categoria.startsWith(c))).flatMap(s=>s.productos);
+    const p=items.find(q=>pic2(q)&&!q.agotado)||items[0];
+    return `<a class="zone" data-page-link="${pg.k}" href="${linkOf(pg.k)}"><img src="${p?(pic2(p)||pic(p)):""}" alt="" loading="lazy"><span><b>${pg.t}</b><small>${items.length} productos →</small></span></a>`;
+  }).join("");
+}
 function render(){
-  let html="",count=0,last=null;
+  let html="",count=0;
   CATALOGO.forEach((sec,si)=>{
+    if(pageOf(sec.categoria)!==PAGE) return;
     const items=sec.productos.filter(p=>current==="all"||p.modelos.includes(current));
     if(!items.length) return;
     count+=items.length;
-    const g=groupOf(sec.categoria);
-    if(g&&g!==last){html+=`<h2 class="group" id="g-${g}">${g}</h2>`;last=g;}
     html+=`<h3 class="cat" id="cat-${si}">${esc(sec.categoria)}<small>${items.length} ${items.length===1?"producto":"productos"}</small></h3><div class="grid">`+items.map(card).join("")+`</div>`;
   });
-  document.getElementById("list").innerHTML=count?html:`<p class="empty">No hay productos para este modelo todavía.</p>`;
+  document.getElementById("list").innerHTML=PAGE==="inicio"?"":(count?html:`<p class="empty">No hay productos de esta sección para este modelo todavía.</p>`);
   document.querySelectorAll(".card").forEach(c=>c.onclick=()=>open(+c.dataset.i));
   renderDrawer();
 }
 function renderDrawer(){
-  let html="",last=null;
-  CATALOGO.forEach((sec,si)=>{
-    const g=groupOf(sec.categoria)||"Destacado";
-    if(g!==last){html+=`<div class="drawer-group">${g}</div>`;last=g;}
-    const n=sec.productos.filter(p=>current==="all"||p.modelos.includes(current)).length;
-    html+=`<button class="drawer-link" data-cat="${si}"><span>${esc(shortName(sec.categoria))}</span><small>${n}</small></button>`;
+  let html=`<a class="drawer-link" data-page-link="inicio" href="${linkOf("inicio")}"><span>Inicio</span></a>`;
+  PAGES.forEach(pg=>{
+    html+=`<a class="drawer-group" data-page-link="${pg.k}" href="${linkOf(pg.k)}" style="display:block;text-decoration:none">${pg.t}</a>`;
+    CATALOGO.forEach((sec,si)=>{ if(!pg.cats.some(c=>sec.categoria.startsWith(c))) return;
+      html+=`<button class="drawer-link" data-pg="${pg.k}" data-cat="${si}"><span>${esc(shortName(sec.categoria))}</span><small>${sec.productos.length}</small></button>`;});
   });
   const box=document.getElementById("drawerList"); box.innerHTML=html;
-  box.querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{
-    let el=document.getElementById("cat-"+b.dataset.cat);
-    if(!el){current="all";renderFilters();render();el=document.getElementById("cat-"+b.dataset.cat);}
-    closeDrawer(); if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);
-  });
+  box.querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{if(current!=="all"&&b.dataset.pg===PAGE){current="all";renderFilters();}goTo(b.dataset.pg,"cat-"+b.dataset.cat);});
+  bindPageLinks(box);
+}
+function bindPageLinks(root){
+  (root||document).querySelectorAll("[data-page-link]").forEach(a=>{a.href=linkOf(a.dataset.pageLink,a.dataset.anchor);a.onclick=e=>{e.preventDefault();goTo(a.dataset.pageLink,a.dataset.anchor);};});
 }
 const drawerEl=document.getElementById("drawer"),overlayEl=document.getElementById("overlay"),menuBtn=document.getElementById("menuBtn");
 function openDrawer(){drawerEl.classList.add("open");drawerEl.setAttribute("aria-hidden","false");overlayEl.hidden=false;menuBtn.setAttribute("aria-expanded","true");document.getElementById("drawerClose").focus();}
@@ -117,4 +150,6 @@ async function ask(p){
 }
 let tt; function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("on"),2800);}
 document.getElementById("moparbtn").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hola Jeepeto Parts, quiero cotizar repuestos originales Mopar. Código(s) de pieza: ");
-renderFilters(); render(); renderFeatured(); renderCompare(); renderGallery();
+renderFilters(); renderZones(); setPage(PAGE,false); renderFeatured(); renderCompare(); renderGallery(); bindPageLinks();
+if(MODE==="hash") window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(PAGES.some(p=>p.k===h)&&h!==PAGE){setPage(h,false);window.scrollTo({top:0});}});
+if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView({block:"start"});},120);}

@@ -18,13 +18,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=202610291450">
+<link rel="stylesheet" href="css/styles.css?v=202610292028">
 </head>
-<body>
+<body data-mode="files" data-page="inicio">
 <header class="top">
   <div class="brand"><button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><span class="bars"><span></span><span></span><span></span></span>Menú</button><img class="logo" src="img/wordmark.png" alt="Jeepeto Parts" width="150" height="35"><b class="sr">Jeepeto Parts</b><small class="sub">Accesorios Xprite para Jeep</small></div>
-  <nav class="subnav" aria-label="Atajos">
-    <a href="#destacados" data-go="destacados">Destacados</a><a href="#catalogo" data-go="catalogo">Catálogo</a><a href="#g-Luces" data-go="g-Luces">Luces</a><a href="#g-Exterior" data-go="g-Exterior">Exterior</a><a href="#comparar" data-go="comparar">Comparar stops</a><a href="#mopar" data-go="mopar">Mopar</a><a href="#comprar" data-go="comprar">Cómo comprar</a><a href="#faq" data-go="faq">Preguntas</a>
+  <nav class="subnav" aria-label="Páginas">
+    <a data-page-link="inicio">Inicio</a><a data-page-link="promociones">Promociones</a><a data-page-link="delantera">Delantera</a><a data-page-link="trasera">Trasera</a><a data-page-link="auxiliares">Luces auxiliares</a><a data-page-link="accesorios">Accesorios</a><a data-page-link="otros">Otros autos</a><a data-page-link="inicio" data-anchor="mopar">Mopar</a><a data-page-link="inicio" data-anchor="comprar">Cómo comprar</a>
   </nav>
 </header>
 <div class="overlay" id="overlay" hidden></div>
@@ -32,32 +32,44 @@
   <div class="drawer-head"><img class="logo" src="img/wordmark.png" alt="Jeepeto Parts" width="150" height="35"><button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button></div>
   <div id="drawerList"></div>
   <div class="drawer-group">Información</div>
-  <a class="drawer-link" href="#mopar" data-go="mopar">Repuestos Mopar a pedido</a>
-  <a class="drawer-link" href="#xprite" data-go="xprite">¿Por qué Xprite?</a>
-  <a class="drawer-link" href="#comprar" data-go="comprar">Cómo comprar</a>
+  <a class="drawer-link" data-page-link="inicio" data-anchor="mopar">Repuestos Mopar a pedido</a>
+  <a class="drawer-link" data-page-link="inicio" data-anchor="xprite">¿Por qué Xprite?</a>
+  <a class="drawer-link" data-page-link="inicio" data-anchor="comprar">Cómo comprar</a>
   <a class="drawer-link wa-link" href="https://wa.me/51946564236" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
 </nav>
 
 
 <main class="wrap">
-  <section class="hero">
+  <section class="hero home-only">
   <div class="hero-txt">
     <p class="eyebrow">Jeepeto Parts · Lima</p>
     <h1>Tu Jeep.<br><span>Mejor equipado.</span></h1>
     <p class="hero-sub">Luces LED y accesorios originales Xprite, traídos a pedido para tu Wrangler o Gladiator.</p>
-    <div class="hero-cta"><a class="btn-main" href="#catalogo" data-go="catalogo">Ver catálogo</a><a class="btn-ghost" href="https://wa.me/51946564236" target="_blank" rel="noopener">Escríbenos</a></div>
+    <div class="hero-cta"><a class="btn-main" href="#zonas" data-go="zonas">Ver catálogo</a><a class="btn-ghost" href="https://wa.me/51946564236" target="_blank" rel="noopener">Escríbenos</a></div>
     <ul class="facts"><li>Originales Xprite</li><li>A pedido · 2 a 3 semanas</li><li>Instalación desde S/ 80</li></ul>
   </div>
   <div class="hero-img"><img src="img/lifehero.jpg" alt="Jeep Wrangler equipado con accesorios Xprite"></div>
 </section>
 
-  <section class="feat" id="destacados">
+  <section class="page-head cat-only">
+    <p class="eyebrow">Jeepeto Parts · Lima</p>
+    <h1 id="pageTitle"></h1>
+    <p class="lead" id="pageSub"></p>
+  </section>
+
+  <section class="zones home-only" id="zonas">
+    <h2 class="big">Explora por zona.</h2>
+    <p class="lead">Elige qué parte de tu Jeep quieres mejorar.</p>
+    <div class="zone-grid" id="zoneGrid"></div>
+  </section>
+
+  <section class="feat home-only" id="destacados">
     <h2 class="big">Destacados.</h2>
     <p class="lead">Lo que más transforma un Jeep, en un vistazo.</p>
     <div class="feat-row" id="featRow"></div>
   </section>
 
-  <section class="gal" aria-label="Jeeps equipados con Xprite">
+  <section class="gal home-only" aria-label="Jeeps equipados con Xprite">
     <h3>Así se ven con Xprite</h3>
     <div class="gal-row">
       <figure data-code="ZS-0128K-JK" tabindex="0" role="button"><img src="img/life9.jpg" alt="Wrangler JK" loading="lazy"><figcaption>Wrangler JK</figcaption></figure>
@@ -69,7 +81,7 @@
     <p class="gal-note">Fotos de referencia de Xprite.</p>
   </section>
 
-  <section class="mopar" id="mopar">
+  <section class="mopar home-only" id="mopar">
     <div>
       <span class="ml">También a pedido</span>
       <h2>Repuestos 100% originales Mopar</h2>
@@ -79,20 +91,20 @@
     <a class="wa" id="moparbtn" href="https://wa.me/51946564236" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
   </section>
 
-  <section class="shop" id="catalogo">
-    <h2 class="big">Catálogo.</h2>
-    <p class="lead">Elige tu Jeep y ve solo lo que le queda.</p>
+  <section class="shop cat-only" id="catalogo">
+    <h2 class="big" id="catTitle">Elige tu Jeep.</h2>
+    <p class="lead">Filtra para ver solo lo que le queda a tu modelo.</p>
     <nav class="filters" id="filters" aria-label="Filtrar por modelo"></nav>
   </section>
-  <div id="list"></div>
+  <div id="list" class="cat-only"></div>
 
-  <section class="cmp" id="comparar">
+  <section class="cmp only-trasera" id="comparar">
     <h2 class="big">¿Qué stop te conviene?</h2>
     <p class="lead">Cuatro estilos de stops LED para Wrangler JK, lado a lado.</p>
     <div class="cmp-wrap"><table class="cmp-table" id="cmpTable"></table></div>
   </section>
 
-  <section class="why" id="xprite">
+  <section class="why home-only" id="xprite">
     <h2>¿Por qué Xprite?</h2>
     <div class="wg">
       <div><b>Marca de California</b><span>Con base en Chino, California, desde 2014. Especialistas en luces LED y accesorios off-road.</span></div>
@@ -102,7 +114,7 @@
     </div>
   </section>
 
-  <section class="buy" id="comprar">
+  <section class="buy home-only" id="comprar">
     <h2>Cómo comprar</h2>
     <ol class="steps">
       <li><b>Escríbenos por WhatsApp</b><span>Toca “Lo quiero” en el producto y te llega el mensaje listo.</span></li>
@@ -119,7 +131,7 @@
     </div>
     <a class="wa" href="https://wa.me/51946564236" target="_blank" rel="noopener">Escríbenos al WhatsApp +51 946 564 236</a>
   </section>
-  <section class="faq" id="faq">
+  <section class="faq home-only" id="faq">
     <h2 class="big">Preguntas frecuentes.</h2>
     <details><summary>¿Cómo sé si le queda a mi Jeep?</summary><p>Cada producto dice con qué modelo y años es compatible. Igual, antes de pedir te confirmamos por WhatsApp con el modelo y año de tu Jeep.</p></details>
     <details><summary>¿Cuánto demora?</summary><p>Entre 2 y 3 semanas aproximadamente, porque traemos cada pedido desde la tienda oficial de Xprite en EE.UU.</p></details>
@@ -141,7 +153,7 @@
 <a class="fab" href="https://wa.me/51946564236" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/productos.js?v=202610291450"></script>
-<script src="js/app.js?v=202610291450"></script>
+<script src="js/productos.js?v=202610292028"></script>
+<script src="js/app.js?v=202610292028"></script>
 </body>
 </html>
