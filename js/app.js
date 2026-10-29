@@ -12,7 +12,28 @@ const ALL=[]; CATALOGO.forEach(s=>s.productos.forEach(p=>ALL.push(p)));
 function renderFilters(){
   const nav=document.getElementById("filters");
   nav.innerHTML=FILTERS.map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${k===current}">${l}</button>`).join("");
-  nav.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{current=b.dataset.k;renderFilters();render();window.scrollTo({top:document.getElementById("list").offsetTop-120,behavior:"smooth"});});
+  nav.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{current=b.dataset.k;renderFilters();render();document.getElementById("catalogo").scrollIntoView({behavior:"smooth",block:"start"});});
+}
+function pic(p){return p.foto;}
+const FEATURED=["KIT-JK-1","TL-JK-G1-CLR + BL-JK-G1-SMK","ZS-0128K-JK","TS-JK-DRL-G2-CLR + SL-JK-G1-CLR","WLB-0008-G1 + WL-10RS-2PC","TL-JK-WHEEL-G5"];
+function renderFeatured(){
+  const row=document.getElementById("featRow");
+  row.innerHTML=FEATURED.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean).map(p=>`<button class="fcard" data-i="${ALL.indexOf(p)}"><div class="fimg"><img src="${pic(p)}" alt="" loading="lazy"></div><div class="fb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3><div class="fp"><b>${soles(p.precio)}</b><span>Ver ›</span></div></div></button>`).join("");
+  row.querySelectorAll(".fcard").forEach(b=>b.onclick=()=>open(+b.dataset.i));
+}
+const CMP=[["Bold",["TL-JK-G1-CLR","TL-JK-G1-SMK"],"Clásico, LED en cuadrícula"],["Destroyer",["TL-JK-G7 Clear","TL-JK-G7 Smoke"],"Robusto, muchos LED"],["Inspire",["TL-JK-G9-CLR","TL-JK-G9-SMK"],"Moderno, con líneas de luz"],["Savage",["XP-JL-TL-JK-G12-CLR","XP-JL-TL-JK-G12-SMK"],"Premium, luz en forma de S"]];
+function renderCompare(){
+  const cols=CMP.map(([n,codes,d])=>{const ps=codes.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean);const av=ps.filter(p=>!p.agotado);return {n,d,ps,av,first:av[0]||ps[0]};}).filter(c=>c.first);
+  const mica=p=>/ahumad/i.test(p.nombre)?"Ahumada":"Transparente";
+  const row=(label,f)=>`<tr><td>${label}</td>${cols.map(c=>`<td>${f(c)}</td>`).join("")}</tr>`;
+  document.getElementById("cmpTable").innerHTML=`<thead><tr><th></th>${cols.map(c=>`<th>${c.n}</th>`).join("")}</tr></thead><tbody>`+
+    row("",c=>`<img src="${pic(c.first)}" alt="Stops ${c.n}" loading="lazy">`)+
+    row("Desde",c=>`<span class="cprice">${soles(Math.min(...(c.av.length?c.av:c.ps).map(p=>p.precio)))}</span>`)+
+    row("Micas",c=>c.ps.map(p=>mica(p)+(p.agotado?" (agotada)":"")).join("<br>"))+
+    row("Estilo",c=>c.d)+
+    row("Para",c=>"Wrangler JK 2007-2018")+
+    row("",c=>`<button class="cbtn" data-i="${ALL.indexOf(c.first)}">Ver</button>`)+`</tbody>`;
+  document.querySelectorAll("#cmpTable .cbtn").forEach(b=>b.onclick=()=>open(+b.dataset.i));
 }
 const GROUPS=[["Luces",["Faros delanteros","Neblineros","Luces de freno","Stops traseros","Luz para la llanta","Luces auxiliares"]],["Exterior",["Máscaras","Accesorios"]],["Otros",["Audio y otros","Otros autos"]]];
 function groupOf(name){for(const [g,cs] of GROUPS){if(cs.some(c=>name.startsWith(c))) return g;}return "";}
@@ -24,7 +45,7 @@ function render(){
     if(!items.length) return;
     count+=items.length;
     const g=groupOf(sec.categoria);
-    if(g&&g!==last){html+=`<h2 class="group">${g}</h2>`;last=g;}
+    if(g&&g!==last){html+=`<h2 class="group" id="g-${g}">${g}</h2>`;last=g;}
     html+=`<h3 class="cat" id="cat-${si}">${esc(sec.categoria)}<small>${items.length} ${items.length===1?"producto":"productos"}</small></h3><div class="grid">`+items.map(card).join("")+`</div>`;
   });
   document.getElementById("list").innerHTML=count?html:`<p class="empty">No hay productos para este modelo todavía.</p>`;
@@ -51,7 +72,7 @@ function openDrawer(){drawerEl.classList.add("open");drawerEl.setAttribute("aria
 function closeDrawer(){drawerEl.classList.remove("open");drawerEl.setAttribute("aria-hidden","true");overlayEl.hidden=true;menuBtn.setAttribute("aria-expanded","false");}
 menuBtn.onclick=openDrawer; overlayEl.onclick=closeDrawer; document.getElementById("drawerClose").onclick=closeDrawer;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&drawerEl.classList.contains("open")) closeDrawer();});
-document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault();closeDrawer();const el=document.getElementById(a.dataset.go);if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);});
+document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault();closeDrawer();let el=document.getElementById(a.dataset.go);if(!el&&current!=="all"){current="all";renderFilters();render();el=document.getElementById(a.dataset.go);}if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);});
 function card(p){
   const i=ALL.indexOf(p), img=p.foto;
   return `<button class="card" data-i="${i}" aria-label="${esc(p.nombre)}, ${soles(p.precio)}">
@@ -87,4 +108,4 @@ async function ask(p){
 }
 let tt; function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("on"),2800);}
 document.getElementById("moparbtn").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hola Jeepeto Parts, quiero cotizar repuestos originales Mopar. Código(s) de pieza: ");
-renderFilters(); render();
+renderFilters(); render(); renderFeatured(); renderCompare();

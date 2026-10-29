@@ -116,6 +116,66 @@ footer{padding-bottom:80px}
 h2.group{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:800;font-stretch:70%;text-transform:uppercase;margin:42px 0 0;display:flex;align-items:center;gap:12px}
 h2.group::after{content:"";flex:1;height:3px;background:var(--red);border-radius:2px}
 @media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+.hero{position:relative;overflow:hidden;margin:0 calc(50% - 50vw);padding:clamp(48px,9vw,110px) max(16px,calc(50vw - 544px)) clamp(40px,7vw,90px);min-height:clamp(420px,62vh,620px);display:flex;align-items:flex-end;color:#fff}
+.hero-img{position:absolute;inset:0;z-index:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:60% 55%;display:block}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.1) 100%),linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 55%)}
+.hero-txt{position:relative;z-index:2;max-width:620px}
+.hero h1,.hero .facts li{color:#fff}
+.hero p{color:#E4E4E8}
+@media (max-width:640px){.hero-img img{object-position:77% 50%}.hero::after{background:linear-gradient(0deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.55) 55%,rgba(0,0,0,.25) 100%)}}
+body{overflow-x:hidden}
+.gal{margin:26px 0 6px}
+.gal h3{margin:0 0 10px;font-size:1.05rem;font-weight:800;font-stretch:80%;text-transform:uppercase;letter-spacing:.03em}
+.gal-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,26%);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:thin}
+.gal-row figure{margin:0;scroll-snap-align:start;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.gal-row img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.gal-row figcaption{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.65);color:#fff;font-size:.75rem;font-weight:700;padding:3px 8px;border-radius:6px}
+.gal-note{margin:4px 0 0;font-size:.75rem;color:var(--muted)}
+/* ---- Estilo tipo Apple ---- */
+.subnav{display:flex;gap:4px;overflow-x:auto;padding:4px 12px 10px;max-width:1120px;margin:0 auto;scrollbar-width:none}
+.subnav::-webkit-scrollbar{display:none}
+.subnav a{flex:none;color:#C9C9CF;text-decoration:none;font-size:.82rem;font-weight:600;padding:5px 10px;border-radius:999px}
+.subnav a:hover,.subnav a:focus-visible{color:#fff;background:rgba(255,255,255,.1);outline:none}
+.eyebrow{margin:0 0 10px;font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.hero h1{font-size:clamp(2.8rem,9vw,5.6rem);line-height:.95;margin:0 0 16px}
+.hero-sub{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:520px;margin:0 0 22px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.btn-main,.btn-ghost{display:inline-block;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:999px;font-size:.95rem}
+.btn-main{background:var(--red);color:#fff}
+.btn-ghost{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-main:hover,.btn-ghost:hover{filter:brightness(1.1)}
+h2.big{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:800;font-stretch:72%;line-height:1;margin:0 0 8px;text-transform:none}
+.lead{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.feat,.shop,.cmp,.faq{margin-top:clamp(48px,8vw,90px)}
+.feat-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,31%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.fcard{all:unset;box-sizing:border-box;cursor:pointer;scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.fcard:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.fcard .fimg{background:#fff;aspect-ratio:1/1;position:relative}
+.fcard .fimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.fcard .fb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.fcard h3{margin:0;font-size:1.15rem;font-weight:800;font-stretch:85%;line-height:1.15}
+.fcard .fp{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:8px}
+.fcard .fp b{font-size:1.4rem;font-stretch:80%}
+.fcard .fp span{color:var(--red);font-weight:800;font-size:.9rem}
+.shop .filters{padding:0 0 4px;margin:0;max-width:none}
+.shop .chip{border-color:var(--line);color:var(--ink)}
+.cmp-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.cmp-table{width:100%;border-collapse:collapse;min-width:640px}
+.cmp-table th,.cmp-table td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line);font-size:.92rem;vertical-align:middle}
+.cmp-table th:first-child,.cmp-table td:first-child{text-align:left;color:var(--muted);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;width:130px}
+.cmp-table thead th{font-size:1.05rem;font-weight:800;font-stretch:85%}
+.cmp-table img{width:110px;height:110px;object-fit:contain;background:#fff;border-radius:12px}
+.cmp-table .cprice{font-size:1.3rem;font-weight:800;font-stretch:80%}
+.cmp-table .cbtn{border:0;background:var(--red);color:#fff;font:inherit;font-weight:800;padding:8px 16px;border-radius:999px;cursor:pointer}
+.cmp-table tr:last-child td{border-bottom:0}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;padding:14px 0;font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--red);font-weight:800;font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 14px;color:var(--muted);max-width:760px}
+@media (max-width:640px){.feat-row{grid-auto-columns:78%}}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.9rem;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;text-align:center;z-index:20}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 @media (prefers-reduced-motion:reduce){.toast,.card{transition:none}}
