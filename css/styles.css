@@ -139,8 +139,8 @@ body{overflow-x:hidden}
 .subnav a:hover,.subnav a:focus-visible{color:#fff;background:rgba(255,255,255,.1);outline:none}
 .eyebrow{margin:0 0 10px;font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
 .hero h1{font-size:clamp(2.8rem,9vw,5.6rem);line-height:.95;margin:0 0 16px}
-.hero-sub{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:520px;margin:0 0 22px}
-.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.hero .hero-sub{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:520px;margin:0 0 28px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
 .btn-main,.btn-ghost{display:inline-block;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:999px;font-size:.95rem}
 .btn-main{background:var(--red);color:#fff}
 .btn-ghost{border:2px solid rgba(255,255,255,.75);color:#fff}
