@@ -1,8 +1,8 @@
 // Lógica de la página: filtros, tarjetas, detalle y WhatsApp.
 // ===== Configuración =====
 const WHATSAPP = "51946564236"; // número con código de país, sin +
-const FILTERS=[["all","Todos"],["jk","Wrangler JK"],["jl","Wrangler JL"],["jt","Gladiator"],["xj","Cherokee XJ · YJ · Comanche"],["uni","Universal"]];
-const SHORT={jk:"JK",jl:"JL",jt:"Gladiator",xj:"XJ · YJ · Comanche",uni:"Universal"};
+const FILTERS=[["all","Todos"],["jk","Wrangler JK"],["jl","Wrangler JL"],["jt","Gladiator"],["uni","Universal"]];
+const SHORT={jk:"JK",jl:"JL",jt:"Gladiator",uni:"Universal"};
 let current="all";
 try{const h=location.hash.slice(1); if(FILTERS.some(f=>f[0]===h)) current=h;}catch(e){}
 const soles=n=>"S/ "+n.toLocaleString("es-PE");
@@ -15,10 +15,11 @@ function renderFilters(){
   nav.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{current=b.dataset.k;renderFilters();render();document.getElementById("catalogo").scrollIntoView({behavior:"smooth",block:"start"});});
 }
 function pic(p){return p.foto;}
+function pic2(p){return p.foto2||"";}
 const FEATURED=["BL-JK-G1-SMK","TL-JK-G1-CLR + BL-JK-G1-SMK","ZS-0128K-JK","TS-JK-DRL-G2-CLR + SL-JK-G1-CLR","WLB-0008-G1","TL-JK-WHEEL-G5"];
 function renderFeatured(){
   const row=document.getElementById("featRow");
-  row.innerHTML=FEATURED.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean).map(p=>`<button class="fcard" data-i="${ALL.indexOf(p)}"><div class="fimg"><img src="${pic(p)}" alt="" loading="lazy"></div><div class="fb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3><div class="fp"><b>${soles(p.precio)}</b><span>Ver ›</span></div></div></button>`).join("");
+  row.innerHTML=FEATURED.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean).map(p=>`<button class="fcard" data-i="${ALL.indexOf(p)}"><div class="fimg${pic2(p)?" has2":""}"><img src="${pic(p)}" alt="" loading="lazy">${pic2(p)?`<img class="alt" src="${pic2(p)}" alt="" loading="lazy">`:""}</div><div class="fb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3><div class="fp"><b>${soles(p.precio)}</b><span>Ver ›</span></div></div></button>`).join("");
   row.querySelectorAll(".fcard").forEach(b=>b.onclick=()=>open(+b.dataset.i));
 }
 const CMP=[["Bold",["TL-JK-G1-CLR","TL-JK-G1-SMK"],"Clásico, LED en cuadrícula"],["Destroyer",["TL-JK-G7 Clear","TL-JK-G7 Smoke"],"Robusto, muchos LED"],["Inspire",["TL-JK-G9-CLR","TL-JK-G9-SMK"],"Moderno, con líneas de luz"],["Savage",["XP-JL-TL-JK-G12-CLR","XP-JL-TL-JK-G12-SMK"],"Premium, luz en forma de S"]];
@@ -35,7 +36,15 @@ function renderCompare(){
     row("",c=>`<button class="cbtn" data-i="${ALL.indexOf(c.first)}">Ver</button>`)+`</tbody>`;
   document.querySelectorAll("#cmpTable .cbtn").forEach(b=>b.onclick=()=>open(+b.dataset.i));
 }
-const GROUPS=[["Luces",["Faros delanteros","Neblineros","Luces de freno","Stops traseros","Luz para la llanta","Luces auxiliares"]],["Exterior",["Máscaras","Accesorios"]],["Otros",["Audio y otros","Otros autos"]]];
+function renderGallery(){
+  document.querySelectorAll(".gal-row figure[data-code]").forEach(f=>{
+    const p=ALL.find(q=>q.codigo===f.dataset.code); if(!p) return;
+    const im=document.createElement("img"); im.className="alt"; im.alt=p.nombre; im.loading="lazy"; im.src=pic(p); f.appendChild(im);
+    const cap=f.querySelector("figcaption"); cap.innerHTML=`<span class="mn">${esc(cap.textContent)}</span><span class="pn">${esc(p.nombre)} · ${soles(p.precio)}</span>`;
+    const go=()=>open(ALL.indexOf(p)); f.onclick=go; f.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};
+  });
+}
+const GROUPS=[["Luces",["Faros delanteros","Neblineros","Luces de freno","Stops traseros","Luz para la llanta","Luces auxiliares"]],["Exterior",["Máscaras","Espejos","Accesorios"]],["Otros",["Audio y otros","Otros autos"]]];
 function groupOf(name){for(const [g,cs] of GROUPS){if(cs.some(c=>name.startsWith(c))) return g;}return "";}
 function shortName(name){return name.replace(/ \(.*\)$/,"");}
 function render(){
@@ -76,7 +85,7 @@ document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault
 function card(p){
   const i=ALL.indexOf(p), img=p.foto;
   return `<button class="card" data-i="${i}" aria-label="${esc(p.nombre)}, ${soles(p.precio)}">
-    <div class="ph">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${p.agotado?`<span class="badge">Agotado</span>`:""}${p.oferta&&!p.agotado?`<span class="badge promo">${p.antes?"–"+Math.round((p.antes-p.precio)*100/p.antes)+"%":"Oferta"}</span>`:""}</div>
+    <div class="ph${pic2(p)?" has2":""}">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${pic2(p)?`<img class="alt" src="${pic2(p)}" alt="" loading="lazy">`:""}${p.agotado?`<span class="badge">Agotado</span>`:""}${p.oferta&&!p.agotado?`<span class="badge promo">${p.antes?"–"+Math.round((p.antes-p.precio)*100/p.antes)+"%":"Oferta"}</span>`:""}</div>
     <div class="cb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3>
     <div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small class="save">Por separado ${soles(p.antes)}</small>`:""}</div></div></button>`;
 }
@@ -108,4 +117,4 @@ async function ask(p){
 }
 let tt; function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("on"),2800);}
 document.getElementById("moparbtn").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hola Jeepeto Parts, quiero cotizar repuestos originales Mopar. Código(s) de pieza: ");
-renderFilters(); render(); renderFeatured(); renderCompare();
+renderFilters(); render(); renderFeatured(); renderCompare(); renderGallery();

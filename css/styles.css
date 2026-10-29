@@ -186,6 +186,17 @@ h2.big{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:800;font-stretch:72%;line-
 .foot-logo{height:120px;width:auto;margin-bottom:10px}
 .drawer-head{background:var(--head);margin-top:calc(-1 * (env(safe-area-inset-top,0px) + 6px));padding-top:calc(env(safe-area-inset-top,0px) + 16px)}
 .drawer-head .drawer-close{color:#fff}
+.ph img.alt{opacity:0;transition:opacity .35s ease;object-fit:cover;background:#000}
+@media (hover:hover){.card:hover .ph.has2 img.alt,.card:focus-visible .ph.has2 img.alt{opacity:1}}
+.ph .badge{z-index:2}
+.fcard .fimg img.alt{opacity:0;transition:opacity .35s ease;object-fit:cover;background:#000}
+@media (hover:hover){.fcard:hover .fimg.has2 img.alt,.fcard:focus-visible .fimg.has2 img.alt{opacity:1}}
+.gal-row figure{cursor:pointer}
+.gal-row figure img.alt{position:absolute;inset:0;height:100%;object-fit:contain;background:#fff;opacity:0;transition:opacity .35s ease}
+.gal-row figcaption .pn{display:none}
+@media (hover:hover){.gal-row figure:hover img.alt,.gal-row figure:focus-visible img.alt{opacity:1}.gal-row figure:hover figcaption .mn,.gal-row figure:focus-visible figcaption .mn{display:none}.gal-row figure:hover figcaption .pn,.gal-row figure:focus-visible figcaption .pn{display:inline}}
+.gal-row figure:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.gal-row figcaption{z-index:2}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.9rem;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;text-align:center;z-index:20}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 @media (prefers-reduced-motion:reduce){.toast,.card{transition:none}}

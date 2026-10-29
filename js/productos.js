@@ -21,6 +21,7 @@ const CATALOGO = [
         ],
         "foto": "img/combo3_clr.jpg",
         "agotado": false,
+        "foto2": "img/s2_p07-003.jpg",
         "antes": 664,
         "oferta": true
       },
@@ -40,6 +41,7 @@ const CATALOGO = [
         ],
         "foto": "img/ts_combo_halo.jpg",
         "agotado": false,
+        "foto2": "img/s2_p05-002.jpg",
         "antes": 384,
         "oferta": true
       },
@@ -59,6 +61,7 @@ const CATALOGO = [
         ],
         "foto": "img/ag_combo_halo_smk.jpg",
         "agotado": true,
+        "foto2": "img/s2_p13-001.jpg",
         "antes": 384,
         "oferta": true
       },
@@ -78,6 +81,7 @@ const CATALOGO = [
         ],
         "foto": "img/ts_combo_sinhalo.jpg",
         "agotado": false,
+        "foto2": "img/s2_p05-003.jpg",
         "antes": 354,
         "oferta": true
       },
@@ -97,6 +101,7 @@ const CATALOGO = [
         ],
         "foto": "img/ag_combo_sin_smk.jpg",
         "agotado": true,
+        "foto2": "img/h2_ag_combo_sin_smk__s2_p13-002.jpg",
         "antes": 358,
         "oferta": true
       }
@@ -153,7 +158,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/halo.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_halo__s2_p10-001.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -170,7 +176,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/envision.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_envision__s2_p09-002.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -272,7 +279,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_chase.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p15-003.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -289,7 +297,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_combo_br.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fd_combo_br__s2_p10-002.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -306,7 +315,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_combo_br.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fd_combo_br__s2_p10-002.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -323,7 +333,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_combo_w.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p15-002.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -357,7 +368,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_rgbkit.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fd_rgbkit__s2_p10-003.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -373,8 +385,9 @@ const CATALOGO = [
         "modelos": [
           "jk"
         ],
-        "foto": "img/fd_chasekit.jpg",
-        "agotado": true
+        "foto": "img/fd_chase.jpg",
+        "agotado": true,
+        "foto2": "img/h2_fd_chasekit__s2_p16-000.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -392,7 +405,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fd_9g6kit.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fd_9g6kit__s2_p11-000.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -410,7 +424,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fd_9g5.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p16-002.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -428,7 +443,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fd_9g1.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p16-001.jpg"
       },
       {
         "cat": "Faros delanteros",
@@ -446,41 +462,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fd_9g3.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros LED rectangulares 5x7 Insight (par)",
-        "compatible": "Cherokee XJ 1984-2001, Wrangler YJ 1987-1995 y Comanche MJ 1986-1992",
-        "descripcion": "Faros principales rectangulares en LED, reemplazo directo del faro de fábrica (H6054). También por unidad: S/ 345.",
-        "ventajas": [
-          "Mucha más luz que los halógenos",
-          "Plug and play con el conector original"
-        ],
-        "codigo": "HL-5X7-G3-K",
-        "precio": 689,
-        "modelos": [
-          "xj"
-        ],
-        "foto": "img/x57g3.jpg",
-        "agotado": true
-      },
-      {
-        "cat": "Faros delanteros",
-        "nombre": "Faros LED rectangulares 5x7 con alta y baja (par)",
-        "compatible": "Cherokee XJ 1984-2001, Wrangler YJ 1987-1995 y Comanche MJ 1986-1992",
-        "descripcion": "Faros LED tipo proyector con luz alta y baja, reemplazo directo del faro de fábrica (H6054).",
-        "ventajas": [
-          "Diseño tipo proyector",
-          "Certificación DOT/SAE"
-        ],
-        "codigo": "HL-5X7-G4",
-        "precio": 889,
-        "modelos": [
-          "xj"
-        ],
-        "foto": "img/x57g4.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p16-003.jpg"
       }
     ]
   },
@@ -504,7 +487,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fogg1.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/fx_3.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -523,7 +507,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fogg1.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/s2_p12-000.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -542,7 +527,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fogg2.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fogg2__s2_p12-001.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -561,7 +547,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fogg2.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fogg2__s2_p12-001.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -578,7 +565,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_fljkg1.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/s2_p11-001.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -595,7 +583,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_fljkg1.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/fx_2.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -612,7 +601,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_al1002.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/s2_p11-002.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -629,7 +619,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_al1001.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/h2_fd_al1001__s2_p17-000.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -646,7 +637,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/fd_fldrl.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fd_fldrl__s2_p11-003.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -662,7 +654,7 @@ const CATALOGO = [
         "modelos": [
           "jk"
         ],
-        "foto": "img/fd_fldrlrgb.jpg",
+        "foto": "img/fd_fldrl.jpg",
         "agotado": false
       },
       {
@@ -682,7 +674,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fogg2.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fogg2__s2_p12-001.jpg"
       },
       {
         "cat": "Neblineros LED 4\"",
@@ -699,7 +692,8 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/fd_alfl.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_fd_alfl__s2_p12-002.jpg"
       }
     ]
   },
@@ -738,7 +732,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/bl2.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/s2_p01-001.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -755,7 +750,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/g10.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/fx_5.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -772,7 +768,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/turn.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_turn__ts_halo_smk.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -789,7 +786,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/turn.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_turn__ts_halo_clr.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -840,7 +838,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/ag_sl_clr.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/fx_4.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -857,7 +856,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/ag_sl_smk.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/fx_4.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -874,7 +874,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/ag_g3_amb.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/h2_ag_g3_amb__s2_p14-000.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -891,7 +892,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/ag_g3_smk.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/h2_ag_g3_smk__s2_p14-000.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -909,7 +911,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fd_tsjl.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p17-001.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -927,7 +930,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/fd_tsjl.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p17-001.jpg"
       },
       {
         "cat": "Luces de freno y direccionales",
@@ -967,7 +971,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/combo3_smk.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p14-003.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -984,7 +989,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/destroyer.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/tl_destroyer_clr.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1001,7 +1007,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/destroyer.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/fx_0.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1052,7 +1059,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_def_clr.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/h2_tl_def_clr__s2_p15-000.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1069,7 +1077,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_def_smk.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/h2_tl_def_smk__s2_p15-000.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1137,7 +1146,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_linear.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p15-001.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1154,7 +1164,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_linear.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/s2_p15-001.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1171,7 +1182,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_inspire_clr.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/fx_1.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1188,7 +1200,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_inspire_smk.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/fx_1.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1205,7 +1218,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_savjk_clr.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_tl_savjk_clr__s2_p08-003.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1222,7 +1236,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/tl_savjk_smk.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_tl_savjk_smk__s2_p08-003.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1275,7 +1290,8 @@ const CATALOGO = [
           "jl"
         ],
         "foto": "img/tl_savjl_clr.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_tl_savjl_clr__s2_p09-001.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1292,7 +1308,8 @@ const CATALOGO = [
           "jl"
         ],
         "foto": "img/tl_savjl_smk.jpg",
-        "agotado": true
+        "agotado": true,
+        "foto2": "img/h2_tl_savjl_smk__s2_p09-001.jpg"
       },
       {
         "cat": "Stops traseros LED",
@@ -1388,7 +1405,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/mamba.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/s2_p02-002.jpg"
       },
       {
         "cat": "Luces auxiliares (uso fuera de carretera)",
@@ -1405,7 +1423,8 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/pod2.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/s2_p02-003.jpg"
       },
       {
         "cat": "Luces auxiliares (uso fuera de carretera)",
@@ -1475,6 +1494,60 @@ const CATALOGO = [
         ],
         "foto": "img/bar50.jpg",
         "agotado": false
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights RGB con app, 4 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Luces LED de colores para debajo del carro, con control por app y control remoto. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Control por app",
+          "Muchos colores"
+        ],
+        "codigo": "DL-RL-G8 4pzs",
+        "precio": 349,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/es_rock.jpg",
+        "agotado": false,
+        "foto2": "img/s2_p06-002.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights RGB con app, 8 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Kit de 8 luces LED de colores para debajo del carro, con control por app y control remoto. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Control por app",
+          "Cubre todo el carro"
+        ],
+        "codigo": "DL-RL-G8 8pzs",
+        "precio": 569,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/es_rock.jpg",
+        "agotado": false,
+        "foto2": "img/fx_6.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights RGB con app, 10 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Kit de 10 luces LED de colores para debajo del carro, con control por app y control remoto. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Control por app",
+          "Máxima cobertura"
+        ],
+        "codigo": "DL-RL-G8 10pzs",
+        "precio": 629,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/es_rock.jpg",
+        "agotado": false,
+        "foto2": "img/s2_p06-002.jpg"
       }
     ]
   },
@@ -1598,7 +1671,8 @@ const CATALOGO = [
           "jk"
         ],
         "foto": "img/p_jksmk.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_p_jksmk__s2_p04-002.jpg"
       },
       {
         "cat": "Máscaras / parrillas (a pedido)",
@@ -1652,7 +1726,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/p_jl123.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_p_jl123__s2_p04-003.jpg"
       },
       {
         "cat": "Máscaras / parrillas (a pedido)",
@@ -1670,7 +1745,8 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/p_jlg1.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_p_jlg1__s2_p03-003.jpg"
       },
       {
         "cat": "Máscaras / parrillas (a pedido)",
@@ -1706,7 +1782,83 @@ const CATALOGO = [
           "jt"
         ],
         "foto": "img/p_jlsmk.jpg",
+        "agotado": false,
+        "foto2": "img/h2_p_jlsmk__s2_p05-000.jpg"
+      }
+    ]
+  },
+  {
+    "categoria": "Espejos",
+    "productos": [
+      {
+        "cat": "Espejos",
+        "nombre": "Espejos de aluminio para manejar sin puertas, JK",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Par de espejos de aluminio que se montan en las bisagras para manejar el Jeep sin puertas.",
+        "ventajas": [
+          "Para salir sin puertas",
+          "Aluminio resistente"
+        ],
+        "codigo": "JK-SM-G1",
+        "precio": 339,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/es_jk.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Espejos",
+        "nombre": "Espejos de aluminio para manejar sin puertas, JL",
+        "compatible": "Wrangler JL 2018 en adelante",
+        "descripcion": "Par de espejos de aluminio que se montan en las bisagras para manejar el JL sin puertas.",
+        "ventajas": [
+          "Para salir sin puertas",
+          "Aluminio resistente"
+        ],
+        "codigo": "JL-SM-G1",
+        "precio": 339,
+        "modelos": [
+          "jl"
+        ],
+        "foto": "img/es_jl.jpg",
         "agotado": false
+      },
+      {
+        "cat": "Espejos",
+        "nombre": "Carcasas de espejo con LED (foco + direccional), transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Carcasas para los espejos laterales con foco LED y direccional integrados. No incluye el vidrio: se usa el espejo original.",
+        "ventajas": [
+          "Foco y direccional en el espejo",
+          "Usa tu vidrio original"
+        ],
+        "codigo": "SM-JK-G1-CLR",
+        "precio": 569,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/es_led.jpg",
+        "agotado": true,
+        "foto2": "img/s2_p14-001.jpg"
+      },
+      {
+        "cat": "Espejos",
+        "nombre": "Carcasas de espejo con LED (foco + direccional), ahumadas",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Carcasas para los espejos laterales con foco LED y direccional integrados, mica ahumada. No incluye el vidrio: se usa el espejo original.",
+        "ventajas": [
+          "Foco y direccional en el espejo",
+          "Look oscuro"
+        ],
+        "codigo": "SM-JK-G1-SMK",
+        "precio": 629,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/es_led.jpg",
+        "agotado": true,
+        "foto2": "img/s2_p14-001.jpg"
       }
     ]
   },
@@ -1994,7 +2146,8 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/tb_fusion.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/s2_p07-000.jpg"
       },
       {
         "cat": "Otros autos",
@@ -2011,7 +2164,8 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/tb_g8.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_tb_g8__s2_p07-001.jpg"
       },
       {
         "cat": "Otros autos",
@@ -2028,7 +2182,40 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/tb_g7.jpg",
-        "agotado": false
+        "agotado": false,
+        "foto2": "img/h2_tb_g7__s2_p07-002.jpg"
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Luces LED de espejo, Ford Bronco",
+        "compatible": "Ford Bronco (consultar año)",
+        "descripcion": "Luces LED para los espejos laterales del Ford Bronco. Consulta el año de tu Bronco antes de pedir.",
+        "ventajas": [
+          "Más visible de lado",
+          "Look moderno"
+        ],
+        "codigo": "SP-CL1479",
+        "precio": 1049,
+        "modelos": [],
+        "foto": "img/es_bronco.jpg",
+        "agotado": false,
+        "foto2": "img/s2_p06-000.jpg"
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Direccionales secuenciales de espejo, Toyota Tacoma",
+        "compatible": "Toyota Tacoma 2016-2023",
+        "descripcion": "Direccionales LED secuenciales para los espejos laterales de la Tacoma.",
+        "ventajas": [
+          "Efecto secuencial",
+          "Más visible al girar"
+        ],
+        "codigo": "SP-CL761-B",
+        "precio": 489,
+        "modelos": [],
+        "foto": "img/es_tacoma.jpg",
+        "agotado": false,
+        "foto2": "img/s2_p06-001.jpg"
       }
     ]
   }
