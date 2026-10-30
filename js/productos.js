@@ -1850,42 +1850,6 @@ const CATALOGO = [
         ],
         "foto": "img/es_jl.jpg",
         "agotado": false
-      },
-      {
-        "cat": "Espejos",
-        "nombre": "Carcasas de espejo con LED (foco + direccional), transparentes",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Carcasas para los espejos laterales con foco LED y direccional integrados. No incluye el vidrio: se usa el espejo original.",
-        "ventajas": [
-          "Foco y direccional en el espejo",
-          "Usa tu vidrio original"
-        ],
-        "codigo": "SM-JK-G1-CLR",
-        "precio": 569,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/es_led.jpg",
-        "agotado": true,
-        "foto2": "img/s2_p14-001.jpg"
-      },
-      {
-        "cat": "Espejos",
-        "nombre": "Carcasas de espejo con LED (foco + direccional), ahumadas",
-        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
-        "descripcion": "Carcasas para los espejos laterales con foco LED y direccional integrados, mica ahumada. No incluye el vidrio: se usa el espejo original.",
-        "ventajas": [
-          "Foco y direccional en el espejo",
-          "Look oscuro"
-        ],
-        "codigo": "SM-JK-G1-SMK",
-        "precio": 629,
-        "modelos": [
-          "jk"
-        ],
-        "foto": "img/es_led.jpg",
-        "agotado": true,
-        "foto2": "img/s2_p14-001.jpg"
       }
     ]
   },
