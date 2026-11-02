@@ -203,9 +203,14 @@ h2.big{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:800;font-stretch:72%;line-
 body[data-page="inicio"] .cat-only{display:none}
 body:not([data-page="inicio"]) .home-only{display:none}
 body:not([data-page="trasera"]) .only-trasera{display:none}
-.page-head{padding:clamp(28px,6vw,60px) 0 0}
-.page-head h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:800;font-stretch:72%;line-height:1;margin:0 0 10px;text-transform:uppercase}
-.page-head .lead{max-width:640px}
+.page-head{position:relative;overflow:hidden;margin:0 calc(50% - 50vw);padding:clamp(56px,9vw,100px) max(16px,calc(50vw - 544px)) clamp(28px,5vw,48px);min-height:clamp(280px,40vh,400px);display:flex;align-items:flex-end;background:#0B0B0C;color:#fff}
+.page-head .hero-img{position:absolute;inset:0;z-index:0}
+.page-head .hero-img img{width:100%;height:100%;object-fit:cover;object-position:60% 55%;display:block}
+.page-head::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#0B0B0C 0%,rgba(11,11,12,.85) 8%,rgba(11,11,12,0) 32%),linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.15) 100%),linear-gradient(0deg,#0B0B0C 0%,rgba(0,0,0,.6) 18%,rgba(0,0,0,0) 60%)}
+.page-head .ph-txt{position:relative;z-index:2;max-width:680px}
+.page-head h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:800;font-stretch:72%;line-height:1;margin:0 0 10px;text-transform:uppercase;color:#fff}
+.page-head .lead{max-width:640px;color:#E4E4E8;margin:0}
+@media (max-width:640px){.page-head .hero-img img{object-position:77% 50%}}
 body:not([data-page="inicio"]) .shop{margin-top:22px}
 .shop h2.big{font-size:1.3rem;margin-bottom:2px}
 .zones{margin-top:clamp(48px,8vw,90px)}
