@@ -5,7 +5,7 @@ const FILTERS=[["all","Todos"],["jk","Wrangler JK"],["jl","Wrangler JL"],["jt","
 const SHORT={jk:"JK",jl:"JL",jt:"Gladiator",uni:"Universal"};
 let current="all";
 
-const soles=n=>"S/ "+n.toLocaleString("es-PE");
+const soles=n=>n?"S/ "+n.toLocaleString("es-PE"):"Consultar";
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ALL=[]; CATALOGO.forEach(s=>s.productos.forEach(p=>ALL.push(p)));
 

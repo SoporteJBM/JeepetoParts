@@ -464,6 +464,43 @@ const CATALOGO = [
         "foto": "img/fd_9g3.jpg",
         "agotado": true,
         "foto2": "img/s2_p16-003.jpg"
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Faros 9\" Warrior con halo, luz de día y direccional",
+        "compatible": "Wrangler JL 2018 en adelante y Gladiator JT 2020 en adelante",
+        "descripcion": "Faros LED de 9\" con diseño Warrior: halo blanco de luz de día con encendido secuencial, direccional ámbar, luz baja y alta. Plug and play, a prueba de agua IP68. Producto grande: el precio incluye impuestos de importación.",
+        "ventajas": [
+          "Encendido secuencial",
+          "Direccional integrada"
+        ],
+        "codigo": "SP-CL980",
+        "precio": 2399,
+        "modelos": [
+          "jl",
+          "jt"
+        ],
+        "foto": "img/fd_warrior.jpg",
+        "agotado": false,
+        "foto2": "img/fd_warrior2.jpg"
+      },
+      {
+        "cat": "Faros delanteros",
+        "nombre": "Soportes de montaje para faros 7\" (par)",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas) (consultar)",
+        "descripcion": "Repuesto del soporte plástico (canasta) donde va montado el faro de 7\". Útil si el original se rompió o al cambiar a faros LED. Se monta en los puntos de fábrica. No incluye el faro.",
+        "ventajas": [
+          "Reemplazo directo",
+          "Plástico ABS resistente"
+        ],
+        "codigo": "ZS-0088",
+        "precio": 229,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/fd_soporte7.jpg",
+        "agotado": false,
+        "foto2": "img/fd_soporte7b.jpg"
       }
     ]
   },
@@ -1510,6 +1547,41 @@ const CATALOGO = [
         ],
         "foto": "img/tl_jt_smk.jpg",
         "agotado": true
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Cyclone, transparentes",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Las dos luces traseras LED Cyclone, con luz de posición, freno, direccional y retroceso. Mica transparente.",
+        "ventajas": [
+          "Diseño moderno",
+          "Retroceso en LED blanco"
+        ],
+        "codigo": "TL-JK-G3-CLR",
+        "precio": 549,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_cyclone.jpg",
+        "agotado": false,
+        "foto2": "img/tl_cyclone2.jpg"
+      },
+      {
+        "cat": "Stops traseros LED",
+        "nombre": "Stops LED Cyclone, ahumados",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Las dos luces traseras LED Cyclone, con luz de posición, freno, direccional y retroceso. Mica ahumada.",
+        "ventajas": [
+          "Look oscuro",
+          "Retroceso en LED blanco"
+        ],
+        "codigo": "TL-JK-G3-SMK",
+        "precio": 549,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tl_cyclone2.jpg",
+        "agotado": false
       }
     ]
   },
@@ -1624,6 +1696,57 @@ const CATALOGO = [
           "jl"
         ],
         "foto": "img/typhoon.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Luz para la llanta de repuesto",
+        "nombre": "Luz de freno RGB doble aro para llanta, JK",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Luz de freno de doble aro para la llanta de repuesto, con colores RGB y control remoto. También funciona como tercera luz de freno. Uso de colores fuera de carretera o en eventos.",
+        "ventajas": [
+          "Doble aro de luz",
+          "Control remoto"
+        ],
+        "codigo": "TL-JK-WHEEL-G7",
+        "precio": 579,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tlw_g7jk.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Luz para la llanta de repuesto",
+        "nombre": "Luz de freno RGB doble aro para llanta, JL",
+        "compatible": "Wrangler JL 2018 en adelante",
+        "descripcion": "Luz de freno de doble aro para la llanta de repuesto del JL, con colores RGB y control remoto. Plug and play. Uso de colores fuera de carretera o en eventos.",
+        "ventajas": [
+          "Doble aro de luz",
+          "Plug and play"
+        ],
+        "codigo": "TL-JL-WHEEL-G7",
+        "precio": 629,
+        "modelos": [
+          "jl"
+        ],
+        "foto": "img/tlw_g7jl.jpg",
+        "agotado": true
+      },
+      {
+        "cat": "Luz para la llanta de repuesto",
+        "nombre": "Luz de freno RGB para llanta con Bluetooth",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas)",
+        "descripcion": "Luz de freno para la llanta de repuesto, con colores RGB controlados por app (Bluetooth) y control remoto. Plug and play. Uso de colores fuera de carretera o en eventos.",
+        "ventajas": [
+          "Control por app y remoto",
+          "Plug and play"
+        ],
+        "codigo": "TL-UNI-WHEEL-G3",
+        "precio": 369,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/tlw_g3bt.jpg",
         "agotado": false
       }
     ]
@@ -1778,6 +1901,24 @@ const CATALOGO = [
       },
       {
         "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights RGB con app, 6 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Kit de 6 luces LED de colores para debajo del carro, con control por app y control remoto. Uso fuera de carretera o en eventos. Foto referencial.",
+        "ventajas": [
+          "Control por app",
+          "Muchos colores"
+        ],
+        "codigo": "DL-RL-G8-6PC",
+        "precio": 569,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/es_rock.jpg",
+        "agotado": false,
+        "foto2": "img/fx_6.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
         "nombre": "Rock lights RGB con app, 8 piezas",
         "compatible": "Universal: Jeep, camionetas y UTV de 12V",
         "descripcion": "Kit de 8 luces LED de colores para debajo del carro, con control por app y control remoto. Uso fuera de carretera o en eventos.",
@@ -1811,6 +1952,131 @@ const CATALOGO = [
         "foto": "img/es_rock.jpg",
         "agotado": false,
         "foto2": "img/s2_p06-002.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights Trophy RGBW, 4 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Rock lights de aluminio con LED RGB + blanco puro, para debajo del Jeep. El blanco también sirve para trabajar de noche. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Blanco puro + colores",
+          "Carcasa de aluminio"
+        ],
+        "codigo": "DL-RL-G7-4PC",
+        "precio": 429,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/rl_trophy4.jpg",
+        "agotado": false,
+        "foto2": "img/rl_trophy_jeep.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights Trophy RGBW, 6 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Kit de 6 rock lights de aluminio con LED RGB + blanco puro. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Blanco puro + colores",
+          "Carcasa de aluminio"
+        ],
+        "codigo": "DL-RL-G7-6PC",
+        "precio": 629,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/rl_trophy6.jpg",
+        "agotado": false,
+        "foto2": "img/rl_trophy_jeep.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights Trophy RGBW, 8 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Kit de 8 rock lights de aluminio con LED RGB + blanco puro. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Cubre todo el Jeep",
+          "Blanco puro + colores"
+        ],
+        "codigo": "DL-RL-G7-8PC",
+        "precio": 749,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/rl_trophy8.jpg",
+        "agotado": false,
+        "foto2": "img/rl_trophy_jeep.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Rock lights Trophy RGBW, 10 piezas",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Kit de 10 rock lights de aluminio con LED RGB + blanco puro. Uso fuera de carretera o en eventos.",
+        "ventajas": [
+          "Máxima cobertura",
+          "Blanco puro + colores"
+        ],
+        "codigo": "DL-RL-G7-10PC",
+        "precio": 879,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/rl_trophy10.jpg",
+        "agotado": false,
+        "foto2": "img/rl_trophy_jeep.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Barra LED 52\" RGBW 5D con proyector",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Barra LED de 52\" con luz blanca y colores RGB. Uso fuera de carretera. Producto grande y largo: el precio depende del envío, consúltalo por WhatsApp.",
+        "ventajas": [
+          "Gran alcance",
+          "Colores RGB"
+        ],
+        "codigo": "SP-CL1130-52",
+        "precio": 0,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/bar52.jpg",
+        "agotado": false,
+        "foto2": "img/bar52b.jpg"
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Cable de extensión 10 pies para rock lights Trophy",
+        "compatible": "Rock lights Trophy RGBW (DL-RL-G7)",
+        "descripcion": "Cable de extensión de 10 pies (3 m) para alejar una luz de la caja de control. Disponible solo como agregado a otro pedido.",
+        "ventajas": [
+          "3 metros más de cable",
+          "Conector a prueba de agua"
+        ],
+        "codigo": "DL-RL-G7-EXT-10FT",
+        "precio": 79,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/rl_ext.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Luces auxiliares (uso fuera de carretera)",
+        "nombre": "Cabeza de repuesto para rock lights RGB (rayo)",
+        "compatible": "Rock lights RGB G2/G4 de Xprite",
+        "descripcion": "Una luz de repuesto en forma de rayo para los kits de rock lights RGB G2/G4, con sus tornillos. Disponible solo como agregado a otro pedido.",
+        "ventajas": [
+          "Reemplazo directo",
+          "Carcasa de aluminio"
+        ],
+        "codigo": "DL-RL-G2G4-HEAD",
+        "precio": 99,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/rl_head.jpg",
+        "foto2": "img/rl_head2.jpg",
+        "agotado": false
       }
     ]
   },
@@ -1923,6 +2189,57 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/canbus.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Accesorios",
+        "nombre": "Antena GMRS con látigo LED ámbar 4 pies",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Antena de radio GMRS con látigo de luz LED ámbar de 4 pies. Incluye interruptor, 2 banderas y accesorios. El uso como antena de radio depende de las normas del MTC; la luz es para uso fuera de carretera.",
+        "ventajas": [
+          "Antena + luz en uno",
+          "Incluye interruptor"
+        ],
+        "codigo": "DL-WL-GMRS-ANT-G4-4FT-Y",
+        "precio": 699,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/ant_gmrs.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Accesorios",
+        "nombre": "Panel de 4 interruptores con control",
+        "compatible": "Wrangler JK 2007-2018 (2 y 4 puertas) (consultar)",
+        "descripcion": "Panel de 4 interruptores que se monta en el pilar A, con su caja de control y cableado. Para encender barras, pods y otras luces desde la cabina.",
+        "ventajas": [
+          "Ordena tus luces",
+          "Incluye cableado"
+        ],
+        "codigo": "CS-4SWITCH-G1",
+        "precio": 879,
+        "modelos": [
+          "jk"
+        ],
+        "foto": "img/sw_4.jpg",
+        "agotado": false
+      },
+      {
+        "cat": "Accesorios",
+        "nombre": "Panel de 8 interruptores Rogue",
+        "compatible": "Universal: Jeep, camionetas y UTV de 12V",
+        "descripcion": "Panel táctil de 8 interruptores con voltímetro y caja de control, para manejar hasta 8 accesorios (luces, radio, bloqueos) desde la cabina.",
+        "ventajas": [
+          "8 salidas",
+          "Voltímetro integrado"
+        ],
+        "codigo": "CS-8SWITCH-G2",
+        "precio": 899,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/sw_8.jpg",
         "agotado": false
       }
     ]
@@ -2158,6 +2475,24 @@ const CATALOGO = [
         "foto": "img/tb_g7.jpg",
         "agotado": false,
         "foto2": "img/h2_tb_g7__s2_p07-002.jpg"
+      },
+      {
+        "cat": "Otros autos",
+        "nombre": "Tiras LED RGB de interior Celestial (USB)",
+        "compatible": "Universal: cualquier auto con puerto USB",
+        "descripcion": "4 tiras de luz de colores para el piso del auto, con control remoto y modo que reacciona a la música. Se conectan por USB.",
+        "ventajas": [
+          "Reacciona a la música",
+          "Instalación sin cables"
+        ],
+        "codigo": "DL-IL-G1",
+        "precio": 129,
+        "modelos": [
+          "uni"
+        ],
+        "foto": "img/il_celestial.jpg",
+        "foto2": "img/il_celestial2.jpg",
+        "agotado": true
       },
       {
         "cat": "Otros autos",
