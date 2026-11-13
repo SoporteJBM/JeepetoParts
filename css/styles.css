@@ -262,3 +262,19 @@ body:not([data-page="inicio"]) .shop{margin-top:22px}
 .spec dd.no{color:var(--red);font-weight:700}
 .spec-note{font-size:.8rem;color:var(--muted)}
 @media (max-width:480px){.spec{grid-template-columns:1fr}.spec dt{border-bottom:0;padding-bottom:2px;background:none}.spec dd{padding-top:0}}
+
+/* Buscador por vehículo */
+.finder{margin-top:clamp(40px,7vw,80px)}
+.fd-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:12px;align-items:end;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px}
+.fd-form label{display:flex;flex-direction:column;gap:6px;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.fd-form select{font:inherit;font-size:1rem;font-weight:600;text-transform:none;letter-spacing:0;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:11px 12px;min-width:0}
+.fd-form select:disabled{opacity:.5}
+.fd-form .btn-main{border:0;cursor:pointer;font-family:inherit}
+.fd-form .btn-main:disabled{opacity:.4;cursor:not-allowed}
+.fd-res{margin-top:18px}
+.fd-sum{font-size:1.15rem;margin:0 0 4px}
+.fd-note{font-size:.85rem;color:var(--muted);margin:0 0 6px}
+.fd-more{margin-top:22px;border:1px solid var(--line);border-radius:14px;padding:4px 14px 14px}
+.fd-more summary{cursor:pointer;font-weight:800;padding:10px 0}
+.fd-wa{margin-top:22px;border:0}
+@media (max-width:760px){.fd-form{grid-template-columns:1fr 1fr}.fd-form label:first-child,.fd-form .btn-main{grid-column:1/-1}}

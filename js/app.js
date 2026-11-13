@@ -161,3 +161,57 @@ document.getElementById("moparbtn").href="https://wa.me/"+WHATSAPP+"?text="+enco
 renderFilters(); renderZones(); setPage(PAGE,false); renderFeatured(); renderCompare(); renderGallery(); bindPageLinks();
 if(MODE==="hash") window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(PAGES.some(p=>p.k===h)&&h!==PAGE){setPage(h,false);window.scrollTo({top:0});}});
 if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView({block:"start"});},120);}
+
+// ===== Buscador por vehículo =====
+(function(){
+  const M={jk:{n:"Wrangler JK",y:[2007,2018]},jl:{n:"Wrangler JL",y:[2018,2026]},jt:{n:"Gladiator JT",y:[2020,2026],doors:4}};
+  const $=id=>document.getElementById(id);
+  const mS=$("fdModel"),yS=$("fdYear"),dS=$("fdDoors"),go=$("fdGo"),out=$("fdOut");
+  if(!mS) return;
+  const jeepItems=()=>ALL.filter(p=>!p.cat.startsWith("Otros autos"));
+  function sync(){
+    const m=M[mS.value];
+    if(!m){yS.innerHTML='<option value="">—</option>';yS.disabled=dS.disabled=true;go.disabled=mS.value!=="otro";return;}
+    const cur=yS.value;let h='<option value="">Elige…</option>';
+    for(let y=m.y[1];y>=m.y[0];y--) h+=`<option${String(y)===cur?" selected":""}>${y}</option>`;
+    yS.innerHTML=h;yS.disabled=false;
+    if(m.doors){dS.value=String(m.doors);dS.disabled=true;}else dS.disabled=false;
+    go.disabled=!(yS.value&&dS.value);
+  }
+  function wa(t){return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;}
+  function show(scroll){
+    const k=mS.value;
+    if(k==="otro"){
+      out.innerHTML=`<div class="fd-res"><p class="fd-sum">Por ahora no tenemos productos confirmados para CJ, YJ o TJ.</p><a class="btn-main btn-wa" target="_blank" rel="noopener" href="${wa("Hola Jeepeto Parts, tengo un Jeep (modelo y año: ). ¿Qué accesorios le quedan?")}">Pregúntanos por WhatsApp</a></div>`;
+      return;
+    }
+    const m=M[k],y=+yS.value,d=+dS.value;
+    try{localStorage.setItem("jp-mijeep",JSON.stringify({k,y,d}));}catch(e){}
+    const ok=[],ask=[],uni=[];
+    jeepItems().forEach(p=>{
+      const t=p.compatible.toLowerCase();
+      if(p.modelos.includes(k)){
+        if(/solo 4 puertas/.test(t)&&d!==4) return;
+        (/consultar/.test(t)?ask:ok).push(p);
+      }else if(p.modelos.length===1&&p.modelos[0]==="uni"&&!/consultar/.test(t)) uni.push(p);
+    });
+    const grp=list=>{const by={};list.forEach(p=>(by[p.cat]=by[p.cat]||[]).push(p));
+      return Object.entries(by).map(([c,ps])=>`<h3 class="cat">${esc(c)}<small>${ps.length} ${ps.length===1?"producto":"productos"}</small></h3><div class="grid">${ps.map(card).join("")}</div>`).join("");};
+    const name=`${m.n} ${y} · ${d} puertas`;
+    out.innerHTML=`<div class="fd-res">
+      <p class="fd-sum"><b>${ok.length}</b> accesorios confirmados para tu <b>${esc(name)}</b></p>
+      <p class="fd-note">La versión (Sport, Sahara, Rubicon) puede cambiar algunos enchufes. Antes de pagar te lo confirmamos con el VIN de tu Jeep.</p>
+      ${grp(ok)}
+      ${ask.length?`<details class="fd-more"><summary>Pregúntanos antes (${ask.length})</summary><p class="fd-note">Podrían quedarle, pero hay que confirmarlo.</p>${grp(ask)}</details>`:""}
+      ${uni.length?`<details class="fd-more"><summary>Universales que sirven en cualquier Jeep (${uni.length})</summary><p class="fd-note">Se montan con soportes o abrazaderas; no dependen del modelo.</p>${grp(uni)}</details>`:""}
+      <a class="btn-main btn-wa fd-wa" target="_blank" rel="noopener" href="${wa(`Hola Jeepeto Parts, tengo un ${name}. ¿Qué me recomiendan?`)}">Cotizar para mi ${esc(m.n)}</a>
+    </div>`;
+    out.querySelectorAll(".card").forEach(c=>c.onclick=()=>open(+c.dataset.i));
+    if(scroll) out.scrollIntoView({behavior:"smooth",block:"start"});
+  }
+  mS.onchange=()=>{sync();if(mS.value==="otro")show(false);else out.innerHTML="";};
+  yS.onchange=dS.onchange=()=>{go.disabled=!(yS.value&&dS.value);};
+  go.onclick=()=>show(true);
+  try{const s=JSON.parse(localStorage.getItem("jp-mijeep")||"null");
+    if(s&&M[s.k]){mS.value=s.k;sync();yS.value=String(s.y);dS.value=String(s.d);go.disabled=false;}}catch(e){}
+})();
