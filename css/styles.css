@@ -238,3 +238,17 @@ body:not([data-page="inicio"]) .shop{margin-top:22px}
 .ours-txt h2{margin:0 0 8px;font-size:clamp(1.8rem,5vw,3rem);font-weight:800;font-stretch:72%;text-transform:uppercase;line-height:1;color:#fff}
 .ours-txt p{margin:0;color:#E4E4E8}
 @media (max-width:640px){.ours{min-height:440px}.ours img{object-position:40% 40%}}
+
+/* Portada con foto real */
+.hero-own{left:40%}
+.hero-own img{object-position:40% 62%;filter:brightness(1.35) contrast(1.05)}
+.hero:has(.hero-own)::after{background:linear-gradient(90deg,#0B0B0C 0%,#0B0B0C 40%,rgba(11,11,12,.5) 47%,rgba(11,11,12,0) 60%),linear-gradient(180deg,#0B0B0C 0%,rgba(11,11,12,0) 18%),linear-gradient(0deg,#0B0B0C 0%,rgba(0,0,0,0) 25%)}
+.btn-wa{background:#25D366;border-color:#25D366}
+@media (max-width:900px){.hero-own{left:0}.hero-own img{object-position:55% 30%}.hero:has(.hero-own)::after{background:linear-gradient(180deg,#0B0B0C 0%,rgba(11,11,12,0) 15%),linear-gradient(0deg,#0B0B0C 0%,rgba(0,0,0,.9) 38%,rgba(0,0,0,.2) 62%,rgba(0,0,0,0) 100%)}}
+@media (max-width:640px){
+.hero:has(.hero-own){flex-direction:column;align-items:stretch;padding-top:0}
+.hero:has(.hero-own)::after{display:none}
+.hero-own{position:relative;inset:auto;left:auto;order:-1;height:300px;margin:0 -16px 18px;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
+.hero-own img{object-position:48% 62%}
+}
+.ours[hidden]{display:none}
