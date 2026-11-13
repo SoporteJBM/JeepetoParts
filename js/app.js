@@ -130,11 +130,19 @@ function open(i){
     <div class="db">
       <span class="tag" style="font-size:.75rem;font-weight:800;color:var(--red);text-transform:uppercase">${esc(p.cat)}</span>
       <h3 id="dtitle">${esc(p.nombre)}</h3>
-      <p class="fit">Compatible con: ${esc(p.compatible)}</p>
       <p>${esc(p.descripcion)}</p>
       <ul>${p.ventajas.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
-      <div class="code">Código: ${esc(p.codigo)}</div>
-      <div class="dfoot"><div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small>Por separado ${soles(p.antes)} · Ahorras ${soles(p.antes-p.precio)} (–${Math.round((p.antes-p.precio)*100/p.antes)}%)</small>`:""}${p.agotado?"<small>Agotado temporalmente · consulta disponibilidad</small>":""}</div>
+      <dl class="spec">
+        <dt>Marca</dt><dd>${esc(p.marca||"Xprite (original)")}</dd>
+        <dt>Código Xprite</dt><dd>${esc(p.codigo)}</dd>
+        <dt>Compatible con</dt><dd>${esc(p.compatible)}</dd>
+        ${p.incluye?`<dt>Incluye</dt><dd>${esc(p.incluye)}</dd>`:""}
+        ${p.instalacion?`<dt>Instalación</dt><dd>${esc(p.instalacion)}</dd>`:""}
+        <dt>Disponibilidad</dt><dd class="${p.agotado?"no":"ok"}">${p.agotado?"Agotado temporalmente · consulta reposición":"A pedido · llega en 2 a 3 semanas"}</dd>
+        <dt>Garantía</dt><dd>1 año por defecto de fábrica · nosotros pagamos el envío del reemplazo</dd>
+      </dl>
+      ${p.incluye&&p.instalacion?"":`<p class="spec-note">¿Dudas sobre qué incluye o cómo se instala? Pregúntanos por WhatsApp antes de pedir.</p>`}
+      <div class="dfoot"><div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small>Por separado ${soles(p.antes)} · Ahorras ${soles(p.antes-p.precio)} (–${Math.round((p.antes-p.precio)*100/p.antes)}%)</small>`:""}</div>
       <button class="btn" id="ask">${p.agotado?"Consultar":"Lo quiero"}</button></div>
     </div>`;
   document.getElementById("ask").onclick=()=>ask(p);
