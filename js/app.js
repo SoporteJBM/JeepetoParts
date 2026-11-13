@@ -20,7 +20,7 @@ const FEATURED=["BL-JK-G1-SMK","TL-JK-G1-CLR + BL-JK-G1-SMK","ZS-0128K-JK","TS-J
 function renderFeatured(){
   const row=document.getElementById("featRow");
   row.innerHTML=FEATURED.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean).map(p=>`<button class="fcard" data-i="${ALL.indexOf(p)}"><div class="fimg${pic2(p)?" has2":""}"><img src="${pic(p)}" alt="" loading="lazy">${pic2(p)?`<img class="alt" src="${pic2(p)}" alt="" loading="lazy">`:""}</div><div class="fb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3><div class="fp"><b>${soles(p.precio)}</b><span>Ver ›</span></div></div></button>`).join("");
-  row.querySelectorAll(".fcard").forEach(b=>b.onclick=()=>open(+b.dataset.i));
+  row.querySelectorAll(".fcard").forEach(b=>b.onclick=()=>openProduct(+b.dataset.i));
 }
 const CMP=[
   {n:"Bold",codes:["TL-JK-G1-CLR","TL-JK-G1-SMK"],tag:"El más económico",diseno:"Clásico, LED en cuadrícula",led:"Chips CREE",extra:"Certificado DOT y SAE"},
@@ -44,14 +44,14 @@ function renderCompare(){
     row("Micas",c=>c.ps.map(p=>mica(p)+(p.agotado?" (agotada)":"")).join("<br>"))+
     row("Para",c=>"Wrangler JK 2007-2018 · 2 y 4 puertas")+
     row("",c=>`<button class="cbtn" data-i="${ALL.indexOf(c.first)}">Ver</button>`)+`</tbody>`;
-  document.querySelectorAll("#cmpTable .cbtn").forEach(b=>b.onclick=()=>open(+b.dataset.i));
+  document.querySelectorAll("#cmpTable .cbtn").forEach(b=>b.onclick=()=>openProduct(+b.dataset.i));
 }
 function renderGallery(){
   document.querySelectorAll(".gal-row figure[data-code]").forEach(f=>{
     const p=ALL.find(q=>q.codigo===f.dataset.code); if(!p) return;
     const im=document.createElement("img"); im.className="alt"; im.alt=p.nombre; im.loading="lazy"; im.src=pic(p); f.appendChild(im);
     const cap=f.querySelector("figcaption"); cap.innerHTML=`<span class="mn">${esc(cap.textContent)}</span><span class="pn">${esc(p.nombre)} · ${soles(p.precio)}</span>`;
-    const go=()=>open(ALL.indexOf(p)); f.onclick=go; f.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};
+    const go=()=>openProduct(ALL.indexOf(p)); f.onclick=go; f.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};
   });
 }
 const GROUPS=[["Luces",["Faros delanteros","Neblineros","Luces de freno","Stops traseros","Luz para la llanta","Luces auxiliares"]],["Exterior",["Máscaras","Espejos","Accesorios"]],["Otros",["Audio y otros","Otros autos"]]];
@@ -102,7 +102,7 @@ function render(){
     html+=`<h3 class="cat" id="cat-${si}">${esc(sec.categoria)}<small>${items.length} ${items.length===1?"producto":"productos"}</small></h3><div class="grid">`+items.map(card).join("")+`</div>`;
   });
   document.getElementById("list").innerHTML=PAGE==="inicio"?"":(count?html:`<p class="empty">No hay productos de esta sección para este modelo todavía.</p>`);
-  document.querySelectorAll(".card").forEach(c=>c.onclick=()=>open(+c.dataset.i));
+  document.querySelectorAll(".card").forEach(c=>c.onclick=()=>openProduct(+c.dataset.i));
   renderDrawer();
 }
 function renderDrawer(){
@@ -125,15 +125,20 @@ function closeDrawer(){drawerEl.classList.remove("open");drawerEl.setAttribute("
 menuBtn.onclick=openDrawer; overlayEl.onclick=closeDrawer; document.getElementById("drawerClose").onclick=closeDrawer;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&drawerEl.classList.contains("open")) closeDrawer();});
 document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault();closeDrawer();let el=document.getElementById(a.dataset.go);if(!el&&current!=="all"){current="all";renderFilters();render();el=document.getElementById(a.dataset.go);}if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);});
+function avail(p){
+  if(p.agotado) return `<span class="avail no">Agotado</span>`;
+  if(p.stock) return `<span class="avail st">En stock · entrega inmediata</span>`;
+  return `<span class="avail ok">A pedido · 2 a 3 semanas</span>`;
+}
 function card(p){
   const i=ALL.indexOf(p), img=p.foto;
   return `<button class="card" data-i="${i}" aria-label="${esc(p.nombre)}, ${soles(p.precio)}">
     <div class="ph${pic2(p)?" has2":""}">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${pic2(p)?`<img class="alt" src="${pic2(p)}" alt="" loading="lazy">`:""}${p.agotado?`<span class="badge">Agotado</span>`:""}${p.oferta&&!p.agotado?`<span class="badge promo">${p.antes?"–"+Math.round((p.antes-p.precio)*100/p.antes)+"%":"Oferta"}</span>`:""}</div>
     <div class="cb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3>
-    <div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small class="save">Por separado ${soles(p.antes)}</small>`:""}</div></div></button>`;
+    ${avail(p)}<div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small class="save">Por separado ${soles(p.antes)}</small>`:""}</div></div></button>`;
 }
 const dlg=document.getElementById("dlg");
-function open(i){
+function openProduct(i){
   const p=ALL[i], img=p.foto;
   document.getElementById("dbody").innerHTML=`
     <div class="dph">${img?`<img src="${img}" alt="${esc(p.nombre)}">`:""}</div>
@@ -148,7 +153,7 @@ function open(i){
         <dt>Compatible con</dt><dd>${esc(p.compatible)}</dd>
         ${p.incluye?`<dt>Incluye</dt><dd>${esc(p.incluye)}</dd>`:""}
         ${p.instalacion?`<dt>Instalación</dt><dd>${esc(p.instalacion)}</dd>`:""}
-        <dt>Disponibilidad</dt><dd class="${p.agotado?"no":"ok"}">${p.agotado?"Agotado temporalmente · consulta reposición":"A pedido · llega en 2 a 3 semanas"}</dd>
+        <dt>Disponibilidad</dt><dd class="${p.agotado?"no":"ok"}">${p.agotado?"Agotado temporalmente · consulta reposición":p.stock?"En stock · entrega inmediata":"A pedido · llega en 2 a 3 semanas"}</dd>
         <dt>Garantía</dt><dd>1 año por defecto de fábrica · nosotros pagamos el envío del reemplazo</dd>
       </dl>
       ${p.incluye&&p.instalacion?"":`<p class="spec-note">¿Dudas sobre qué incluye o cómo se instala? Pregúntanos por WhatsApp antes de pedir.</p>`}
@@ -161,10 +166,35 @@ function open(i){
 }
 document.getElementById("dclose").onclick=()=>dlg.close();
 dlg.addEventListener("click",e=>{if(e.target===dlg) dlg.close();});
-async function ask(p){
-  const msg=`Hola Jeepeto Parts, me interesa: ${p.nombre} (código ${p.codigo}). ¿Me confirmas si le queda a mi Jeep?`;
-  if(WHATSAPP){ window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank","noopener"); return; }
-  try{await navigator.clipboard.writeText(msg); toast("Mensaje copiado. Pégalo en el chat.");}catch(e){toast(msg);}
+function myJeep(){try{const v=JSON.parse(localStorage.getItem("jp-mijeep")||"null");const n={jk:"Wrangler JK",jl:"Wrangler JL",jt:"Gladiator JT"}[v&&v.k];return n?`${n} ${v.y} · ${v.d} puertas`:"";}catch(e){return "";}}
+function sendWA(msg){window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank","noopener");}
+function ask(p){
+  const jeep=myJeep();
+  if(p.agotado||!p.precio){
+    sendWA(`Hola Jeepeto Parts, me interesa: ${p.nombre} (código ${p.codigo}). ${p.agotado?"¿Cuándo vuelve a haber?":"¿Me pasan el precio?"}${jeep?` Mi Jeep: ${jeep}.`:""}`);return;
+  }
+  const ad=Math.ceil(p.precio/2), saldo=p.precio-ad, plazo=p.stock?"Entrega inmediata":"2 a 3 semanas desde el adelanto";
+  document.getElementById("dbody").innerHTML=`<div class="db sum">
+    <span class="tag" style="font-size:.75rem;font-weight:800;color:var(--red);text-transform:uppercase">Resumen de tu pedido</span>
+    <h3 id="dtitle">${esc(p.nombre)}</h3>
+    <dl class="spec">
+      <dt>Código</dt><dd>${esc(p.codigo)}</dd>
+      <dt>Precio</dt><dd><b>${soles(p.precio)}</b></dd>
+      <dt>Adelanto (50%)</dt><dd><b>${soles(ad)}</b> por Yape, Plin o transferencia</dd>
+      <dt>Saldo</dt><dd>${soles(saldo)} al recibir</dd>
+      <dt>Entrega</dt><dd>${plazo} · Miraflores y alrededores</dd>
+      ${jeep?`<dt>Tu Jeep</dt><dd>${esc(jeep)}</dd>`:""}
+    </dl>
+    <label class="sum-inst"><input type="checkbox" id="sumInst"> Quiero instalación (desde S/ 80, se cotiza aparte)</label>
+    <p class="spec-note">Todavía no pagas nada. Al enviar, te confirmamos por WhatsApp que le queda a tu Jeep y recién ahí haces el adelanto.</p>
+    <div class="dfoot"><button class="btn-ghost2" id="sumBack">Volver</button><button class="btn btn-wa2" id="sumGo">Enviar por WhatsApp</button></div>
+  </div>`;
+  document.getElementById("sumBack").onclick=()=>openProduct(ALL.indexOf(p));
+  document.getElementById("sumGo").onclick=()=>{
+    const inst=document.getElementById("sumInst").checked;
+    sendWA(`Hola Jeepeto Parts, quiero hacer este pedido:\n• ${p.nombre}\n• Código: ${p.codigo}\n• Precio: ${soles(p.precio)}\n• Adelanto 50%: ${soles(ad)}\n• Instalación: ${inst?"Sí, quiero cotizarla":"No"}${jeep?`\n• Mi Jeep: ${jeep}`:""}\n¿Me confirman que le queda a mi Jeep?`);
+  };
+  dlg.scrollTop=0;
 }
 let tt; function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("on"),2800);}
 document.getElementById("moparbtn").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hola Jeepeto Parts, quiero cotizar repuestos originales Mopar. Código(s) de pieza: ");
@@ -216,7 +246,7 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
       ${uni.length?`<details class="fd-more"><summary>Universales que sirven en cualquier Jeep (${uni.length})</summary><p class="fd-note">Se montan con soportes o abrazaderas; no dependen del modelo.</p>${grp(uni)}</details>`:""}
       <a class="btn-main btn-wa fd-wa" target="_blank" rel="noopener" href="${wa(`Hola Jeepeto Parts, tengo un ${name}. ¿Qué me recomiendan?`)}">Cotizar para mi ${esc(m.n)}</a>
     </div>`;
-    out.querySelectorAll(".card").forEach(c=>c.onclick=()=>open(+c.dataset.i));
+    out.querySelectorAll(".card").forEach(c=>c.onclick=()=>openProduct(+c.dataset.i));
     if(scroll) out.scrollIntoView({behavior:"smooth",block:"start"});
   }
   mS.onchange=()=>{sync();if(mS.value==="otro")show(false);else out.innerHTML="";};
