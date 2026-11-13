@@ -1,6 +1,6 @@
 // Lógica de la página: filtros, tarjetas, detalle y WhatsApp.
 // ===== Configuración =====
-const APP_VERSION = "202611130635"; // se cambia en cada publicación
+const APP_VERSION = "202611130639"; // se cambia en cada publicación
 // Si el navegador guardó una versión vieja de la página, se recarga sola con la nueva.
 (function(){
   try{
@@ -143,6 +143,14 @@ function closeDrawer(){drawerEl.classList.remove("open");drawerEl.setAttribute("
 menuBtn.onclick=openDrawer; overlayEl.onclick=closeDrawer; document.getElementById("drawerClose").onclick=closeDrawer;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&drawerEl.classList.contains("open")) closeDrawer();});
 document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault();closeDrawer();let el=document.getElementById(a.dataset.go);if(!el&&current!=="all"){current="all";renderFilters();render();el=document.getElementById(a.dataset.go);}if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);});
+const LIGHT_CATS=/^(Faros|Neblineros|Direccionales|Stops)/;
+function needsVersion(p,k){return (k?["jl","jt"].includes(k):p.modelos.some(m=>m==="jl"||m==="jt"))&&LIGHT_CATS.test(p.cat);}
+function yearRange(p,k){
+  const t=p.compatible;
+  const re={jk:/JKU?\b[^,.;]*?(\d{4})\s*-\s*(\d{4})/,jl:/JL\b[^,.;]*?(\d{4})(?:\s*-\s*(\d{4})|\s+en adelante)/,jt:/(?:Gladiator|JT)\b[^,.;]*?(\d{4})(?:\s*-\s*(\d{4})|\s+en adelante)/}[k];
+  const m=re&&t.match(re); if(!m) return null;
+  return [+m[1], m[2]?+m[2]:2100];
+}
 function needsPlug(p){return /(^|\+ |\s)TL-JK-G\d/.test(p.codigo)||/^XP-JL-TL-JK/.test(p.codigo);}
 function avail(p){
   if(p.agotado) return `<span class="avail no">Agotado</span>`;
@@ -169,7 +177,7 @@ function openProduct(i){
       <dl class="spec">
         <dt>Marca</dt><dd>${esc(p.marca||"Xprite (original)")}</dd>
         <dt>Código Xprite</dt><dd>${esc(p.codigo)}</dd>
-        <dt>Compatible con</dt><dd>${esc(p.compatible)}${needsPlug(p)?`<span class="plugnote">Para el enchufe americano del JK. Algunos JK vendidos fuera de EE.UU. traen enchufe europeo: mándanos una foto del enchufe de tu stop antes de pedir.</span>`:""}</dd>
+        <dt>Compatible con</dt><dd>${esc(p.compatible)}${needsVersion(p)?`<span class="plugnote">En JL y Gladiator, confirma si tu versión trae luces halógenas o LED de fábrica: cambia el enchufe.</span>`:""}${needsPlug(p)?`<span class="plugnote">Para el enchufe americano del JK. Algunos JK vendidos fuera de EE.UU. traen enchufe europeo: mándanos una foto del enchufe de tu stop antes de pedir.</span>`:""}</dd>
         ${p.incluye?`<dt>Incluye</dt><dd>${esc(p.incluye)}</dd>`:""}
         ${p.instalacion?`<dt>Instalación</dt><dd>${esc(p.instalacion)}</dd>`:""}
         <dt>Disponibilidad</dt><dd class="${p.agotado?"no":"ok"}">${p.agotado?"Agotado temporalmente · consulta reposición":p.stock?"En stock · entrega inmediata":"A pedido · llega en 2 a 3 semanas"}</dd>
@@ -249,21 +257,31 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
     try{localStorage.setItem("jp-mijeep",JSON.stringify({k,y,d,v:ver}));}catch(e){}
     current=k; renderFilters(); render();
     const ok=[],ask=[],uni=[];
+    const why=new Map();
     jeepItems().forEach(p=>{
       const t=p.compatible.toLowerCase();
       if(p.modelos.includes(k)){
         if(/solo 4 puertas/.test(t)&&d!==4) return;
-        (/consultar|techo duro|stops de fábrica/.test(t)?ask:ok).push(p);
+        const yr=yearRange(p,k);
+        if(yr&&(y<yr[0]||y>yr[1])) return;            // año fuera de rango: no se muestra
+        const r=[];
+        if(!yr) r.push("el año");
+        if(/consultar/.test(t)) r.push("compatibilidad");
+        if(/techo duro/.test(t)) r.push("si tu Jeep tiene techo duro");
+        if(/stops de fábrica/.test(t)) r.push("si tienes los stops de fábrica");
+        if(needsPlug(p)) r.push("_enchufe");
+        if(needsVersion(p,k)) r.push("si tu versión trae luces halógenas o LED de fábrica");
+        if(r.length){why.set(p,r);ask.push(p);} else ok.push(p);
       }else if(p.modelos.length===1&&p.modelos[0]==="uni"&&!/consultar/.test(t)) uni.push(p);
     });
     const grp=list=>{const by={};list.forEach(p=>(by[p.cat]=by[p.cat]||[]).push(p));
-      return Object.entries(by).map(([c,ps])=>`<h3 class="cat">${esc(c)}<small>${ps.length} ${ps.length===1?"producto":"productos"}</small></h3><div class="grid">${ps.map(card).join("")}</div>`).join("");};
+      return Object.entries(by).map(([c,ps])=>`<h3 class="cat">${esc(c)}<small>${ps.length} ${ps.length===1?"producto":"productos"}</small></h3><div class="grid">${ps.map(p=>{const h=card(p),r=(why.get(p)||[]).filter(x=>x!=="_enchufe");return r.length?h.replace('<div class="price',`<span class="avail why">Confirmar: ${esc(r.join(", "))}</span><div class="price`):h;}).join("")}</div>`).join("");};
     const name=`${m.n} ${y} · ${d} puertas${ver?" · "+ver:""}`;
     out.innerHTML=`<div class="fd-res">
       <p class="fd-sum"><b>${ok.length}</b> accesorios confirmados para tu <b>${esc(name)}</b></p>
-      <p class="fd-note">Los marcados con <b>“Verificar enchufe”</b> dependen de cómo vino tu Jeep de fábrica. Antes de pagar te lo confirmamos con una foto o el VIN.</p>
+      <p class="fd-note">Confirmados = el fabricante indica tu modelo, tu año y tus puertas, sin condiciones extra.</p>
       ${grp(ok)}
-      ${ask.length?`<details class="fd-more"><summary>Pregúntanos antes (${ask.length})</summary><p class="fd-note">Podrían quedarle, pero depende de algo de tu Jeep (por ejemplo, si tiene techo duro o stops de fábrica). Te lo confirmamos.</p>${grp(ask)}</details>`:""}
+      ${ask.length?`<details class="fd-more" open><summary>Le quedan a tu modelo, pero hay que confirmar algo (${ask.length})</summary><p class="fd-note">Cada uno dice qué hay que revisar. Te lo confirmamos con una foto o el VIN antes de que pagues el adelanto.</p>${grp(ask)}</details>`:""}
       ${uni.length?`<details class="fd-more"><summary>Universales que sirven en cualquier Jeep (${uni.length})</summary><p class="fd-note">Se montan con soportes o abrazaderas; no dependen del modelo.</p>${grp(uni)}</details>`:""}
       <a class="btn-main btn-wa fd-wa" target="_blank" rel="noopener" href="${wa(`Hola Jeepeto Parts, tengo un ${name}. ¿Qué me recomiendan?`)}">Cotizar para mi ${esc(m.n)}</a>
     </div>`;

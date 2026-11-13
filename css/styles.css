@@ -308,3 +308,4 @@ body:not([data-page="inicio"]) .shop{margin-top:22px}
 .fd-form{grid-template-columns:repeat(4,minmax(0,1fr)) auto}
 .fd-form label small{text-transform:none;letter-spacing:0;font-weight:600}
 @media (max-width:900px){.fd-form{grid-template-columns:1fr 1fr}.fd-form label:first-child,.fd-form .btn-main{grid-column:1/-1}}
+.avail.why{color:#B45309}
