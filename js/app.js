@@ -1,5 +1,17 @@
 // Lógica de la página: filtros, tarjetas, detalle y WhatsApp.
 // ===== Configuración =====
+const APP_VERSION = "202611130635"; // se cambia en cada publicación
+// Si el navegador guardó una versión vieja de la página, se recarga sola con la nueva.
+(function(){
+  try{
+    fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{
+      if(!d||!d.v||d.v===APP_VERSION) return;
+      const u=new URL(location.href);
+      if(u.searchParams.get("v")===d.v) return; // ya se intentó, evita recargar en bucle
+      u.searchParams.set("v",d.v); location.replace(u.toString());
+    }).catch(()=>{});
+  }catch(e){}
+})();
 const WHATSAPP = "51946564236"; // número con código de país, sin +
 const FILTERS=[["all","Todos"],["jk","Wrangler JK"],["jl","Wrangler JL"],["jt","Gladiator"],["uni","Universal"]];
 const SHORT={jk:"JK",jl:"JL",jt:"Gladiator",uni:"Universal"};
