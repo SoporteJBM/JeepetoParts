@@ -22,17 +22,27 @@ function renderFeatured(){
   row.innerHTML=FEATURED.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean).map(p=>`<button class="fcard" data-i="${ALL.indexOf(p)}"><div class="fimg${pic2(p)?" has2":""}"><img src="${pic(p)}" alt="" loading="lazy">${pic2(p)?`<img class="alt" src="${pic2(p)}" alt="" loading="lazy">`:""}</div><div class="fb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3><div class="fp"><b>${soles(p.precio)}</b><span>Ver ›</span></div></div></button>`).join("");
   row.querySelectorAll(".fcard").forEach(b=>b.onclick=()=>open(+b.dataset.i));
 }
-const CMP=[["Bold",["TL-JK-G1-CLR","TL-JK-G1-SMK"],"Clásico, LED en cuadrícula"],["Destroyer",["TL-JK-G7 Clear","TL-JK-G7 Smoke"],"Robusto, muchos LED"],["Inspire",["TL-JK-G9-CLR","TL-JK-G9-SMK"],"Moderno, con líneas de luz"],["Savage",["XP-JL-TL-JK-G12-CLR","XP-JL-TL-JK-G12-SMK"],"Premium, luz en forma de S"]];
+const CMP=[
+  {n:"Bold",codes:["TL-JK-G1-CLR","TL-JK-G1-SMK"],tag:"El más económico",diseno:"Clásico, LED en cuadrícula",led:"Chips CREE",extra:"Certificado DOT y SAE"},
+  {n:"Destroyer",codes:["TL-JK-G7 Clear","TL-JK-G7 Smoke"],tag:"Mejor precio-calidad",diseno:"Robusto, lente 4D con mucho brillo",led:"OSRAM",extra:"Resistencias integradas · Certificado DOT"},
+  {n:"Inspire",codes:["TL-JK-G9-CLR","TL-JK-G9-SMK"],tag:"Diseño moderno",diseno:"Líneas de luz en forma de C",led:"OSRAM",extra:"Protección contra bajo voltaje · Certificado DOT y SAE"},
+  {n:"Savage",codes:["XP-JL-TL-JK-G12-CLR","XP-JL-TL-JK-G12-SMK"],tag:"El más llamativo",diseno:"Luz en forma de S, estilo JL",led:"LED",extra:"Carcasa más grande y pesada (3.4 kg)"}
+];
 function renderCompare(){
-  const cols=CMP.map(([n,codes,d])=>{const ps=codes.map(c=>ALL.find(p=>p.codigo===c)).filter(Boolean);const av=ps.filter(p=>!p.agotado);return {n,d,ps,av,first:av[0]||ps[0]};}).filter(c=>c.first);
+  const cols=CMP.map(c=>{const ps=c.codes.map(k=>ALL.find(p=>p.codigo===k)).filter(Boolean);const av=ps.filter(p=>!p.agotado);return {...c,ps,av,first:av[0]||ps[0]};}).filter(c=>c.first);
   const mica=p=>/ahumad/i.test(p.nombre)?"Ahumada":"Transparente";
-  const row=(label,f)=>`<tr><td>${label}</td>${cols.map(c=>`<td>${f(c)}</td>`).join("")}</tr>`;
-  document.getElementById("cmpTable").innerHTML=`<thead><tr><th></th>${cols.map(c=>`<th>${c.n}</th>`).join("")}</tr></thead><tbody>`+
+  const yes=t=>`<span class="cyes">✓</span> ${t}`;
+  const row=(label,f,cls="")=>`<tr class="${cls}"><td>${label}</td>${cols.map(c=>`<td>${f(c)}</td>`).join("")}</tr>`;
+  document.getElementById("cmpTable").innerHTML=`<thead><tr><th></th>${cols.map(c=>`<th>${c.n}<small class="ctag">${c.tag}</small></th>`).join("")}</tr></thead><tbody>`+
     row("",c=>`<img src="${pic(c.first)}" alt="Stops ${c.n}" loading="lazy">`)+
     row("Desde",c=>`<span class="cprice">${soles(Math.min(...(c.av.length?c.av:c.ps).map(p=>p.precio)))}</span>`)+
+    row("Diseño",c=>c.diseno,"cdiff")+
+    row("Funciones",c=>[yes("Posición"),yes("Freno"),yes("Direccional"),yes("Retroceso")].join("<br>"))+
+    row("LED",c=>c.led,"cdiff")+
+    row("Lo distinto",c=>c.extra,"cdiff")+
+    row("Conexión",c=>"Plug & play · sin cortar ni perforar")+
     row("Micas",c=>c.ps.map(p=>mica(p)+(p.agotado?" (agotada)":"")).join("<br>"))+
-    row("Estilo",c=>c.d)+
-    row("Para",c=>"Wrangler JK 2007-2018")+
+    row("Para",c=>"Wrangler JK 2007-2018 · 2 y 4 puertas")+
     row("",c=>`<button class="cbtn" data-i="${ALL.indexOf(c.first)}">Ver</button>`)+`</tbody>`;
   document.querySelectorAll("#cmpTable .cbtn").forEach(b=>b.onclick=()=>open(+b.dataset.i));
 }

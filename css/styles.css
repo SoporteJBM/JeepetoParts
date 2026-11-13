@@ -278,3 +278,10 @@ body:not([data-page="inicio"]) .shop{margin-top:22px}
 .fd-more summary{cursor:pointer;font-weight:800;padding:10px 0}
 .fd-wa{margin-top:22px;border:0}
 @media (max-width:760px){.fd-form{grid-template-columns:1fr 1fr}.fd-form label:first-child,.fd-form .btn-main{grid-column:1/-1}}
+
+/* Comparador mejorado */
+.cmp-table th .ctag{display:block;margin-top:4px;font-size:.72rem;font-weight:700;font-stretch:100%;color:var(--red);text-transform:none}
+.cmp-table tr.cdiff td:not(:first-child){font-weight:700}
+.cmp-table td{line-height:1.45}
+.cyes{color:#1B8A3D;font-weight:800}
+.cmp-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
