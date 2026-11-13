@@ -176,7 +176,7 @@ dlg.addEventListener("click",e=>{if(e.target===dlg) dlg.close();});
 function myJeep(){try{const v=JSON.parse(localStorage.getItem("jp-mijeep")||"null");const n={jk:"Wrangler JK",jl:"Wrangler JL",jt:"Gladiator JT"}[v&&v.k];return n?`${n} ${v.y} · ${v.d} puertas${v.v?" · "+v.v:""}`:"";}catch(e){return "";}}
 function sendWA(msg){window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank","noopener");}
 function ask(p){
-  const jeep=myJeep();
+  const otro=p.cat.startsWith("Otros autos"), jeep=otro?"":myJeep();
   if(p.agotado||!p.precio){
     sendWA(`Hola Jeepeto Parts, me interesa: ${p.nombre} (código ${p.codigo}). ${p.agotado?"¿Cuándo vuelve a haber?":"¿Me pasan el precio?"}${jeep?` Mi Jeep: ${jeep}.`:""}`);return;
   }
@@ -199,7 +199,7 @@ function ask(p){
   document.getElementById("sumBack").onclick=()=>openProduct(ALL.indexOf(p));
   document.getElementById("sumGo").onclick=()=>{
     const inst=document.getElementById("sumInst").checked;
-    sendWA(`Hola Jeepeto Parts, quiero hacer este pedido:\n• ${p.nombre}\n• Código: ${p.codigo}\n• Precio: ${soles(p.precio)}\n• Adelanto 50%: ${soles(ad)}\n• Instalación: ${inst?"Sí, quiero cotizarla":"No"}${jeep?`\n• Mi Jeep: ${jeep}`:""}\n¿Me confirman que le queda a mi Jeep?`);
+    sendWA(`Hola Jeepeto Parts, quiero hacer este pedido:\n• ${p.nombre}\n• Código: ${p.codigo}\n• Precio: ${soles(p.precio)}\n• Adelanto 50%: ${soles(ad)}\n• Instalación: ${inst?"Sí, quiero cotizarla":"No"}${jeep?`\n• Mi Jeep: ${jeep}`:""}\n${otro?"¿Me confirman que le queda a mi auto? (marca, modelo y año: )":"¿Me confirman que le queda a mi Jeep?"}`);
   };
   dlg.scrollTop=0;
 }
@@ -241,7 +241,7 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
       const t=p.compatible.toLowerCase();
       if(p.modelos.includes(k)){
         if(/solo 4 puertas/.test(t)&&d!==4) return;
-        (/consultar/.test(t)?ask:ok).push(p);
+        (/consultar|techo duro|stops de fábrica/.test(t)?ask:ok).push(p);
       }else if(p.modelos.length===1&&p.modelos[0]==="uni"&&!/consultar/.test(t)) uni.push(p);
     });
     const grp=list=>{const by={};list.forEach(p=>(by[p.cat]=by[p.cat]||[]).push(p));
@@ -251,7 +251,7 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
       <p class="fd-sum"><b>${ok.length}</b> accesorios confirmados para tu <b>${esc(name)}</b></p>
       <p class="fd-note">Los marcados con <b>“Verificar enchufe”</b> dependen de cómo vino tu Jeep de fábrica. Antes de pagar te lo confirmamos con una foto o el VIN.</p>
       ${grp(ok)}
-      ${ask.length?`<details class="fd-more"><summary>Pregúntanos antes (${ask.length})</summary><p class="fd-note">Podrían quedarle, pero hay que confirmarlo.</p>${grp(ask)}</details>`:""}
+      ${ask.length?`<details class="fd-more"><summary>Pregúntanos antes (${ask.length})</summary><p class="fd-note">Podrían quedarle, pero depende de algo de tu Jeep (por ejemplo, si tiene techo duro o stops de fábrica). Te lo confirmamos.</p>${grp(ask)}</details>`:""}
       ${uni.length?`<details class="fd-more"><summary>Universales que sirven en cualquier Jeep (${uni.length})</summary><p class="fd-note">Se montan con soportes o abrazaderas; no dependen del modelo.</p>${grp(uni)}</details>`:""}
       <a class="btn-main btn-wa fd-wa" target="_blank" rel="noopener" href="${wa(`Hola Jeepeto Parts, tengo un ${name}. ¿Qué me recomiendan?`)}">Cotizar para mi ${esc(m.n)}</a>
     </div>`;
