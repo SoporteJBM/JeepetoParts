@@ -300,3 +300,11 @@ body:not([data-page="inicio"]) .shop{margin-top:22px}
 .btn-wa2{background:#25D366!important}
 /* Celular: botones más fáciles de tocar */
 @media (max-width:640px){.chip{padding:9px 14px}.cmp-table .cbtn{padding:10px 18px}}
+
+/* Enchufe y Mi Jeep */
+.avail.plug{color:#B45309}
+.plugnote{display:block;margin-top:6px;font-size:.8rem;color:#B45309;font-weight:600}
+#catTitle .chg{font-size:.85rem;font-weight:700;font-stretch:100%;color:var(--red);margin-left:8px;white-space:nowrap}
+.fd-form{grid-template-columns:repeat(4,minmax(0,1fr)) auto}
+.fd-form label small{text-transform:none;letter-spacing:0;font-weight:600}
+@media (max-width:900px){.fd-form{grid-template-columns:1fr 1fr}.fd-form label:first-child,.fd-form .btn-main{grid-column:1/-1}}

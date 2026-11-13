@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=202611140300">
+<link rel="stylesheet" href="css/styles.css?v=202611140500">
 </head>
 <body data-mode="files" data-page="trasera">
 <header class="top">
@@ -62,11 +62,12 @@
 
   <section class="finder home-only" id="mijeep">
     <h2 class="big">Busca por tu Jeep.</h2>
-    <p class="lead">Elige modelo, año y puertas. Te mostramos solo lo que le queda.</p>
+    <p class="lead">Elige modelo, año y puertas. Te mostramos solo lo que le queda, y lo usamos en todas las secciones.</p>
     <div class="fd-form">
       <label>Modelo<select id="fdModel"><option value="">Elige…</option><option value="jk">Wrangler JK (2007-2018)</option><option value="jl">Wrangler JL (2018 en adelante)</option><option value="jt">Gladiator JT (2020 en adelante)</option><option value="otro">Otro (CJ, YJ, TJ…)</option></select></label>
       <label>Año<select id="fdYear" disabled><option value="">—</option></select></label>
       <label>Puertas<select id="fdDoors" disabled><option value="">—</option><option value="2">2 puertas</option><option value="4">4 puertas (Unlimited)</option></select></label>
+      <label>Versión <small>(opcional)</small><select id="fdVer"><option value="">No sé</option><option>Sport</option><option>Sahara</option><option>Rubicon</option><option>Otra</option></select></label>
       <button class="btn-main" id="fdGo" disabled>Ver accesorios</button>
     </div>
     <div id="fdOut" aria-live="polite"></div>
@@ -117,7 +118,7 @@
 
   <section class="shop cat-only" id="catalogo">
     <h2 class="big" id="catTitle">Elige tu Jeep.</h2>
-    <p class="lead">Filtra para ver solo lo que le queda a tu modelo.</p>
+    <p class="lead">Filtra rápido por modelo o cambia tu Jeep cuando quieras.</p>
     <nav class="filters" id="filters" aria-label="Filtrar por modelo"></nav>
   </section>
   <div id="list" class="cat-only"></div>
@@ -178,7 +179,7 @@
 <a class="fab" href="https://wa.me/51946564236" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/productos.js?v=202611140300"></script>
-<script src="js/app.js?v=202611140300"></script>
+<script src="js/productos.js?v=202611140500"></script>
+<script src="js/app.js?v=202611140500"></script>
 </body>
 </html>

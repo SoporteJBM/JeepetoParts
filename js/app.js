@@ -9,7 +9,13 @@ const soles=n=>n?"S/ "+n.toLocaleString("es-PE"):"Consultar";
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ALL=[]; CATALOGO.forEach(s=>s.productos.forEach(p=>ALL.push(p)));
 
+function renderCatHead(){
+  const t=document.getElementById("catTitle"); if(!t) return;
+  const j=typeof myJeep==="function"?myJeep():"";
+  t.innerHTML=j?`Para tu ${esc(j)} <a class="chg" href="${linkOf("inicio","mijeep")}">Cambiar</a>`:`Elige tu Jeep. <a class="chg" href="${linkOf("inicio","mijeep")}">Buscar por modelo y año</a>`;
+}
 function renderFilters(){
+  renderCatHead();
   const nav=document.getElementById("filters");
   nav.innerHTML=FILTERS.map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${k===current}">${l}</button>`).join("");
   nav.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{current=b.dataset.k;renderFilters();render();document.getElementById("catalogo").scrollIntoView({behavior:"smooth",block:"start"});});
@@ -125,6 +131,7 @@ function closeDrawer(){drawerEl.classList.remove("open");drawerEl.setAttribute("
 menuBtn.onclick=openDrawer; overlayEl.onclick=closeDrawer; document.getElementById("drawerClose").onclick=closeDrawer;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&drawerEl.classList.contains("open")) closeDrawer();});
 document.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault();closeDrawer();let el=document.getElementById(a.dataset.go);if(!el&&current!=="all"){current="all";renderFilters();render();el=document.getElementById(a.dataset.go);}if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),60);});
+function needsPlug(p){return /(^|\+ |\s)TL-JK-G\d/.test(p.codigo)||/^XP-JL-TL-JK/.test(p.codigo);}
 function avail(p){
   if(p.agotado) return `<span class="avail no">Agotado</span>`;
   if(p.stock) return `<span class="avail st">En stock · entrega inmediata</span>`;
@@ -135,7 +142,7 @@ function card(p){
   return `<button class="card" data-i="${i}" aria-label="${esc(p.nombre)}, ${soles(p.precio)}">
     <div class="ph${pic2(p)?" has2":""}">${img?`<img src="${img}" alt="" loading="lazy">`:`<span class="nofoto">Foto próximamente</span>`}${pic2(p)?`<img class="alt" src="${pic2(p)}" alt="" loading="lazy">`:""}${p.agotado?`<span class="badge">Agotado</span>`:""}${p.oferta&&!p.agotado?`<span class="badge promo">${p.antes?"–"+Math.round((p.antes-p.precio)*100/p.antes)+"%":"Oferta"}</span>`:""}</div>
     <div class="cb"><span class="tag">${p.modelos.map(t=>SHORT[t]).join(" · ")}</span><h3>${esc(p.nombre)}</h3>
-    ${avail(p)}<div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small class="save">Por separado ${soles(p.antes)}</small>`:""}</div></div></button>`;
+    ${avail(p)}${needsPlug(p)?`<span class="avail plug">Verificar enchufe antes de pedir</span>`:""}<div class="price ${p.agotado?"sold":""}">${soles(p.precio)}${p.antes?`<small class="save">Por separado ${soles(p.antes)}</small>`:""}</div></div></button>`;
 }
 const dlg=document.getElementById("dlg");
 function openProduct(i){
@@ -150,7 +157,7 @@ function openProduct(i){
       <dl class="spec">
         <dt>Marca</dt><dd>${esc(p.marca||"Xprite (original)")}</dd>
         <dt>Código Xprite</dt><dd>${esc(p.codigo)}</dd>
-        <dt>Compatible con</dt><dd>${esc(p.compatible)}</dd>
+        <dt>Compatible con</dt><dd>${esc(p.compatible)}${needsPlug(p)?`<span class="plugnote">Para el enchufe americano del JK. Algunos JK vendidos fuera de EE.UU. traen enchufe europeo: mándanos una foto del enchufe de tu stop antes de pedir.</span>`:""}</dd>
         ${p.incluye?`<dt>Incluye</dt><dd>${esc(p.incluye)}</dd>`:""}
         ${p.instalacion?`<dt>Instalación</dt><dd>${esc(p.instalacion)}</dd>`:""}
         <dt>Disponibilidad</dt><dd class="${p.agotado?"no":"ok"}">${p.agotado?"Agotado temporalmente · consulta reposición":p.stock?"En stock · entrega inmediata":"A pedido · llega en 2 a 3 semanas"}</dd>
@@ -166,7 +173,7 @@ function openProduct(i){
 }
 document.getElementById("dclose").onclick=()=>dlg.close();
 dlg.addEventListener("click",e=>{if(e.target===dlg) dlg.close();});
-function myJeep(){try{const v=JSON.parse(localStorage.getItem("jp-mijeep")||"null");const n={jk:"Wrangler JK",jl:"Wrangler JL",jt:"Gladiator JT"}[v&&v.k];return n?`${n} ${v.y} · ${v.d} puertas`:"";}catch(e){return "";}}
+function myJeep(){try{const v=JSON.parse(localStorage.getItem("jp-mijeep")||"null");const n={jk:"Wrangler JK",jl:"Wrangler JL",jt:"Gladiator JT"}[v&&v.k];return n?`${n} ${v.y} · ${v.d} puertas${v.v?" · "+v.v:""}`:"";}catch(e){return "";}}
 function sendWA(msg){window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank","noopener");}
 function ask(p){
   const jeep=myJeep();
@@ -226,8 +233,8 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
       out.innerHTML=`<div class="fd-res"><p class="fd-sum">Por ahora no tenemos productos confirmados para CJ, YJ o TJ.</p><a class="btn-main btn-wa" target="_blank" rel="noopener" href="${wa("Hola Jeepeto Parts, tengo un Jeep (modelo y año: ). ¿Qué accesorios le quedan?")}">Pregúntanos por WhatsApp</a></div>`;
       return;
     }
-    const m=M[k],y=+yS.value,d=+dS.value;
-    try{localStorage.setItem("jp-mijeep",JSON.stringify({k,y,d}));}catch(e){}
+    const m=M[k],y=+yS.value,d=+dS.value,ver=$("fdVer").value;
+    try{localStorage.setItem("jp-mijeep",JSON.stringify({k,y,d,v:ver}));}catch(e){}
     current=k; renderFilters(); render();
     const ok=[],ask=[],uni=[];
     jeepItems().forEach(p=>{
@@ -239,10 +246,10 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
     });
     const grp=list=>{const by={};list.forEach(p=>(by[p.cat]=by[p.cat]||[]).push(p));
       return Object.entries(by).map(([c,ps])=>`<h3 class="cat">${esc(c)}<small>${ps.length} ${ps.length===1?"producto":"productos"}</small></h3><div class="grid">${ps.map(card).join("")}</div>`).join("");};
-    const name=`${m.n} ${y} · ${d} puertas`;
+    const name=`${m.n} ${y} · ${d} puertas${ver?" · "+ver:""}`;
     out.innerHTML=`<div class="fd-res">
       <p class="fd-sum"><b>${ok.length}</b> accesorios confirmados para tu <b>${esc(name)}</b></p>
-      <p class="fd-note">La versión (Sport, Sahara, Rubicon) puede cambiar algunos enchufes. Antes de pagar te lo confirmamos con el VIN de tu Jeep.</p>
+      <p class="fd-note">Los marcados con <b>“Verificar enchufe”</b> dependen de cómo vino tu Jeep de fábrica. Antes de pagar te lo confirmamos con una foto o el VIN.</p>
       ${grp(ok)}
       ${ask.length?`<details class="fd-more"><summary>Pregúntanos antes (${ask.length})</summary><p class="fd-note">Podrían quedarle, pero hay que confirmarlo.</p>${grp(ask)}</details>`:""}
       ${uni.length?`<details class="fd-more"><summary>Universales que sirven en cualquier Jeep (${uni.length})</summary><p class="fd-note">Se montan con soportes o abrazaderas; no dependen del modelo.</p>${grp(uni)}</details>`:""}
@@ -255,5 +262,5 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
   yS.onchange=dS.onchange=()=>{go.disabled=!(yS.value&&dS.value);};
   go.onclick=()=>show(true);
   try{const s=JSON.parse(localStorage.getItem("jp-mijeep")||"null");
-    if(s&&M[s.k]){mS.value=s.k;sync();yS.value=String(s.y);dS.value=String(s.d);go.disabled=false;}}catch(e){}
+    if(s&&M[s.k]){mS.value=s.k;sync();yS.value=String(s.y);dS.value=String(s.d);$("fdVer").value=s.v||"";go.disabled=false;}}catch(e){}
 })();
