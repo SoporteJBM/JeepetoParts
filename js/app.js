@@ -198,6 +198,7 @@ function ask(p){
 }
 let tt; function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("on"),2800);}
 document.getElementById("moparbtn").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hola Jeepeto Parts, quiero cotizar repuestos originales Mopar. Código(s) de pieza: ");
+try{const v=JSON.parse(localStorage.getItem("jp-mijeep")||"null");if(v&&["jk","jl","jt"].includes(v.k)) current=v.k;}catch(e){}
 renderFilters(); renderZones(); setPage(PAGE,false); renderFeatured(); renderCompare(); renderGallery(); bindPageLinks();
 if(MODE==="hash") window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(PAGES.some(p=>p.k===h)&&h!==PAGE){setPage(h,false);window.scrollTo({top:0});}});
 if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView({block:"start"});},120);}
@@ -227,6 +228,7 @@ if(MODE==="files"&&location.hash){setTimeout(()=>{const el=document.getElementBy
     }
     const m=M[k],y=+yS.value,d=+dS.value;
     try{localStorage.setItem("jp-mijeep",JSON.stringify({k,y,d}));}catch(e){}
+    current=k; renderFilters(); render();
     const ok=[],ask=[],uni=[];
     jeepItems().forEach(p=>{
       const t=p.compatible.toLowerCase();
