@@ -1,6 +1,6 @@
 // Lógica de la página: filtros, tarjetas, detalle y WhatsApp.
 // ===== Configuración =====
-const APP_VERSION = "202611130639"; // se cambia en cada publicación
+const APP_VERSION = "202611150724"; // se cambia en cada publicación
 // Si el navegador guardó una versión vieja de la página, se recarga sola con la nueva.
 (function(){
   try{

@@ -309,3 +309,16 @@ body:not([data-page="inicio"]) .shop{margin-top:22px}
 .fd-form label small{text-transform:none;letter-spacing:0;font-weight:600}
 @media (max-width:900px){.fd-form{grid-template-columns:1fr 1fr}.fd-form label:first-child,.fd-form .btn-main{grid-column:1/-1}}
 .avail.why{color:#B45309}
+
+/* Jeepeto real */
+.real{margin-top:clamp(40px,7vw,80px)}
+.real-head .ml{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:var(--red);color:#fff;padding:4px 10px;border-radius:6px;margin-bottom:8px}
+.real-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;margin-top:16px}
+.real-grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;min-height:0}
+.real-grid .r-main{grid-row:1/3;aspect-ratio:3/4}
+.real-grid img:nth-child(4){grid-column:2/4}
+@media (max-width:640px){.real-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.real-grid .r-main{grid-column:1/-1;grid-row:auto;aspect-ratio:4/5}.real-grid img{aspect-ratio:3/4}.real-grid img:nth-child(4){grid-column:1/-1;aspect-ratio:4/3}}
+.real-grid{grid-template-rows:clamp(170px,21vw,270px) clamp(170px,21vw,270px)}
+.real-grid .r-main{aspect-ratio:auto;object-position:50% 60%}
+.real-grid img:nth-child(4){object-position:50% 38%}
+@media (max-width:640px){.real-grid{grid-template-rows:auto}.real-grid .r-main{aspect-ratio:4/5}.real-grid img{aspect-ratio:1/1}.real-grid img:nth-child(4){aspect-ratio:16/10}}
