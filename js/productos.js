@@ -2177,7 +2177,7 @@ const CATALOGO = [
       {
         "cat": "Accesorios",
         "nombre": "Decodificador anti-parpadeo 9005 (pack x2)",
-        "compatible": "Universal: cualquier Jeep o carro con focos LED tipo 9005 (consultar)",
+        "compatible": "Universal: cualquier Jeep o carro con focos LED tipo 9005 (consultar). No es compatible con los focos LED R3",
         "descripcion": "Dos decodificadores para focos LED 9005. Evitan que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
         "ventajas": [
           "Elimina parpadeos",
@@ -2386,23 +2386,6 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/tb_4s.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Otros autos",
-        "nombre": "Pack focos LED 9005 + decodificador 9005",
-        "compatible": "Universal: autos con focos 9005 / HB3. Hyundai Tiburon 1997-1999 (alta)",
-        "descripcion": "Par de focos LED R3 9005 de alta potencia más su decodificador anti-parpadeo.",
-        "ventajas": [
-          "Focos + decodificador en uno",
-          "Alta potencia"
-        ],
-        "codigo": "HB-R3-9005 + HL-CANBUS-9005",
-        "precio": 599,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/tb_r3.jpg",
         "agotado": false
       },
       {

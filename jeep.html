@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jeepeto Parts · Luces LED para tu Jeep en Lima</title>
+<meta name="description" content="Luces LED y accesorios a pedido para Jeep Wrangler y Gladiator en Lima. Te confirmamos que le quedan a tu Jeep antes de que pagues.">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--card:#16161A;--line:#2A2A30;--txt:#F2F2F3;--mut:#B4B4BC;--red:#C8102E;--wa:#25D366}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--txt);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+body{padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%;display:block}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{padding:calc(14px + env(safe-area-inset-top,0px)) 20px 14px;border-bottom:3px solid var(--red);display:flex;justify-content:center}
+header img{height:34px;width:auto}
+.hero{position:relative;overflow:hidden}
+.hero img{width:100%;height:clamp(300px,62vw,520px);object-fit:cover;object-position:55% 55%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0%,rgba(11,11,12,.7) 35%,rgba(11,11,12,0) 70%)}
+.hero-txt{position:relative;z-index:1;margin-top:clamp(-170px,-18vw,-120px)}
+h1{font-size:clamp(2.2rem,8vw,4rem);font-weight:900;font-stretch:66%;text-transform:uppercase;line-height:.95;margin:0 0 12px}
+h1 span{color:var(--red)}
+.lead{font-size:1.08rem;color:var(--mut);margin:0 0 20px;max-width:560px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:#06280F;font:inherit;font-weight:800;font-size:1.05rem;padding:15px 26px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;width:100%;max-width:380px}
+.btn:active{transform:scale(.98)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.chips li{font-size:.85rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--mut)}
+section{margin-top:clamp(40px,8vw,64px)}
+h2{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:900;font-stretch:70%;text-transform:uppercase;line-height:1;margin:0 0 6px}
+.sub{color:var(--mut);margin:0 0 18px}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.price{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.price b{display:block;font-size:1rem}
+.price small{color:var(--mut);font-size:.8rem}
+.price strong{display:block;font-size:clamp(1.2rem,5.2vw,1.6rem);font-weight:900;font-stretch:75%;margin-top:6px;white-space:nowrap}
+.note{font-size:.82rem;color:var(--mut);margin-top:10px}
+form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:12px}
+label{display:grid;gap:6px;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+select{font:inherit;font-size:1rem;font-weight:600;text-transform:none;letter-spacing:0;color:var(--txt);background:#0F0F12;border:1px solid var(--line);border-radius:12px;padding:13px 12px;width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.steps{display:grid;gap:12px;counter-reset:s;padding:0;margin:0;list-style:none}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--red);font-weight:900;font-size:1.2rem}
+.steps b{display:block}
+.steps span{color:var(--mut);font-size:.95rem}
+.pics{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:8px}
+.pics img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.pics img:first-child{grid-row:1/3;aspect-ratio:3/4}
+.final{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px 18px}
+.final .btn{margin:0 auto}
+footer{margin:48px 0 28px;text-align:center;color:var(--mut);font-size:.85rem}
+.float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:auto;padding:13px 20px;box-shadow:0 6px 20px rgba(0,0,0,.4);z-index:10}
+@media (min-width:760px){.float{display:none}}
+</style>
+</head>
+<body>
+<header><img src="img/wordmark.png" alt="Jeepeto Parts" width="146" height="34"></header>
+
+<div class="hero"><img src="img/jeepeto-hero-real.jpg" srcset="img/jeepeto-hero-real-m.jpg 820w, img/jeepeto-hero-real.jpg 972w" sizes="100vw" alt="Jeep Wrangler Rubicon de frente con faros LED encendidos" fetchpriority="high"></div>
+
+<main class="wrap">
+  <div class="hero-txt">
+    <h1>¿Tienes un <span>Wrangler</span> o <span>Gladiator</span>?</h1>
+    <p class="lead">Luces LED y accesorios a pedido para tu Jeep, en Lima. Antes de que pagues, te confirmamos que le quedan.</p>
+    <a class="btn wa" href="#" data-msg="Hola Jeepeto Parts, vengo de TikTok. Quiero cotizar luces para mi Jeep.">Cotiza por WhatsApp</a>
+    <ul class="chips"><li>Wrangler JK · JL</li><li>Gladiator</li><li>A pedido · 2 a 3 semanas</li><li>Garantía 1 año</li></ul>
+  </div>
+
+  <section>
+    <h2>Precios de referencia</h2>
+    <p class="sub">Para que sepas desde cuánto, antes de escribirnos.</p>
+    <div class="prices">
+      <div class="price"><b>Faros LED 7"</b><small>Wrangler JK</small><strong>desde S/ 699</strong></div>
+      <div class="price"><b>Stops LED</b><small>Wrangler JK</small><strong>desde S/ 499</strong></div>
+      <div class="price"><b>Neblineros LED</b><small>Wrangler JK</small><strong>desde S/ 345</strong></div>
+      <div class="price"><b>Luces auxiliares</b><small>Para cualquier Jeep</small><strong>desde S/ 109</strong></div>
+    </div>
+    <p class="note">El precio exacto depende de tu modelo y año. Te lo confirmamos por WhatsApp.</p>
+  </section>
+
+  <section>
+    <h2>Cotiza en 10 segundos</h2>
+    <p class="sub">Elige tu Jeep y qué te interesa. Te llega todo escrito a WhatsApp.</p>
+    <form id="f" onsubmit="return false">
+      <label>Modelo
+        <select id="m"><option value="">Elige…</option><option>Wrangler JK (2007-2018)</option><option>Wrangler JL (2018 en adelante)</option><option>Gladiator (2020 en adelante)</option><option>Otro Jeep</option></select>
+      </label>
+      <div class="row">
+        <label>Año<select id="y"><option value="">—</option></select></label>
+        <label>Puertas<select id="d"><option value="">—</option><option>2 puertas</option><option>4 puertas</option></select></label>
+      </div>
+      <label>Me interesa
+        <select id="i"><option value="">Elige…</option><option>Faros delanteros</option><option>Stops traseros</option><option>Neblineros</option><option>Direccionales</option><option>Luces auxiliares / barras</option><option>Varias cosas</option></select>
+      </label>
+      <button class="btn" id="send" type="button">Enviar por WhatsApp</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Cómo funciona</h2>
+    <p class="sub">Sin sorpresas.</p>
+    <ol class="steps">
+      <li><div><b>Nos dices tu Jeep</b><span>Modelo, año y, si puedes, una foto.</span></div></li>
+      <li><div><b>Te confirmamos que le queda</b><span>Y el precio exacto, antes de cobrarte nada.</span></div></li>
+      <li><div><b>Adelanto del 50%</b><span>Por Yape, Plin o transferencia. El resto al recibir.</span></div></li>
+      <li><div><b>Llega en 2 a 3 semanas</b><span>Entrega en Miraflores y alrededores. Instalación desde S/ 80. Garantía de 1 año por defecto de fábrica.</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Este es Jeepeto</h2>
+    <p class="sub">Nuestro Wrangler Rubicon 2009. Fotos reales, solo con ajuste de color.</p>
+    <div class="pics">
+      <img src="img/jeepeto-1.jpg" alt="Jeepeto en la playa" loading="lazy">
+      <img src="img/jeepeto-2.jpg" alt="Faros LED de Jeepeto" loading="lazy">
+      <img src="img/jeepeto-5.jpg" alt="Frente de Jeepeto" loading="lazy">
+    </div>
+  </section>
+
+  <section class="final">
+    <h2>¿Listo para equipar tu Jeep?</h2>
+    <p class="sub">Escríbenos tu modelo y año.</p>
+    <a class="btn wa" href="#" data-msg="Hola Jeepeto Parts, vengo de TikTok. Quiero cotizar luces para mi Jeep.">Cotiza por WhatsApp</a>
+  </section>
+
+  <footer>Jeepeto Parts · Miraflores, Lima · WhatsApp +51 946 564 236</footer>
+</main>
+
+<a class="btn wa float" href="#" data-msg="Hola Jeepeto Parts, vengo de TikTok. Quiero cotizar luces para mi Jeep.">WhatsApp</a>
+
+<script>
+const WA="51946564236";
+const link=m=>"https://wa.me/"+WA+"?text="+encodeURIComponent(m);
+document.querySelectorAll("a.wa").forEach(a=>a.href=link(a.dataset.msg));
+const R={"Wrangler JK (2007-2018)":[2007,2018],"Wrangler JL (2018 en adelante)":[2018,2026],"Gladiator (2020 en adelante)":[2020,2026]};
+const m=document.getElementById("m"),y=document.getElementById("y"),d=document.getElementById("d"),i=document.getElementById("i");
+m.onchange=()=>{const r=R[m.value];let h='<option value="">—</option>';if(r)for(let a=r[1];a>=r[0];a--)h+="<option>"+a+"</option>";y.innerHTML=h;
+  if(m.value.startsWith("Gladiator"))d.value="4 puertas";};
+document.getElementById("send").onclick=()=>{
+  const jeep=[m.value?m.value.replace(/ \(.*\)/,""):"Jeep",y.value,d.value].filter(Boolean).join(" · ");
+  const msg="Hola Jeepeto Parts, vengo de TikTok.\n• Mi Jeep: "+jeep+(i.value?"\n• Me interesa: "+i.value:"")+"\n¿Qué me recomiendan y cuánto sale?";
+  window.open(link(msg),"_blank","noopener");
+};
+</script>
+</body>
+</html>
