@@ -2271,57 +2271,6 @@ const CATALOGO = [
     "productos": [
       {
         "cat": "Otros autos",
-        "nombre": "Focos LED 4S H7 (par)",
-        "compatible": "Universal: autos con focos H7. Hyundai Tiburon 2000-2001 (baja), 2003-2006 (baja y alta) y 2007-2008 (alta)",
-        "descripcion": "Par de focos LED para reemplazar los halógenos H7 de faros o neblineros.",
-        "ventajas": [
-          "Luz blanca, mucho más clara",
-          "Reemplazo directo"
-        ],
-        "codigo": "HB-4S-H7",
-        "precio": 329,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/tb_4s.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Otros autos",
-        "nombre": "Focos LED 4S H11 (par)",
-        "compatible": "Universal: autos con focos H11. Hyundai Tiburon 2007-2008 (baja)",
-        "descripcion": "Par de focos LED para reemplazar los halógenos H11, muy usados en neblineros y luces bajas.",
-        "ventajas": [
-          "Luz blanca, mucho más clara",
-          "Reemplazo directo"
-        ],
-        "codigo": "HB-4S-H11",
-        "precio": 329,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/tb_4s.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Otros autos",
-        "nombre": "Focos LED R3 9005 (par)",
-        "compatible": "Universal: autos con focos 9005 / HB3. Hyundai Tiburon 1997-1999 (alta)",
-        "descripcion": "Par de focos LED de alta potencia para luces altas tipo 9005.",
-        "ventajas": [
-          "Alta potencia",
-          "Reemplazo directo"
-        ],
-        "codigo": "HB-R3-9005",
-        "precio": 489,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/tb_r3.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Otros autos",
         "nombre": "Decodificador anti-parpadeo H7 (pack x2)",
         "compatible": "Universal: autos con focos LED H7",
         "descripcion": "Dos decodificadores para focos LED H7. Evitan que los focos LED parpadeen o que salga error de foco quemado en el tablero.",
@@ -2352,40 +2301,6 @@ const CATALOGO = [
           "uni"
         ],
         "foto": "img/tb_cb_h11.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Otros autos",
-        "nombre": "Pack focos LED H7 + decodificador H7",
-        "compatible": "Universal: autos con focos H7. Hyundai Tiburon 2000-2001 (baja), 2003-2006 (baja y alta) y 2007-2008 (alta)",
-        "descripcion": "Par de focos LED 4S H7 más su decodificador anti-parpadeo, listos para instalar sin errores en el tablero.",
-        "ventajas": [
-          "Focos + decodificador en uno",
-          "Sin parpadeos"
-        ],
-        "codigo": "HB-4S-H7 + HL-CANBUS-H7-G1",
-        "precio": 449,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/tb_4s.jpg",
-        "agotado": false
-      },
-      {
-        "cat": "Otros autos",
-        "nombre": "Pack focos LED H11 + decodificador H11",
-        "compatible": "Universal: autos con focos H11. Hyundai Tiburon 2007-2008 (baja)",
-        "descripcion": "Par de focos LED 4S H11 más su decodificador anti-parpadeo, listos para instalar sin errores en el tablero.",
-        "ventajas": [
-          "Focos + decodificador en uno",
-          "Sin parpadeos"
-        ],
-        "codigo": "HB-4S-H11 + HL-CANBUS-H11-G1",
-        "precio": 449,
-        "modelos": [
-          "uni"
-        ],
-        "foto": "img/tb_4s.jpg",
         "agotado": false
       },
       {

@@ -1,6 +1,6 @@
 // Lógica de la página: filtros, tarjetas, detalle y WhatsApp.
 // ===== Configuración =====
-const APP_VERSION = "202611170330"; // se cambia en cada publicación
+const APP_VERSION = "202611171114"; // se cambia en cada publicación
 // Si el navegador guardó una versión vieja de la página, se recarga sola con la nueva.
 (function(){
   try{
@@ -82,7 +82,7 @@ const PAGES=[
  {k:"trasera",t:"Parte trasera",s:"Stops, tercera luz, luz de llanta de repuesto y protectores.",cats:["Stops traseros","Luces de freno","Luz para la llanta","Protectores de stops"]},
  {k:"auxiliares",t:"Luces auxiliares",s:"Pods, barra LED, soportes y rock lights. Uso fuera de carretera.",cats:["Luces auxiliares"]},
  {k:"accesorios",t:"Accesorios",s:"Espejos, seguros de capó, tapa de gasolina, apoyapiés y más.",cats:["Espejos","Accesorios","Audio y otros"]},
- {k:"otros",t:"Otros autos",s:"Focos LED, decodificadores y luces para otros vehículos.",cats:["Otros autos"]}];
+ {k:"otros",t:"Otros autos",s:"Luces y accesorios para otros vehículos.",cats:["Otros autos"]}];
 const MODE=document.body.dataset.mode;
 function pageOf(cat){const p=PAGES.find(p=>p.cats.some(c=>cat.startsWith(c)));return p?p.k:"";}
 function fileOf(k){return k==="inicio"?"index.html":k+".html";}
